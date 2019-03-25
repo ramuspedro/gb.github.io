@@ -1,0 +1,99 @@
+<div class="video-background" ng-style="vm.backHeader">
+    <div class="video-container">
+        <div class="video-bg-game">
+            <video class="fade-in-video" preload="auto" autoplay="true" loop="loop" muted="muted" id="videoGB">
+                <source src="./assets/videos/GameProducts.mp4" type="video/mp4"> video not supported
+            </video>
+        </div>
+        <div class="video-overlay"></div>
+        <!-- <div class="img-back-game"></div> -->
+        <div class="imageText" ng-style="vm.paddingTopLogo"> <img src="./assets/images/mainpagelogo.png" alt="greenbooks logo">
+            <div class="textBesideImage white-text">
+                <p class="main">out of the <span class="changeText">bored</span>.</p>
+                <p class="submain"><span>gamified</span></p>
+            </div>
+        </div>
+    </div>
+    <div class="btn-scroll">
+        <button href class="btn-large waves-effect waves-light event-second-btn" ng-click="vm.scrollTo()">
+            <i class="fa fa-chevron-down fa-2x"></i>
+        </button>
+    </div>
+</div>
+<div class="products" id="section-game">
+    <h1 class="center-align whatTitle">Game Learn</h1>
+    <div class="section gameProducts">
+        <div class="container">
+            <div class="row game-content">
+                <div class="{{product.class}}" ng-repeat="product in vm.gameProducts track by $index">
+                    <div class="col s12 m6 l4 medium-m3">
+                        <div class="inside-content">
+                            <div class="center">
+                                <div class="game-header">
+                                    <img ng-src="{{product.src}}">
+                                </div>
+                            </div>
+                            <div class="slogan">
+                                <h3>{{product.slogan}}</h3>
+                            </div>
+                            <div class="title">
+                                <h2>{{product.title}}</h2>
+                            </div>
+                            <div class="description">
+                                <p>{{product.description}}</p>
+                            </div>
+                            <div class="buttons">
+                                <div class="btn-read">
+                                    <a href ui-sref="{{product.url}}">read more</a>
+                                </div>
+                                <div class="btn-play">
+                                    <button ng-click="vm.callGameVideo($index)">watch trailer</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="triangleGrey"></div>
+    <div class="leftDivision"></div>
+    <div class="rightDivision"></div>
+    <div class="section section-feedback greyBackground">
+        <div class="container">
+            <div class="row">
+                <div class="col s12 m6 l4 left-align">
+                    <p class="container sectionTitle"><span class="underlineGreen">User feedback</span></p>
+                </div>
+            </div>
+            <percentage></percentage>
+        </div>
+    </div>
+    <div class="triangleGrey"></div>
+    <div class="leftDivision"></div>
+    <div class="rightDivision"></div>
+    <div class="section benefits center paddingBottom2rem" ng-init="tableEffect='animated fadeInUp'">
+        <div class="container">
+            <p class="paddingTop5rem" style="font-size:1.3rem;">Let’s see the benefits of game learn.</p>
+            <div class="row" ng-class="tableEffect">
+                <div class="col s12 m10 l10 push-m1 push-l1"> <img src="./assets/images/game/Website-30.png" alt="benefits of game learn greenbooks" style="width:100%;"> </div>
+            </div>
+        </div>
+    </div>
+    <div class="triangleWhite"></div>
+    <div class="leftDivision"></div>
+    <div class="rightDivision"></div>
+</div>
+<!-- Modal to open the video of game products -->
+<div id="gameProductVideo" class="modal modal-fixed-footer">
+    <div class="row">
+        <div class="col s12 m12 l12">
+            <div id="video-modal" class="video-modal">
+                <iframe id="videoGameProducts" class="videoGameProducts" width="853" height="480" ng-src="{{vm.trustSrc(vm.videoToShow)}}" frameborder="0" id="video-game-learn"></iframe>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <a href id="closeYoutubeVideo" class="modal-action modal-close waves-effect waves-green btn-flat" ng-click="vm.stopVideoModal()">Close</a>
+    </div>
+</div>

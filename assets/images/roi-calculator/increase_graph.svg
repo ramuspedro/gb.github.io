@@ -1,0 +1,85 @@
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="500px" height="326px" viewBox="45.291 96.289 500 326" style="enable-background:new 45.291 96.289 500 326;"
+	 xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#F9F9F9;}
+	.st1{fill:#FFFFFF;}
+	.st2{fill:#40ED00; animation: changeWidth 2s ease-in; -webkit-animation: changeWidth 2s ease-in;}
+	.st3{opacity:0.7;fill:#40ED00; animation: changeWidth 2s ease-in; -webkit-animation: changeWidth 2s ease-in;}
+	.st4{opacity:0.6;fill:#40ED00; animation: changeWidth 2s ease-in; -webkit-animation: changeWidth 2s ease-in;}
+	.st5{opacity:0.5;fill:#40ED00; animation: changeWidth 2s ease-in; -webkit-animation: changeWidth 2s ease-in;}
+	.st6{opacity:0.4;fill:#40ED00; animation: changeWidth 2s ease-in; -webkit-animation: changeWidth 2s ease-in;}
+	.st7{opacity:0.3;fill:#40ED00; animation: changeWidth 2s ease-in; -webkit-animation: changeWidth 2s ease-in;}
+	.st8{opacity:0.2;fill:#40ED00; animation: changeWidth 2s ease-in; -webkit-animation: changeWidth 2s ease-in;}
+	.st9{fill:none;stroke:#AEAFAE;stroke-width:1.2871;stroke-miterlimit:10;}
+	.st10{fill:none;stroke:#AEAFAE;stroke-width:1.3298;stroke-miterlimit:10;}
+
+	@keyframes changeWidth {
+		from {width: 0;}
+		to {width: 36.646px}
+	}
+	@-webkit-keyframes changeWidth {
+		from {width: 0;}
+		to {width: 36.646px}
+	}
+</style>
+<!-- <g id="bg">
+	<g>
+		<g>
+			<polygon class="st0" points="538.33,364.898 57.737,364.641 57.737,341.088 538.33,341.344 			"/>
+			<polygon class="st0" points="538.33,412.006 57.737,411.75 57.737,388.196 538.33,388.451 			"/>
+			<polygon class="st0" points="538.33,270.682 57.737,270.426 57.737,246.872 538.33,247.129 			"/>
+			<polygon class="st0" points="538.33,317.791 57.737,317.534 57.737,293.98 538.33,294.236 			"/>
+			<polygon class="st0" points="538.33,129.061 57.737,128.805 57.737,105.251 538.33,105.508 			"/>
+			<polygon class="st0" points="538.33,176.17 57.737,175.913 57.737,152.36 538.33,152.615 			"/>
+			<polygon class="st0" points="538.33,223.277 57.737,223.02 57.737,199.467 538.33,199.723 			"/>
+		</g>
+	</g>
+</g> -->
+<g id="_x37_">
+	<g>
+		<rect x="466.809" y="117.509" class="st1" width="36.646" height="294.424"/>
+		<rect x="466.743" y="117.31" class="st2" width="36.646" height="294.424"/>
+	</g>
+</g>
+<g id="_x36_">
+	<g>
+		<rect x="403.495" y="147.301" class="st1" width="36.646" height="264.632"/>
+		<rect x="403.429" y="147.102" class="st3" width="36.646" height="264.632"/>
+	</g>
+</g>
+<g id="_x35_">
+	<g>
+		<rect x="340.181" y="199.799" class="st1" width="36.646" height="212.134"/>
+		<rect x="340.114" y="199.6" class="st4" width="36.646" height="212.134"/>
+	</g>
+</g>
+<g id="_x34_">
+	<g>
+		<rect x="276.867" y="236.263" class="st1" width="36.646" height="175.671"/>
+		<rect x="276.667" y="236.063" class="st5" width="36.646" height="175.671"/>
+	</g>
+</g>
+<g id="_x33_">
+	<g>
+		<rect x="213.42" y="264.721" class="st1" width="36.646" height="147.213"/>
+		<rect x="213.221" y="264.521" class="st6" width="36.646" height="147.213"/>
+	</g>
+</g>
+<g id="_x32_">
+	<g>
+		<rect x="149.974" y="324.098" class="st1" width="36.646" height="87.835"/>
+		<rect x="149.774" y="323.898" class="st7" width="36.646" height="87.835"/>
+	</g>
+</g>
+<g id="_x31_">
+	<g>
+		<rect x="86.527" y="353.197" class="st1" width="36.646" height="58.736"/>
+		<rect x="86.195" y="352.997" class="st8" width="36.646" height="58.736"/>
+	</g>
+</g>
+<g id="Toplines">
+	<line class="st9" x1="56.939" y1="105.517" x2="56.939" y2="412.114"/>
+	<line class="st10" x1="56.939" y1="411.867" x2="538.33" y2="412.123"/>
+</g>
+</svg>

@@ -1,0 +1,268 @@
+<div class="navbar-fixed">
+    <ul id="what" class="dropdown-content collection" ng-style="styleWhat" ng-click="activeMenu=''; styleWhat={}">
+        <li><a ui-sref="what.custom">custom content development</a></li>
+        <li class="divider"></li>
+        <li><a ui-sref="what.corporate">corporate training</a></li>
+        <li class="divider"></li>
+        <li ng-mouseover="styleRoi={display:'block'}" ng-mouseleave="styleRoi={display:'none'}"> <a ui-sref="what.roi">measuring training <br>impact and ROI</a> </li>
+        <div class="subMenu" ng-style="styleRoi">
+            <ul class="sub-menu-roi" ng-mouseover="styleRoi={display:'block'}" ng-mouseleave="styleRoi={display:'none'}">
+                <li> <a ui-sref="what.consulting">roi consulting</a> </li>
+                <li class="divider"></li>
+                <li> <a ui-sref="programs.measurement">roi workshop</a> </li>
+                <li class="divider"></li>
+                <li> <a ui-sref="tools.preAssessmentRoi">roi calculator</a></li>
+                <!-- <li class="divider"></li> -->
+            </ul>
+        </div>
+    </ul>
+    <ul id="products" class="dropdown-content collection" ng-style="styleProduct" ng-click="activeMenu=''; styleProduct={}">
+        <li class="divider"></li>
+        <li ng-mouseover="styleGame={display:'block'}" ng-mouseleave="styleGame={display:'none'}"> <a ui-sref="products.game">game learn</a> </li>
+        <div class="subMenu" ng-style="styleGame">
+            <ul class="producSubMenu" ng-mouseover="styleGame={display:'block'}" ng-mouseleave="styleGame={display:'none'}">
+                <li> <a ui-sref="products.negotiation">negotiation</a> </li>
+                <li class="divider"></li>
+                <li> <a ui-sref="products.productivity">productivity</a> </li>
+                <li class="divider"></li>
+                <li> <a ui-sref="products.leadership">leadership</a> </li>
+                <li class="divider"></li>
+            </ul>
+        </div>
+    </ul>
+    <ul id="methodologies" class="dropdown-content " ng-class="collection" ng-style="styleMetho" ng-click="activeMenu=''; styleMetho={}">
+        <!-- <li><a ui-sref="metho.methos">methodologies</a></li> -->
+        <li class="divider"></li>
+        <li><a ui-sref="metho.elear">e-learning</a></li>
+        <li class="divider"></li>
+        <li><a ui-sref="metho.mlear">m-learning</a></li>
+        <li class="divider"></li>
+        <li><a ui-sref="metho.webinar">webinar</a></li>
+        <li class="divider"></li>
+        <li><a ui-sref="metho.video">video</a></li>
+        <li class="divider"></li>
+        <li><a ui-sref="metho.simu">simulation</a></li>
+        <li class="divider"></li>
+        <li><a ui-sref="metho.gameBased">game-based</a></li>
+        <li class="divider"></li>
+        <li><a ui-sref="metho.blended">blended learning</a></li>
+    </ul>
+    <ul id="about" class="dropdown-content drop-content-last-menu" ng-class="collection" ng-style="styleAbout" ng-click="activeMenu=''; styleAbout={}">
+        <li><a ui-sref="about.clients">clients</a></li>
+        <li class="divider"></li>
+        <li><a ui-sref="about.people">Our people</a></li>
+        <li class="divider"></li>
+        <li><a ui-sref="about.career">career</a></li>
+        <li class="divider"></li>
+        <li><a ui-sref="about.add"><span style="text-transform: uppercase !important;">ADD</span> Architecture</a></li>
+        <!-- <li><a ui-sref="about.presentations">Presentations</a></li> -->
+        <!-- <li class="divider"></li> -->
+    </ul>
+    <div class="container">
+        <div class="dropdown-content" id="programs" ng-style="styleProg" ng-click="activeMenu=''; styleProg={}">
+            <ul ng-class="collection" class="mainMenu">
+                <li ng-mouseover="styleCommun={display:'block'}" ng-mouseleave="styleCommun={display:'none'}"> <a class="" ui-sref="programs.communication">Communication</a> </li>
+                <div class="subMenu" ng-style="styleCommun">
+                    <ul class="programsCommun" ng-mouseover="styleCommun={display:'block'}" ng-mouseleave="styleCommun={display:'none'}">
+                        <li> <a ui-sref="programs.fundamentals">Fundamentals of communication skills</a> </li>
+                        <li class="divider"></li>
+                        <li> <a ui-sref="programs.presentation">Presentation skills</a> </li>
+                        <li class="divider"></li>
+                        <li> <a ui-sref="programs.masterful">Masterful presentation</a> </li>
+                        <li class="divider"></li>
+                        <li> <a ui-sref="programs.feedback">Effective feedback</a> </li>
+                        <li class="divider"></li>
+                        <li> <a ui-sref="programs.conflict">Conflict resolution</a> </li>
+                        <li class="divider"></li>
+                        <li> <a ui-sref="programs.business">Business writing</a> </li>
+                        <li class="divider"></li>
+                        <li> <a ui-sref="programs.email">Email excellence</a> </li>
+                    </ul>
+                </div>
+                <li class="divider"></li>
+                <li ng-mouseover="styleProduc={display:'block'}" ng-mouseleave="styleProduc={display:'none'}"> <a ui-sref="programs.productivity">Productivity</a> </li>
+                <div class="subMenu" ng-style="styleProduc">
+                    <ul class="producSubMenu" ng-mouseover="styleProduc={display:'block'}" ng-mouseleave="styleProduc={display:'none'}">
+                        <li> <a ui-sref="programs.conducting">Conducting productivity meetings</a> </li>
+                        <li class="divider"></li>
+                        <li> <a ui-sref="programs.creativity">Creativity and innovation</a> </li>
+                        <li class="divider"></li>
+                        <li> <a ui-sref="programs.insane">Insane productivity</a> </li>
+                        <li class="divider"></li>
+                        <li> <a ui-sref="programs.negotiations">Winning negotiations</a> </li>
+                    </ul>
+                </div>
+                <li class="divider"></li>
+                <li> <a ui-sref="programs.measurement">Measurement</a> </li>
+            </ul>
+        </div>
+    </div>
+    <nav>
+        <div class="fix-container">
+            <div class="nav-wrapper container">
+                <a ui-sref="home" class="brand-logo"><img class="largeSize" src="./assets/images/logo.png" alt="greenbooks logo"></a>
+                <a ui-sref="home" class="brand-logo"><img class="smallSize" src="./assets/images/twittericon-19.png" alt="greenbooks logo"></a>
+                <div class="requestCall">
+                    <div class="request-call-navbar small-medium-screen">
+                        <div ng-hide="requestCall">
+                            <div class="floatButton without-border-button">
+                                <a class="btn-floating btn-large modal-trigger" data-target="modalRequest"> <i class="material-icons">phone</i> </a>
+                            </div>
+                        </div>
+                    </div>
+                </div><a href data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down paddingRight">
+                    <li ng-mouseover="activeMenu=' active '; styleWhat={width: '120px', position: 'absolute', top: '80px', left: '0px', opacity: '1', display: 'block'}" ng-mouseleave="activeMenu=''; styleWhat={}"> <a class="dropdown-button not-clickable-menu" data-activates="what" data-beloworigin="true" href>services</a> </li>
+                    <!-- before "services" was what we do -->
+                    <li ng-mouseover="activeMenu=' active '; styleProduct={width: '120px', position: 'absolute', top: '80px', left: '0px', opacity: '1', display: 'block'}" ng-mouseleave="activeMenu=''; styleProduct={}"> <a class="dropdown-button not-clickable-menu" data-activates="products" data-beloworigin="true" href>products</a> </li>
+                    <li ng-mouseover="activeMenu=' active '; styleProg={width: '120px', position: 'absolute', top: '80px', left: '0px', opacity: '1', display: 'block'}" ng-mouseleave="activeMenu=''; styleProg={}"> <a class="dropdown-button not-clickable-menu" data-activates="programs" data-beloworigin="true" href>programs</a> </li>
+                    <li ng-mouseover="activeMenu=' active '; styleMetho={width: '120px', position: 'absolute', top: '80px', left: '0px', opacity: '1', display: 'block'}" ng-mouseleave="activeMenu=''; styleMetho={}" ng-click="changeMethoPage()"> <a class="dropdown-button" data-activates="methodologies" data-beloworigin="true" href>methodologies</a> </li>
+                    <li><a ui-sref="events">Events</a></li>
+                    <li> <a ui-sref="success.successStories">Case Studies</a> </li>
+                    <li ng-mouseover="activeMenu=' active '; styleAbout={width: '120px', position: 'absolute', top: '80px', left: '0px', opacity: '1', display: 'block'}" ng-mouseleave="activeMenu=''; styleAbout={}"> <a class="dropdown-button not-clickable-menu" data-activates="about" data-beloworigin="true" href>about us</a> </li>
+                    <!-- <li style="margin-right:10px" class="gbPhone"> <i class="material-icons md-18">phone</i>+91-8880 100 200 </li> -->
+                </ul>
+                <ul class="side-nav" id="mobile-demo">
+                    <div id="mainMenuMobile" ng-hide="methoSubMenu || aboutSubMenu || whatSubMenu || progSubMenu || prodSubMenu" class="">
+                        <!-- <div class="firstItemMenu center-align"> <div class="phoneNumber"><i class="material-icons md-18 firstIcon">phone</i><span class="number">+91-8880 100 200</span></div></div>-->
+                        <div class="firstItemMenu center-align">
+                            <a ui-sref="home" class="logo-nav"><img src="./assets/images/logo.png" alt="greenbooks logo"></a>
+                        </div>
+                        <div class="animated fadeInRight">
+                            <li class="divider"></li>
+                            <li> <a ui-sref="home" ng-click="closeSideMenu()">Home</a> </li>
+                            <li class="divider"></li>
+                            <li> <a href ng-click="whatSubMenu=true">services <i class="material-icons">keyboard_arrow_right</i></a> </li>
+                            <li class="divider"></li>
+                            <li> <a href ng-click="prodSubMenu=true">products <i class="material-icons">keyboard_arrow_right</i></a> </li>
+                            <li class="divider"></li>
+                            <li> <a href ng-click="progSubMenu=true">programs<i class="material-icons">keyboard_arrow_right</i></a> </li>
+                            <li class="divider"></li>
+                            <li> <a href ng-click="methoSubMenu=true">methodologies <i class="material-icons">keyboard_arrow_right</i></a> </li>
+                            <li class="divider"></li>
+                            <li><a ui-sref="events" ng-click="closeSideMenu()">Events</a></li>
+                            <li class="divider"></li>
+                            <li> <a ui-sref="success.successStories" ng-click="closeSideMenu()">Case Studies</a> </li>
+                            <li class="divider"></li>
+                            <li> <a href ng-click="aboutSubMenu=true">about us<i class="material-icons">keyboard_arrow_right</i></a> </li>
+                            <li class="divider"></li>
+                            <div class="firstItemMenu">
+                                <div class="phoneNumber"><i class="material-icons md-18 firstIcon">phone</i><span class="number">+91-8880 100 200</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="prodMenuMobile" ng-show="prodSubMenu" class="subMenuMobile">
+                        <div class="subMenuIcon center-align"> <a href class="firstIconSub" ng-click="prodSubMenu=false"><i class="material-icons md-32">arrow_back</i></a> </div>
+                        <div class="animated fadeInLeft">
+                            <li class="divider"></li>
+                            <li><a ui-sref="products.game" ng-click="closeSideMenu(); prodSubMenu=false">game learn</a></li>
+                            <li class="divider"></li>
+                            <div class="sub-menu-navbar">
+                                <li> <a ui-sref="products.negotiation" ng-click="closeSideMenu(); prodSubMenu=false">negotiation</a> </li>
+                                <li class="divider"></li>
+                                <li> <a ui-sref="products.productivity" ng-click="closeSideMenu(); prodSubMenu=false">productivity</a> </li>
+                                <li class="divider"></li>
+                                <li> <a ui-sref="products.leadership" ng-click="closeSideMenu(); prodSubMenu=false">leadership</a> </li>
+                            </div>
+                            <li class="divider"></li>
+                        </div>
+                    </div>
+                    <div id="whatMenuMobile" ng-show="whatSubMenu" class="subMenuMobile">
+                        <div class="subMenuIcon center-align"> <a href class="firstIconSub" ng-click="whatSubMenu=false"><i class="material-icons md-32">arrow_back</i></a> </div>
+                        <div class="animated fadeInLeft">
+                            <li class="divider"></li>
+                            <li><a ui-sref="what.custom" ng-click="closeSideMenu(); whatSubMenu=false">custom content</a></li>
+                            <li class="divider"></li>
+                            <li><a ui-sref="what.corporate" ng-click="closeSideMenu(); whatSubMenu=false">corporate training</a></li>
+                            <li class="divider"></li>
+                            <li><a ui-sref="what.roi" ng-click="closeSideMenu(); whatSubMenu=false">measuring training ROI</a></li>
+                            <li class="divider"></li>
+                            <div class="sub-menu-navbar">
+                                <li><a ui-sref="what.consulting" ng-click="closeSideMenu(); whatSubMenu=false">roi consulting</a></li>
+                                <li class="divider"></li>
+                                <li><a ui-sref="programs.measurement" ng-click="closeSideMenu(); whatSubMenu=false">roi workshop</a></li>
+                                <li class="divider"></li>
+                                <li> <a ui-sref="tools.preAssessmentRoi" ng-click="closeSideMenu(); whatSubMenu=false">roi calculator</a></li>
+                                <li class="divider"></li>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="methoMenuMobile" ng-show="methoSubMenu" class="subMenuMobile">
+                        <div class="subMenuIcon center-align"> <a href class="firstIconSub" ng-click="methoSubMenu=false"><i class="material-icons md-32">arrow_back</i></a> </div>
+                        <div class="animated fadeInLeft">
+                            <li class="divider"></li>
+                            <li><a ui-sref="metho.methos" ng-click="closeSideMenu(); methoSubMenu=false">methodologies</a></li>
+                            <li class="divider"></li>
+                            <li><a ui-sref="metho.elear" ng-click="closeSideMenu(); methoSubMenu=false">e-learning</a></li>
+                            <li class="divider"></li>
+                            <li><a ui-sref="metho.mlear" ng-click="closeSideMenu(); methoSubMenu=false">m-learning</a></li>
+                            <li class="divider"></li>
+                            <li><a ui-sref="metho.webinar" ng-click="closeSideMenu(); methoSubMenu=false">webinar</a></li>
+                            <li class="divider"></li>
+                            <li><a ui-sref="metho.video" ng-click="closeSideMenu(); methoSubMenu=false">video</a></li>
+                            <li class="divider"></li>
+                            <li><a ui-sref="metho.simu" ng-click="closeSideMenu(); methoSubMenu=false">simulation</a></li>
+                            <li class="divider"></li>
+                            <li><a ui-sref="metho.gameBased" ng-click="closeSideMenu(); methoSubMenu=false">game-based</a></li>
+                            <li class="divider"></li>
+                            <li><a ui-sref="metho.blended" ng-click="closeSideMenu(); methoSubMenu=false">blended learning</a></li>
+                            <li class="divider"></li>
+                        </div>
+                    </div>
+                    <div id="aboutMenuMobile" ng-show="aboutSubMenu" class="subMenuMobile">
+                        <div class="subMenuIcon center-align"> <a href class="firstIconSub" ng-click="aboutSubMenu=false"><i class="material-icons md-32">arrow_back</i></a> </div>
+                        <div class="animated fadeInLeft">
+                            <li class="divider"></li>
+                            <li><a ui-sref="about.clients" ng-click="closeSideMenu(); aboutSubMenu=false">clients</a></li>
+                            <li class="divider"></li>
+                            <li><a ui-sref="about.people" ng-click="closeSideMenu(); aboutSubMenu=false">Our people</a></li>
+                            <li class="divider"></li>
+                            <li><a ui-sref="about.career" ng-click="closeSideMenu(); aboutSubMenu=false">career</a></li>
+                            <li class="divider"></li>
+                            <li><a ui-sref="about.add" ng-click="closeSideMenu(); aboutSubMenu=false"><span style="text-transform: uppercase !important;">ADD</span> Architecture</a></li>
+                            <li class="divider"></li>
+                        </div>
+                    </div>
+                    <div id="progMenuMobile" ng-show="progSubMenu" class="subMenuMobile">
+                        <div class="subMenuIcon center-align"> <a href class="firstIconSub" ng-click="progSubMenu=false"><i class="material-icons md-32">arrow_back</i></a> </div>
+                        <div class="animated fadeInLeft">
+                            <li class="divider"></li>
+                            <li><a ui-sref="programs.communication" ng-click="closeSideMenu(); progSubMenu=false">Communication</a></li>
+                            <li class="divider"></li>
+                            <div class="sub-menu-navbar">
+                                <li><a ui-sref="programs.fundamentals" ng-click="closeSideMenu(); progSubMenu=false">communication skills</a></li>
+                                <li class="divider"></li>
+                                <li><a ui-sref="programs.presentation" ng-click="closeSideMenu(); progSubMenu=false">Presentation skills</a></li>
+                                <li class="divider"></li>
+                                <li><a ui-sref="programs.masterful" ng-click="closeSideMenu(); progSubMenu=false">Masterful presentation</a></li>
+                                <li class="divider"></li>
+                                <li><a ui-sref="programs.feedback" ng-click="closeSideMenu(); progSubMenu=false">Effective feedback</a></li>
+                                <li class="divider"></li>
+                                <li><a ui-sref="programs.conflict" ng-click="closeSideMenu(); progSubMenu=false">Conflict resolution</a></li>
+                                <li class="divider"></li>
+                                <li><a ui-sref="programs.business" ng-click="closeSideMenu(); progSubMenu=false">Business writing</a></li>
+                                <li class="divider"></li>
+                                <li><a ui-sref="programs.email" ng-click="closeSideMenu(); progSubMenu=false">Email excellence</a></li>
+                                <li class="divider"></li>
+                            </div>
+                            <li><a ui-sref="programs.productivity" ng-click="closeSideMenu(); progSubMenu=false">Productivity</a></li>
+                            <li class="divider"></li>
+                            <div class="sub-menu-navbar">
+                                <li><a ui-sref="programs.conducting" ng-click="closeSideMenu(); progSubMenu=false">Conducting productivity</a></li>
+                                <li class="divider"></li>
+                                <li><a ui-sref="programs.creativity" ng-click="closeSideMenu(); progSubMenu=false">Creativity and innovation</a></li>
+                                <li class="divider"></li>
+                                <li><a ui-sref="programs.insane" ng-click="closeSideMenu(); progSubMenu=false">Insane productivity</a></li>
+                                <li class="divider"></li>
+                                <li><a ui-sref="programs.negotiations" ng-click="closeSideMenu(); progSubMenu=false">Winning negotiations</a></li>
+                                <li class="divider"></li>
+                            </div>
+                            <li><a ui-sref="programs.measurement" ng-click="closeSideMenu(); progSubMenu=false">Measurement</a></li>
+                            <li class="divider"></li>
+                        </div>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>

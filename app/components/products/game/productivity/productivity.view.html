@@ -1,0 +1,112 @@
+<div class="products">
+    <div class="section triskelionBackground gameProductsPages">
+        <div class="container">
+            <div class="textSectionGame center-align"> <img src="./assets/images/game/logo2.png" alt="greenbooks logo">
+                <h5>Triskelion®</h5>
+                <p class="p1">time management & productivity</p>
+                <p class="p2">Employee productivity is a key success factor in an organization that overshadows all others. In addition to creating a change in their working efficiency, Triskelion is about adopting an attitude and creating a reliable system for managing commitment, both professionally and personally.</p>
+                <div>
+                    <button ng-click="vm.openProductModal()">request demo</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section videoGameProducts whatWillYou">
+        <div class="container">
+            <h2 class="center-align methoTitle">Have a quick look</h2>
+            <div class="row">
+                <div class="col s12 m12 l7">
+                    <div class="video-container">
+                        <iframe width="853" height="480" src="https://www.youtube.com/embed/38ZxlbVQsY0" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="goals-right">
+                    <div class="col s12 m12 l5">
+                        <ul>
+                            <li> <i class="material-icons">play_arrow</i> Learn to effectively manage an agenda </li>
+                            <li> <i class="material-icons">play_arrow</i> Improve the ability to make decisions and manage daily tasks </li>
+                            <li> <i class="material-icons">play_arrow</i> Develop techniques to improve employees efficiency and productivity </li>
+                            <li> <i class="material-icons">play_arrow</i> Understand the impact of time management on stress </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="triangleWhite"></div>
+    <div class="leftDivision"></div>
+    <div class="rightDivision"></div>
+    <div class="whatWillYou greyBackground">
+        <div class="textLeft">
+            <div class="section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col s12 m12 l6 push-l6"> <img src="./assets/images/game/cpt2.png" alt="what learn greenbooks"> </div>
+                        <div class="col s12 m12 l6 pull-l6 paddingTop text-right-side">
+                            <ul>
+                                <li><i class="material-icons">play_arrow</i>Develop and practice effective time management skills</li>
+                                <li><i class="material-icons">play_arrow</i>Identify commonly unproductive areas of work and convert them to useful time</li>
+                                <li><i class="material-icons">play_arrow</i>Utilize tools, strategies, and creativity to manage time effectively and perform to one's potential</li>
+                                <li><i class="material-icons">play_arrow</i>Increase control and reduce stress</li>
+                                <li><i class="material-icons">play_arrow</i>Goal-oriented approach to work</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="triangleGrey"></div>
+    <div class="leftDivision"></div>
+    <div class="rightDivision"></div>
+</div>
+<div id="modal-products" class="modal">
+    <div class="modal-content">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <form id="form-products" name="form-products">
+                    <div class="input-field col s12 m12"> <i class="material-icons md-24 prefix">account_circle</i>
+                        <input id="FirstName" type="text" class="validate" ng-model="vm.gameProduct.name" name="FirstName" required>
+                        <label for="FirstName">name*</label>
+                    </div>
+                    <div class="input-field col s12 m6"> <i class="material-icons md-24 prefix">phone</i>
+                        <input id="Phone" name="Phone" type="text" class="validate" ng-model="vm.gameProduct.phone" required="" aria-required="true">
+                        <label for="Phone">phone number*</label>
+                    </div>
+                    <div class="input-field col s12 m6"> <i class="material-icons md-24 prefix">email</i>
+                        <input id="EmailAddress" type="email" class="validate" ng-model="vm.gameProduct.email" name="EmailAddress" required>
+                        <label for="EmailAddress">email*</label>
+                    </div>
+                    <div class="input-field col s12 m12 l12">
+                        <p>
+                            <input type="checkbox" class="filled-in" ng-model="vm.gameProduct.products.merchants" id="checkbox-merchants" />
+                            <label for="checkbox-merchants">Merchants - negotiation and conflict resolution</label>
+                        </p>
+                        <p>
+                            <input type="checkbox" class="filled-in" ng-model="vm.gameProduct.products.triskelion" id="checkbox-triskelion" />
+                            <label for="checkbox-triskelion">Triskelion - time management & productivity</label>
+                        </p>
+                        <p>
+                            <input type="checkbox" class="filled-in" ng-model="vm.gameProduct.products.pacific" id="checkbox-pacific" />
+                            <label for="checkbox-pacific">Pacific - leadership and team management</label>
+                        </p>
+                    </div>
+                    <button href type="submit" class="btn-large col s6 m4 l4 push-s3 push-m4 push-l4 waves-effect waves-light btn-greenBooks-grey products" ng-click="vm.sendRequest(vm.gameProduct)">submit</button>
+                    <br />
+                    <input type="hidden" name="MXHOrgCode" value="7983" />
+                    <input type="hidden" name="MXHLandingPageId" value="7940ec3a-fbc5-11e5-b61b-22000aa8e760" />
+                    <input type="hidden" name="MXHFormBehaviour" value="0" />
+                    <input type="hidden" name="MXHFormDataTransfer" value="0" />
+                    <input type="hidden" name="MXHRedirectUrl" value="/" />
+                    <input type="hidden" name="MXHAsc" value="5" />
+                    <input type="hidden" name="MXHPageTitle" value="products form" />
+                    <input type="hidden" name="MXHOutputMessagePosition" value="0" />
+                    <input type="hidden" name="MXHIsExternallyUsed" value="1" />
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <a href class=" modal-action waves-effect waves-green btn-flat" ng-click="vm.closeProductModal()">close</a>
+    </div>
+</div>

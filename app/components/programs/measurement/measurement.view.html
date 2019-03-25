@@ -1,0 +1,291 @@
+<div class="section sectionEvents">
+    <div class="container">
+        <div class="position-relative">
+            <img class="logoEvent" src="./assets/images/logoEvent.png" alt="greenbooks events logo">
+            <div class="row">
+                <div class="col s12 m3 l3 alignmentTitle">
+                    <p class="sectionTitle"></p>
+                </div>
+                <div class="col s12 m10 l7 push-m2 push-l2">
+                    <div class="textImageEvent">
+                        <img class="responsive-img roiImage" alt="measuring roi greenbooks" src="./assets/images/roi/ROIimage-31.png">
+                        <p class="p1">in L&D/HRD</p>
+                        <p class="p2 fontLight">a 2 day intense and practical workshop on training evaluation</p>
+                        <ul>
+                            <li ng-repeat="info in vm.datesAndVenueTable">{{info.date}} - {{info.location}}</li>
+                        </ul>
+                    </div>
+                    <div class="button-text-event">
+                        <a href ui-sref="register" class="btn-large waves-effect waves-light btn-greenBooks-grey">register now</a>
+                        <p class="p3">*Early bird discount of 10% for registrations before 8th April 2016</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="about">
+    <div class="section sectionMeasure greyBackground">
+        <div class="container">
+            <div class="row">
+                <div class="col s12 m12 l8 push-l2 center">
+                    <p class="p1"> This program emphasizes the ROI Methodology developed by industry experts. Participants will experience the application of the ROI Process model. This includes developing application, impact objectives, isolating the effects of the program, converting data to monetary values, tabulating appropriate program costs, and calculating the ROI.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="triangleGrey"></div>
+    <div class="leftDivision"></div>
+    <div class="rightDivision"></div>
+    <div class="testmonials-videos section">
+        <div class="container">
+            <div class="row">
+                <div class="col s12 m6 l4 left-align">
+                    <p class="container sectionTitle"><span class="underlineGreen">testimonials</span></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="slider">
+                    <div ng-repeat="testmonial in vm.gbTestmonials track by $index">
+                        <div ng-show="$index == vm.controlSlide.index" class="animated fadeIn">
+                            <div class="col s12 m12 l8 push-l2">
+                                <div class="video-container">
+                                    <iframe width="853" height="480" ng-src="{{vm.trustSrc(testmonial.video)}}" frameborder="0"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m12 l12 slider-nav">
+                    <a href class="arrow-prev" ng-click="vm.goPrev()"><i class="material-icons">keyboard_arrow_left</i></a>
+                    <ul class="slider-dots">
+                        <li class="dot" ng-class="{'active-dot': 0 == vm.controlSlide.index}" ng-click="vm.clickDot(0)"></li>
+                        <li class="dot" ng-class="{'active-dot': 1 == vm.controlSlide.index}" ng-click="vm.clickDot(1)"></li>
+                    </ul>
+                    <a href class="arrow-next" ng-click="vm.goNext()"><i class="material-icons">keyboard_arrow_right</i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="triangleWhite"></div>
+    <div class="leftDivision"></div>
+    <div class="rightDivision"></div>
+    <div class="section sectionInformations">
+        <div class="container">
+            <div class="row">
+                <div class="col s12 m12 l8">
+                    <div>
+                        <div class="borderBottom"> <img class="imageIcon" src="./assets/images/about/smallicon1.png" alt="icon right for me greenbooks"> <span class="textBesideIcon">Is it right for me?</span> </div>
+                        <p> Appropriate for Training Heads / HRD Heads, Training Managers / HRD Managers, Trainers, Facilitators, Executive Coaches, Evaluation Managers and Specialists & Performance Measurement Specialists. </p>
+                    </div>
+                    <div class="paddingTop2rem whatWillLearn">
+                        <div class="borderBottom"> <img class="imageIcon" src="./assets/images/about/smallicon2.png" alt="icon what will learn greenbooks"> <span class="textBesideIcon">What will I learn?</span> </div>
+                        <ul>
+                            <li ng-repeat="what in vm.willILearnList track by $index"> <i class="material-icons triangleIcon">play_arrow</i>{{what}}</li>
+                        </ul>
+                    </div>
+                    <div class="borderBottom paddingTop2rem"> <img class="imageIcon" src="./assets/images/about/smallicon3.png" alt="icon duration greenbooks"> <span class="textBesideIcon">Duration</span> </div>
+                    <p> Two days. </p>
+                    <div>
+                        <div class="borderBottom paddingTop2rem"> <img class="imageIcon" src="./assets/images/about/smallicon4.png" alt="icon date and venue greenbooks"> <span class="textBesideIcon">Dates and venue</span> </div>
+                        <table class="tableBorder">
+                            <thead>
+                                <th>Date</th>
+                                <th>Location</th>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="datesAndVenue in vm.datesAndVenueTable track by $index">
+                                    <td>{{datesAndVenue.date}}</td>
+                                    <td>{{datesAndVenue.location}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="paddingTop2rem gb-colapsible">
+                        <ul class="collapsible" data-collapsible="accordion">
+                            <li>
+                                <div class="collapsible-header" ng-click="vm.changeIcon(0)">What will it cover? <i class="material-icons">{{vm.whatIcon}}</i></div>
+                                <div class="collapsible-body" ng-show="0==vm.showSection">
+                                    <what-will-it-cover></what-will-it-cover>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col s12 m12 l4">
+                    <div class="aviability">
+                        <div class="col s12 m6 l12">
+                            <div class="">
+                                <span>Availability</span>
+                                <ul class="availability-check">
+                                    <li><img class="imageCheck" src="./assets/images/about/tick1.png" alt="icon availability greenbooks">Public Program</li>
+                                    <li><img class="imageCheck" src="./assets/images/about/tick1.png" alt="icon availability greenbooks">Off the shelf</li>
+                                    <li><img class="imageCheck" src="./assets/images/about/tick2.png" alt="icon availability greenbooks">Game-based</li>
+                                    <li><img class="imageCheck" src="./assets/images/about/tick1.png" alt="icon availability greenbooks">Customizable</li>
+                                </ul>
+                            </div>
+                            <div class="top-between-section top-medium-section">
+                                <a href class="btn-large waves-effect waves-light btn-greenBooks-grey" ui-sref="programs.downloadBrochure" target="_blank">Download brochure</a>
+                                <a data-target="modal-explain-trigger" class="btn-large waves-effect waves-light btn-greenBooks-grey modal-trigger-explain">Explain this to your boss</a>
+                                <a href="https://twitter.com/intent/tweet?text=%22Attending+workshop+on+Measuring+ROI+by+%40greenbooks%22+Check+it+out+http%3A%2F%2Fgreenbookslearning.com%2Fcompetencies%2Fmeasurement" target="_blank" class="btn-large waves-effect waves-light btn-greenBooks-grey">Tweet about the workshop</a>
+                            </div>
+                        </div>
+                        <div class="col s12 m6 l12">
+                            <div class="programFee top-between-section">
+                                <p>program fee</p>
+                                <ul>
+                                    <li class="li-triangle"> <i class="material-icons triangleIcon">play_arrow</i>early bird offer (valid till 23nd Dec 2016) – INR 26,999/- * </li>
+                                    <li class="li-triangle"> <i class="material-icons triangleIcon">play_arrow</i>regular fee per – INR 29,999/-* </li>
+                                    <li class="li-triangle"> <i class="material-icons triangleIcon">play_arrow</i>group discount </li>
+                                    <li> 2 participants – 10% discount </li>
+                                    <li> 3-4 participants – 15% discount </li>
+                                    <li> 5 or more participants – 20% discount </li>
+                                    <li class="li-triangle"> * - all fee are exclusive of service tax. </li>
+                                </ul>
+                                <div class="top-between-section">
+                                    <span>Question?</span>
+                                    <br/>amit@greenbooks.co.in
+                                    <br/>or call us at 8880-100-200 </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="paddingBottom3rem"></div>
+            </div>
+        </div>
+    </div>
+    <div class="triangleWhite"></div>
+    <div class="leftDivision"></div>
+    <div class="rightDivision"></div>
+    <div class="section facilitators greyBackground">
+        <div class="container">
+            <div class="row">
+                <div class="col s12 m6 l4 left-align">
+                    <p class="container sectionTitle"><span class="underlineGreen">facilitators</span></p>
+                </div>
+            </div>
+            <div class="row facilitator-content">
+                <div class="col s12 m4 l4">
+                    <div class="each-content">
+                        <a href ng-click="vm.modalFacilitator(0)">
+                            <img src="./assets/images/about/shyam_jpg.jpg" alt="Shyam Sunder greenbooks">
+                            <h5>Shyam Sunder</h5>
+                            <p>Principal Consultant & Cofounder</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="col s12 m4 l4 padding-top-small">
+                    <div class="each-content">
+                        <a href ng-click="vm.modalFacilitator(1)">
+                            <img src="./assets/images/about/lehal.jpg" alt="Capt. Charanjit Lehal greenbooks">
+                            <h5>Capt. Charanjit Lehal</h5>
+                            <p>Guest Facilitator</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="col s12 m4 l4 padding-top-small">
+                    <div class="each-content">
+                        <a href ng-click="vm.modalFacilitator(2)">
+                            <img src="./assets/images/about/sumit_jpg.jpg" alt="Sumit Joshi greenbooks">
+                            <h5>Sumit Joshi</h5>
+                            <p>Guest Facilitator</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="triangleGrey"></div>
+    <div class="leftDivision"></div>
+    <div class="rightDivision"></div>
+    <div class="section sectionBadget">
+        <div class="container">
+            <div class="row">
+                <div class="col s12 m6 l4 left-align">
+                    <p class="container sectionTitle"><span class="underlineGreen">Skill certificate</span></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12 m12 l12">
+                    <p class="paddingTop2rem"> Digital Badges are quickly becoming the standard for tracking and validating skills and achievements in the corporate world. Badges are emerging as an accepted representation of professional credentials over traditional paper certificates. </p>
+                </div>
+                <div class="center">
+                    <div class="col s12 m6 l3 push-l2 center">
+                        <img src="./assets/images/badges/DigitalBadges-02.png" alt="competence in roi greenbooks">
+                    </div>
+                    <div class="col s12 m6 l3 push-l4 center">
+                        <img src="./assets/images/badges/DigitalBadges-01.png" alt="mastery in roi greenbooks">
+                    </div>
+                    <div class="col s12 m12 l12"> <a ui-sref="about.certifications" class="btn-large waves-effect waves-light btn-greenBooks-grey">Know more about the badges</a> </div>
+                </div>
+            </div>
+        </div>
+        <div class="paddingBottom3rem"></div>
+    </div>
+    <div class="triangleWhite"></div>
+    <div class="leftDivision"></div>
+    <div class="rightDivision"></div>
+    <div class="sectionRegisterNow greyBackground">
+        <div class="section">
+            <div class="container">
+                <div class="row center">
+                    <div class="col s12 m6 l6 borderStraightRight">
+                        <a href ui-sref="register" class="btn-large waves-effect waves-light btn-greenBooks-grey">Register Now</a>
+                        <p>Registration is purely on a first come first serve basis as the seats are limited</p>
+                    </div>
+                    <div class="col s12 m6 l6">
+                        <a href="mailto:amit@greenbooks.co.in" class="btn-large waves-effect waves-light btn-greenBooks-grey">Question?</a>
+                        <p>Email: amit@greenbooks.co.in or call Amit at 8880 100 200</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="triangleGrey"></div>
+    <div class="leftDivision"></div>
+    <div class="rightDivision"></div>
+</div>
+<modal-explain></modal-explain>
+<div id="facilitatorsModal" class="modal">
+    <div class="row modal-facilitators" ng-switch on="vm.selectFacilitator">
+        <div class="col s12 m12 l12" ng-switch-when="0">
+            <img src="./assets/images/about/shyam_jpg.jpg" alt="Shyam Sunder greenbooks">
+            <div class="main-header">
+                <h5>Shyam Sunder</h5>
+                <p>Principal Consultant & Cofounder</p>
+            </div>
+            <div class="content-text">
+                <p> Shyam is the co-founder of Greenbooks, and he has 15 years of experience in training and consulting with organizations such as American Express, HSBC, Citi, NTPC, L&T, Amazon, Verizon, Wipro, Hexaware, Nokia, Randstad, Hyundai, Xansa, Airtel, Hutch and many more.</p>
+                <p>As a learning architect who helps organizations build result-driven learning interventions and performance solutions, Shyam also delivers international assignments in UK and Asia.</p>
+                <p>He is also a certified ROI Professional, who has trained with Dr. Jack Phillips and conducts ROI studies for organizations in India. He has pioneered and evangelized ROI measurements in India and has trained more than 300 HR & Training professionals on learning measurements and strategy to build capacity in measurement, evaluation & ROI.</p>
+            </div>
+        </div>
+        <div class="col s12 m12 l12" ng-switch-when="1">
+            <img src="./assets/images/about/lehal.jpg" alt="Shyam Sunder greenbooks">
+            <div class="main-header">
+                <h5>Capt. Charanjit Lehal</h5>
+                <p>Guest Facilitator</p>
+            </div>
+            <div class="content-text">
+                <p>A HR professional with over 25 years of experience, Capt. Charan specialized in Learning and Development and Talent Management in the media, telecom and civil service sectors. He has had significant exposure to culture transformation, aligning learning and development with business objectives, leadership development, change facilitation, team building, executive coaching and mentoring. Recognized internationally through the publication of case studies, the endorsement of a book and by authoring a chapter in a book by the American Society for Training and Development, Charan is a Certified Executive Coach and Certified ROI practitioner. Charan is an ROI consultant for Greenbooks.</p>
+            </div>
+        </div>
+        <div class="col s12 m12 l12" ng-switch-when="2">
+            <img src="./assets/images/about/sumit_jpg.jpg" alt="Shyam Sunder greenbooks">
+            <div class="main-header">
+                <h5>Sumit Joshi</h5>
+                <p>Guest Facilitator</p>
+            </div>
+            <div class="content-text">
+                <p>A Post Graduate from XLRI, Jamshedpur and a graduate from IIT Roorkee, Sumit has more than 19 years of corporate experience. He has successfully demonstrated capabilities in varied roles like Quality Management, Training & Development, Process Improvement, Organization Development and Business Excellence. The common thread across all these roles has been managing organization-wide change management initiatives through diverse, multi-location teams.</p>
+                <p>His versatile experience stretches across various industries like Automobiles, IT, ITES, Pharmaceutical, Chemicals and Infrastructure and brings in him a deep understanding of business fundamentals.</p>
+                <p>During the initial part of his career, Sumit handled Quality Management & Customer Service and later transitioned into Learning & OD. He managed end-to-end training activities, driving employee engagement and designing & deploying Performance Management System and measurement processes.</p>
+                <p>He is a Six Sigma Black Belt and a Certified Professional Behavioral Analyst (CPBA). He holds an NLP Practitioner license from Dr. Richard Bandler's Institute and has been trained in Jack Philips ROI model of measuring training effectiveness. Sumit is an ROI consultant for Greenbooks.</p>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <a href class="modal-action modal-close waves-effect waves-green btn-flat">close</a>
+    </div>
+</div>

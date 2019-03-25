@@ -1,0 +1,75 @@
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="500px" height="326px" viewBox="45.291 86.789 500 326" style="enable-background:new 45.291 86.789 500 326;"
+	 xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#F9F9F9;}
+	.st1{fill:#40ED00;}
+	.st2{opacity:0.2;fill:#40ED00;enable-background:new    ;}
+	.st3{opacity:0.3;fill:#40ED00;enable-background:new    ;}
+	.st4{opacity:0.4;fill:#40ED00;enable-background:new    ;}
+	.st5{opacity:0.5;fill:#40ED00;enable-background:new    ;}
+	.st6{opacity:0.6;fill:#40ED00;enable-background:new    ;}
+	.st7{opacity:0.8;fill:#40ED00;enable-background:new    ;}
+	.st8{fill:none;stroke:#AEAFAE;stroke-width:1.293;stroke-miterlimit:10;}
+	.st9{fill:none;stroke:#AEAFAE;stroke-width:1.3359;stroke-miterlimit:10;}
+</style>
+<g id="bg">
+	<g>
+		<g>
+			<polygon class="st0" points="537.082,358.085 54.302,357.827 54.302,334.167 537.082,334.424 			"/>
+			<polygon class="st0" points="537.082,405.408 54.302,405.15 54.302,381.49 537.082,381.746 			"/>
+			<polygon class="st0" points="537.082,263.441 54.302,263.183 54.302,239.522 537.082,239.78 			"/>
+			<polygon class="st0" points="537.082,310.764 54.302,310.506 54.302,286.845 537.082,287.102 			"/>
+			<polygon class="st0" points="537.082,121.176 54.302,120.918 54.302,97.257 537.082,97.515 			"/>
+			<polygon class="st0" points="537.082,168.498 54.302,168.241 54.302,144.58 537.082,144.836 			"/>
+			<polygon class="st0" points="537.082,215.82 54.302,215.562 54.302,191.901 537.082,192.159 			"/>
+		</g>
+	</g>
+</g>
+<g id="_x37_">
+	<g>
+		<rect x="83.256" y="402.082" class="st1" width="36.812" height="3.961"/>
+		<rect x="83.19" y="402.079" class="st2" width="36.812" height="3.961"/>
+	</g>
+</g>
+<g id="_x36_">
+	<g>
+		<rect x="146.992" y="402.082" class="st1" width="36.812" height="3.961"/>
+		<rect x="146.925" y="402.079" class="st3" width="36.812" height="3.961"/>
+	</g>
+</g>
+<g id="_x35_">
+	<g>
+		<rect x="210.727" y="402.07" class="st1" width="36.812" height="3.974"/>
+		<rect x="210.66" y="402.066" class="st4" width="36.812" height="3.974"/>
+	</g>
+</g>
+<g id="_x34_">
+	<g>
+		<rect x="274.429" y="402.07" class="st1" width="36.812" height="3.973"/>
+		<rect x="274.228" y="402.066" class="st5" width="36.812" height="3.973"/>
+	</g>
+</g>
+<g id="_x33_">
+	<g>
+		<rect x="338.064" y="402.085" class="st1" width="36.812" height="3.958"/>
+		<rect x="337.864" y="402.079" class="st6" width="36.812" height="3.958"/>
+	</g>
+</g>
+<g id="_x32_">
+	<g>
+		<rect x="401.734" y="402.075" class="st1" width="36.812" height="3.969"/>
+		<rect x="401.533" y="402.066" class="st7" width="36.812" height="3.969"/>
+	</g>
+</g>
+<g id="_x31_">
+	<g>
+		<rect x="465.336" y="402.098" class="st1" width="36.812" height="3.945"/>
+		<rect x="465.002" y="402.085" class="st1" width="36.812" height="3.945"/>
+	</g>
+</g>
+<g id="Toplines">
+	<line class="st8" x1="53.5" y1="97.524" x2="53.5" y2="405.516"/>
+	<line class="st9" x1="53.5" y1="405.268" x2="537.082" y2="405.526"/>
+</g>
+</svg>

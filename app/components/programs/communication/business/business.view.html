@@ -1,0 +1,99 @@
+<div class="section competencies greyBackground">
+    <div class="container header-icons-competencies">
+        <div class="row">
+            <div class="col s12 m6 l4 push-l4 push-m3">
+                <img src="./assets/images/competencies/icons/BusinessWriting.png">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="competencies">
+    <div class="section greyBackground">
+        <div class="container">
+            <h1 class="center-align methoTitle">Business writing</h1>
+            <div class="row">
+                <div class="col s12 m12 l8 push-l2 center">
+                    <p class="p1"> People represent the face of any organization. Any written document that is sent has to establish credibility and professionalism. Appropriate for professionals to write competently at any level, this course helps to plan the writing, perfect the grammar, and assess the style and tone of an email. Combining gamification, e-learning and personalized coaching, the learner is invited to an engaging learning experience. </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="triangleGrey"></div>
+    <div class="leftDivision"></div>
+    <div class="rightDivision"></div>
+    <div class="section sectionInformations">
+        <div class="container">
+            <div class="row">
+                <div class="col s12 m12 l8">
+                    <div>
+                        <div class="borderBottom"> <img class="imageIcon" src="./assets/images/about/smallicon1.png" alt="icon right for me greenbooks"> <span class="textBesideIcon">Is it right for me?</span> </div>
+                        <p> Appropriate for professionals at any level, whose role requires a lot of email and report writing. </p>
+                    </div>
+                    <div class="paddingTop2rem whatWillLearn">
+                        <div class="borderBottom"> <img class="imageIcon" src="./assets/images/about/smallicon2.png" alt="what will learn greenbooks"> <span class="textBesideIcon">What will I learn?</span> </div>
+                        <ul>
+                            <li ng-repeat="what in vm.willILearnList track by $index"> <i class="material-icons triangleIcon">play_arrow</i>{{what}}</li>
+                        </ul>
+                    </div>
+                    <div class="borderBottom paddingTop2rem"> <img class="imageIcon" src="./assets/images/about/smallicon3.png" alt="duration greenbooks"> <span class="textBesideIcon">Duration</span> </div>
+                    <p> The duration can range between one to three days depending on the intensity of the intervention. </p>
+                    <div class="paddingTop2rem gb-colapsible">
+                        <ul class="collapsible" data-collapsible="accordion">
+                            <li>
+                                <div class="collapsible-header" ng-click="vm.changeIcon(0)">What will it cover? <i class="material-icons">{{vm.whatIcon}}</i></div>
+                                <div class="collapsible-body" ng-show="0==vm.showSection">
+                                    <what-will-business></what-will-business>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col s12 m12 l4">
+                    <div class="aviability">
+                        <div class="row">
+                            <span>Availability</span>
+                            <ul class="availability-check">
+                                <li><img class="imageCheck" src="./assets/images/about/tick2.png" alt="icon availability greenbooks">Public Program</li>
+                                <li><img class="imageCheck" src="./assets/images/about/tick1.png" alt="icon availability greenbooks">Off the shelf</li>
+                                <li><img class="imageCheck" src="./assets/images/about/tick1.png" alt="icon availability greenbooks">Game-based</li>
+                                <li><img class="imageCheck" src="./assets/images/about/tick1.png" alt="icon availability greenbooks">Customizable</li>
+                            </ul>
+                        </div>
+                        <div class="row">
+                            <a href="" target="_blank" class="btn-large waves-effect waves-light btn-greenBooks-grey marginTop3rem">Tweet about the workshop</a>
+                            <p class="paddingTop3rem"><span>Question?</span>
+                                <br/>amit@greenbooks.co.in
+                                <br/>or call us at 8880-100-200 </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="triangleWhite"></div>
+    <div class="leftDivision"></div>
+    <div class="rightDivision"></div>
+    <slide-communication remove="5"></slide-communication>
+    <div class="triangleGrey"></div>
+    <div class="leftDivision"></div>
+    <div class="rightDivision"></div>
+    <div class="hide-section">
+        <div class="sectionRegisterNow">
+            <div class="section">
+                <div class="container">
+                    <div class="row center">
+                        <div class="col s12 m6 l6 borderStraightRight"> <a href class="btn-large waves-effect waves-light btn-greenBooks-grey">Register Now</a>
+                            <p>Registration is purely on a first come first serve basis as the seats are limited</p>
+                        </div>
+                        <div class="col s12 m6 l6"> <a href="mailto:amit@greenbooks.co.in" target="_blank" class="btn-large waves-effect waves-light btn-greenBooks-grey">Question?</a>
+                            <p>Email: amit@greenbooks.co.in or call Amit at 8880 100 200</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="triangleWhite"></div>
+        <div class="leftDivision"></div>
+        <div class="rightDivision"></div>
+    </div>
+</div>

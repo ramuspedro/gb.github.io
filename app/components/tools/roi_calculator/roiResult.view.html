@@ -1,0 +1,75 @@
+<div class="section roi-calculator">
+    <!-- <div class="container">
+        <h1 class="center-align methoTitle">ROI Calculator result</h1>
+    </div> -->
+    <div class="roi-calculator-result">
+        <div class="dark-layer">
+            <div class="container">
+                <div class="row result-content">
+                    <div class="col s12 m12 l6 main-content">
+                        <div class="graph-content">
+                            <h1 class="methoTitle with-br"><span style="text-transform: uppercase;">ROI</span> is </h1>
+                            <h1 class="methoTitle without-br"><span style="text-transform: uppercase;">ROI</span> is </h1>
+                            <h2 class="count-number" ng-if="vm.roiResult >= 0">{{vm.showResult}}%</h2>
+                            <h2 class="count-number red-text" ng-if="vm.roiResult < 0">{{vm.showResult}}%</h2>
+                            <div class="graph" style="display: block; margin: 0 auto;" ng-if="vm.roiResult > 0">
+                                <object>
+                                    <embed src="./assets/images/roi-calculator/increase_graph.svg" style="width: 100%; height: auto;">
+                                </object>
+                            </div>
+                            <div class="graph" style="display: block; margin: 0 auto;" ng-if="vm.roiResult < 0">
+                                <object>
+                                    <embed src="./assets/images/roi-calculator/decrease_graph.svg" style="width: 100%; height: auto;">
+                                </object>
+                            </div>
+                            <div class="graph" style="display: block; margin: 0 auto;" ng-if="vm.roiResult == 0">
+                                <object>
+                                    <embed src="./assets/images/roi-calculator/zero_graph.svg" style="width: 100%; height: auto;">
+                                </object>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 m12 l6">
+                        <div class="call-to-action">
+                            <h5>Would you like to learn more about the ROI methodology?</h5>
+                            <p class="main-paragraph">
+                                We are one of the leading experts in training evaluation in India. More than 300 companies have benefited from our expertise. You can develop your evaluation capability too!
+                            </p>
+                            <div class="main-paragraph">
+                                <div class="row center content-roi">
+                                    <div class="box-top"></div>
+                                    <div class="col s12 m6 l6 borderStraightRight">
+                                        <p class="title-button">ROI consulting service</p> <a ui-sref="what.consulting" class="btn-large waves-effect waves-light btn-greenBooks-grey"><span>Read more</span></a> </div>
+                                    <div class="col s12 m6 l6 padding-small-screen">
+                                        <p class="title-button">ROI workshop</p> <a href class="btn-large waves-effect waves-light btn-greenBooks-grey" ui-sref="programs.measurement"><span>Read more</span></a>
+                                    </div>
+                                </div>
+                                <div class="box-bottom"></div>
+                            </div>
+                            <p class="main-paragraph">
+                                Talk to our experts:
+                            </p>
+                            <p><i class="material-icons icon">email</i> <span class="name-icon">amit@greenbooks.co.in</span></p>
+                            <p><i class="material-icons icon">phone</i> <span class="name-icon">8880 100 200</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="triangleWhite"></div>
+            <div class="leftDivision"></div>
+            <div class="rightDivision"></div>
+            <div class="container">
+                <div class="row center paddingTop5rem choice-user">
+                    <div class="col s12 m6 l6 borderStraightRight">
+                        <h5>ROI Consulting service</h5> <a ui-sref="what.consulting" class="btn-large waves-effect waves-light btn-greenBooks-grey"><span>Read more</span></a> </div>
+                    <div class="col s12 m6 l6 padding-small-screen">
+                        <h5>ROI Workshop</h5> <a href class="btn-large waves-effect waves-light btn-greenBooks-grey" ui-sref="programs.measurement"><span>Read more</span></a>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </div>
+    <div class="triangleWhite"></div>
+    <div class="leftDivision"></div>
+    <div class="rightDivision"></div>
+</div>

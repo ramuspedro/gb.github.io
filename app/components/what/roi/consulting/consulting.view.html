@@ -1,0 +1,85 @@
+<div class="what">
+    <div class="section roi-consulting">
+        <h2 class="center-align whatTitle">ROI consulting service</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col s12 m8 push-m2 center">
+                    <p class="paragraph-main"> One of the strongest predictors of a high-impact learning organization is learning measurement. Our Learning Analytics system offers various insights that show how successful or unsuccessful your learning initiatives are. </p>
+                </div>
+            </div>
+        </div>
+        <div class="triangleWhite"></div>
+        <div class="leftDivision"></div>
+        <div class="rightDivision"></div>
+        <div class="section greyBackground roi-consulting">
+            <div class="container">
+                <div class="row">
+                    <div class="col s12 m6 l4 left-align">
+                        <p class="container sectionTitle"><span class="underlineGreen">methodology</span></p>
+                    </div>
+                </div>
+                <div class="row img-methodology">
+                    <div class="col s12 m12 l12 large-medium-screen"> <img src="./assets/images/what/methodology.png" alt="methodology greenbooks"> </div>
+                    <div class="col s12 m12 l12 small-screen"> <img src="./assets/images/what/Method1.png" alt="methodology greenbooks"> </div>
+                    <div class="col s12 m12 l12 small-screen"> <img src="./assets/images/what/Method2.png" alt="methodology greenbooks"> </div>
+                    <div class="col s12 m12 l12 small-screen"> <img src="./assets/images/what/Method3.png" alt="methodology greenbooks"> </div>
+                </div>
+            </div>
+        </div>
+        <div class="triangleGrey"></div>
+        <div class="leftDivision"></div>
+        <div class="rightDivision"></div>
+        <div class="section roi-consulting">
+            <div class="container implementation-steps">
+                <div class="row">
+                    <div class="col s12 m6 l4 left-align">
+                        <p class="container sectionTitle"><span class="underlineGreen">implementation steps</span></p>
+                    </div>
+                </div>
+                <div class="row content-implementation medium-large-screen">
+                    <div class="col s12 m5 l6"> <img src="./assets/images/what/implementationsteps.png" alt="implementation steps greenbooks"> </div>
+                    <div class="col s12 m7 l6">
+                        <!-- <div ng-repeat="implementation in vm.implementations track by $index"> </div>-->
+                        <div class="header">
+                            <div class="id" ng-class="vm.implementation.color">{{vm.implementation.id}}</div>
+                            <div class="title">
+                                <p class="main">{{vm.implementation.title}}</p>
+                                <p class="duration">Duration: {{vm.implementation.duration}}</p>
+                            </div>
+                            <div class="buttons"> <a class="btn-large waves-effect btn-greenBooks-grey cursor-pointer" ng-click="vm.goPrevious()"><i class="material-icons triangleIcon">keyboard_arrow_left</i></a> <a class="btn-large waves-effect btn-greenBooks-grey cursor-pointer" ng-click="vm.goNext()"><i class="material-icons triangleIcon">keyboard_arrow_right</i></a> </div>
+                        </div>
+                        <ul>
+                            <li ng-repeat="list in vm.implementation.list track by $index" class="icon-list"> <i class="material-icons triangleIcon">play_arrow</i>{{list}}</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row content-implementation small-screen">
+                    <div class="col s12 m7 l6">
+                        <!-- <div ng-repeat="implementation in vm.implementations track by $index"> </div>-->
+                        <div ng-repeat="implementation in vm.implementations track by $index">
+                            <div class="header">
+                                <div class="id" ng-class="implementation.color">{{implementation.id}}</div>
+                                <div class="title">
+                                    <p class="main">{{implementation.title}}</p>
+                                    <p class="duration">Duration: {{implementation.duration}}</p>
+                                </div>
+                            </div>
+                            <ul>
+                                <li ng-repeat="list in implementation.list track by $index" class="icon-list"> <i class="material-icons triangleIcon">play_arrow</i>{{list}}</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="triangleWhite"></div>
+        <div class="leftDivision"></div>
+        <div class="rightDivision"></div>
+        <div class="greyBackground">
+            <slide-success></slide-success>
+        </div>
+    </div>
+    <div class="triangleGrey"></div>
+    <div class="leftDivision"></div>
+    <div class="rightDivision"></div>
+</div>

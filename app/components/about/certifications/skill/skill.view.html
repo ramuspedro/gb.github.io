@@ -1,0 +1,54 @@
+<!-- <div class="triangleGrey"></div><div class="leftDivisionGreyBack"></div><div class="rightDivisionGreyBack"></div>-->
+<div class="section greyBackground section-badge">
+    <div class="row">
+        <div class="col s12 m12 l12">
+            <h2 class="title">Skill badges</h2>
+        </div>
+        <div class="remove-padding">
+            <div class="col s6 m5 push-m1 l3 push-l3">
+                <a href ng-click="activeCompetence()">
+                    <div class="border-skill"> <img src="./assets/images/badges/DigitalBadges-02.png" alt="Competence in ROI greenbooks">
+                        <div ng-class="competenceRoi.box">
+                            <p class="inside-badge">Competence in <span>ROI</span></p>
+                            <div class="border-left"></div>
+                            <div class="border-right"></div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="remove-padding">
+            <div class="col s6 m5 push-m1 l3 push-l3">
+                <a href ng-click="activeMastery()">
+                    <div class="border-skill"> <img src="./assets/images/badges/DigitalBadges-01.png" alt="Mastery in ROI greenbooks">
+                        <div ng-class="masteryRoi.box">
+                            <p class="inside-badge">Mastery in <span>ROI</span></p>
+                            <div class="border-left"></div>
+                            <div class="border-right"></div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="row tabs-badge white-back-border" ng-show="competenceRoi.content" ng-class="competenceRoi.effect">
+        <div class="col s12 m12 l3 center"> <img src="./assets/images/badges/DigitalBadges-02.png" alt="Competence in ROI greenbooks"> </div>
+        <div class="col s12 m12 l9 content-badge">
+            <p class="sectionTitle"><span class="underlineGreen">Competence in ROI</span> <a href ng-click="closeWindowSkill()"><i class="material-icons md-32">close</i></a></p>
+            <p class="sub-title">Description</p>
+            <p class="paragraph"> The earner of this badge has successfully completed the two day hands-on workshop on Measuring ROI in Training, facilitated by Greenbooks Learning Solutions by demonstrating that he/she has acquired the competence required to conduct an impact study. </p>
+            <p class="sub-title">Criteria</p>
+            <p class="paragraph"> The recipient should clear all learning assessments, and demonstrate implementation capability by submitting their data collection and ROI analysis plan. A practitioner/ facilitator will evaluate the plan on the following parameters: a) Clarity in business context b) Clear objectives (action words in learning objectives; audience, behaviour, condition, degree in application objectives; measurable hard data in application objectives) c) Coherence in needs, objectives and evaluation. </p>
+        </div>
+    </div>
+    <div class="row tabs-badge white-back-border" ng-show="masteryRoi.content" ng-class="masteryRoi.effect">
+        <div class="col s12 m12 l3 center"> <img src="./assets/images/badges/DigitalBadges-01.png" alt="Mastery in ROI greenbooks"> </div>
+        <div class="col s12 m12 l9 content-badge">
+            <p class="sectionTitle"><span class="underlineGreen">Mastery in ROI</span> <a href ng-click="closeWindowSkill()"><i class="material-icons md-32">close</i></a></p>
+            <p class="sub-title">Description</p>
+            <p class="paragraph"> The earner of this badge has successfully earned the 'Competence in ROI' badge after compleing the two day hands-on workshop on Measuring ROI in Training, facilitated by Greenbooks Learning Solutions. This earner has demonstrated the ability to implement the ROI Methodology and to conduct impact studies by publicly sharing results of a completed ROI Impact Study on a real time project. </p>
+            <p class="sub-title">Criteria</p>
+            <p class="paragraph"> This badge will be awarded to those who have successfully completed a detailed ROI Impact study on a real time training program, within 3 months. </p>
+        </div>
+    </div>
+</div>

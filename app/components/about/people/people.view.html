@@ -1,0 +1,72 @@
+<div class="about">
+    <div class="section">
+        <div class="container">
+            <h1 class="center-align methoTitle">Our people</h1>
+        </div>
+    </div>
+    <div class=" section our-people">
+        <div class="container">
+            <div class="row">
+                <div class="col s12 m12 l12">
+                    <p class="presentation-text">we’re the Geebee Team!</p>
+                </div>
+            </div>
+            <div class="row">
+                <div ng-repeat="member in vm.members track by $index">
+                    <div class="col s12 m6 l4" ng-mouseover="vm.memberOver=$index; member.img=member.img2" ng-mouseleave="vm.memberOver='-99'; member.img=member.img1" ng-click="member.img=member.img1">
+                        <div class="members">
+                            <a ui-sref="{{member.page}}">
+                                <img class="img-people" ng-src="{{member.img}}" alt="{{member.name}} greenbooks">
+                                <div class="name-position animated slideInUp" ng-show="member.index==vm.memberOver">
+                                    <p class="name">{{member.name}}</p>
+                                    <p class="position">{{member.position}}</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="paddingBottom5rem"></div>
+    <div class="triangleWhite"></div>
+    <div class="leftDivision"></div>
+    <div class="rightDivision"></div>
+    <div class=" section our-people greyBackground">
+        <div class="container paddingTop5rem">
+            <div class="row">
+                <div class="col s12 m12 l12">
+                    <p class="presentation-text">advisor</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12 m6 l4" ng-mouseover="vm.advisor=0" ng-mouseleave="vm.advisor='-99'">
+                    <div class="members">
+                        <a ui-sref="about.advisor1">
+                            <img class="img-people" ng-src="assets/images/people/advisor1-14.png" alt="V. Sridhar greenbooks">
+                            <div class="name-position animated slideInUp" ng-show="0==vm.advisor">
+                                <p class="name">V. Sridhar</p>
+                                <p class="position"></p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col s12 m6 l4" ng-mouseover="vm.advisor2=0" ng-mouseleave="vm.advisor2='-99'">
+                    <div class="members">
+                        <a ui-sref="about.advisor2">
+                            <img class="img-people" ng-src="assets/images/people/advisor2.png" alt="Gourav Srivastava greenbooks">
+                            <div class="name-position animated slideInUp" ng-show="0==vm.advisor2">
+                                <p class="name">Gourav Srivastava</p>
+                                <p class="position"></p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="paddingBottom5rem"></div>
+    </div>
+    <div class="triangleGrey"></div>
+    <div class="leftDivision"></div>
+    <div class="rightDivision"></div>
+</div>

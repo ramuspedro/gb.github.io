@@ -1,0 +1,178 @@
+<div class="video-background" ng-style="vm.backHeader">
+    <div class="video-container">
+        <div class="video-bg-corporate">
+            <video class="fade-in-video" preload="auto" autoplay="true" loop="loop" muted="muted" id="videoGB">
+                <source src="./assets/videos/CorporateTraining.mp4" type="video/mp4"> video not supported
+            </video>
+        </div>
+        <div class="video-overlay"></div>
+        <!-- <div class="img-back-corporate"></div> -->
+        <div class="container">
+            <div class="imageText" ng-style="vm.paddingTopLogo"> <img src="./assets/images/mainpagelogo.png" alt="greenbooks logo">
+                <div class="textBesideImage white-text">
+                    <p class="main">out of the <span class="changeText">gyan</span>.</p>
+                    <p class="submain"><span>immersive</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="btn-scroll">
+        <button class="btn-large waves-effect waves-light event-second-btn" ng-click="vm.scrollTo()">
+            <i class="fa fa-chevron-down fa-2x"></i>
+        </button>
+    </div>
+</div>
+<div class="what" id="section-corporate">
+    <div class="section">
+        <h1 class="center-align whatTitle">Corporate training</h1>
+        <div class="container">
+            <div class="row blockWithQuote">
+                <div class="col s12 m12 l6">
+                    <div class="borderTopBottom">
+                        <h5 class="leftH5"> One of the primary reasons why trainings fail is the lack of alignment with the actual business requirements, and so, they miss opportunities to contribute to the interests of the executives. </h5> </div>
+                </div>
+                <div class="col s12 m12 l6">
+                    <p class="paragraphWithoutTop"> While other companies may try to force you into their prepackaged curriculum, we work with you to understand your unique needs and develop a solution that's right for you. </p>
+                    <p> This is exactly why organizations like Amazon, Renault Nissan, Deutsche bank and 100 plus other customers depend on our expertise to design and deliver training programs pan India for their workforce capability development. </p>
+                </div>
+            </div>
+        </div>
+        <div class="triangleWhite"></div>
+        <div class="leftDivision"></div>
+        <div class="rightDivision"></div>
+        <div class="section greyBackground">
+            <div class="container">
+                <div class="row">
+                    <div class="col s12 m6 l4 left-align">
+                        <p class="container sectionTitle"><span class="underlineGreen">Advantage</span></p>
+                    </div>
+                </div>
+                <div class="advantageCustom">
+                    <div class="row center paddingTopAdvantage">
+                        <div class="col s12 m6 l3"> <img src="./assets/images/what/WhatWeDo-50.png" alt="Training business greenbooks">
+                            <p>training is aligned to business</p>
+                        </div>
+                        <div class="col s12 m6 l3"> <img src="./assets/images/what/MeasurableOutcomes.png" alt="Measurable outcome greenbooks">
+                            <p>measurable outcomes</p>
+                        </div>
+                        <div class="col s12 m6 l3"> <img src="./assets/images/what/Scalable-45.png" alt="Scalable greenbooks">
+                            <p>scalable</p>
+                        </div>
+                        <div class="col s12 m6 l3"> <img src="./assets/images/what/LearnerEngagement.png" alt="High level greenbooks">
+                            <p>high level of learner engagement</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="triangleGrey"></div>
+        <div class="leftDivision"></div>
+        <div class="rightDivision"></div>
+        <div class="section approachCorporate">
+            <div class="container">
+                <div class="row">
+                    <div class="col s12 m6 l4 left-align">
+                        <p class="container sectionTitle"><span class="underlineGreen">Approach</span></p>
+                    </div>
+                    <div class="row">
+                        <div class="col s12 m12 l12">
+                            <p class="p1"> Our front-loaded custom training process begins with a clear focus on the outcome. Our approach to business alignment ensures your investment drives business results. </p>
+                        </div>
+                    </div>
+                    <div class="designProcess paddingTop2rem" ng-init="vm.identify=false; vm.develop=false; vm.evaluate=false">
+                        <div class="row position-relative">
+                            <div class="show-medium-large">
+                                <a href ng-click="vm.identify=true" class="click-mob">
+                                    <div class="col s12 m4 l3 push-l2"> <img src="./assets/images/custom/CorporateTable-96.png" alt="table needs greenbooks"> </div>
+                                </a>
+                                <div class="col s12 m4 l3 padding-image large-screen" ng-mouseover="vm.identify=true" ng-mouseleave="vm.identify=false"> <img src="./assets/images/custom/CorporateTable-96.png" alt="table needs greenbooks"> </div>
+                                <a href ng-click="vm.develop=true" class="click-mob">
+                                    <div class="col s12 m4 l3 push-l2"> <img src="./assets/images/custom/CorporateTable-97.png" alt="table objectives greenbooks"> </div>
+                                </a>
+                                <div class="col s12 m4 l3 large-screen" ng-mouseover="vm.develop=true" ng-mouseleave="vm.develop=false"> <img src="./assets/images/custom/CorporateTable-97.png" alt="table objectives greenbooks"> </div>
+                                <a href ng-click="vm.evaluate=true" class="click-mob">
+                                    <div class="col s12 m4 l3 push-l2"> <img src="./assets/images/custom/CorporateTable-98.png" alt="table evaluation greenbooks"> </div>
+                                </a>
+                                <div class="col s12 m4 l3 large-screen" ng-mouseover="vm.evaluate=true" ng-mouseleave="vm.evaluate=false"> <img src="./assets/images/custom/CorporateTable-98.png" alt="table evaluation greenbooks"> </div>
+                                <div class="identify-block" ng-show="vm.identify"> <a href ng-click="vm.identify=false; vm.develop=false; vm.evaluate=false"><i class="material-icons triangleIcon close">close</i></a>
+                                    <p class="title">1. Identify stakeholder needs ROI Objectives</p>
+                                    <p class="paragraph"> We begin by identifying specific business measures that, if improved, will take advantage of the opportunity or the problem. By working through the process, we map the performance behaviors or actions to improve the business measures. Then we will identify the learning needs and the preferred methodologies for learning. </p>
+                                </div>
+                                <div class="develop-block" ng-show="vm.develop"> <a href ng-click="vm.identify=false; vm.develop=false; vm.evaluate=false"><i class="material-icons triangleIcon close">close</i></a>
+                                    <p class="title">2. Develop Objectives</p>
+                                    <p class="paragraph"> We build objectives & success measures to the stakeholder needs at different levels (business impact objectives, application objectives, learning objectives and reaction objectives). Objectives set the stage for program evaluation, ensuring the right measures are taken based on the results that are important to stakeholders. </p>
+                                </div>
+                                <div class="evaluate-block" ng-show="vm.evaluate"> <a href ng-click="vm.identify=false; vm.develop=false; vm.evaluate=false"><i class="material-icons triangleIcon close">close</i></a>
+                                    <p class="title">3. Evaluate the Program</p>
+                                    <p> Our training evaluation model captures and reports the chain of impact that occurs from the program. </p>
+                                    <p class="paragraph-li"> We capture data at four levels, </p>
+                                    <ul>
+                                        <li> <i class="material-icons triangleIcon">play_arrow</i>The learners reaction to the training process </li>
+                                        <li> <i class="material-icons triangleIcon">play_arrow</i>The learning that has taken place </li>
+                                        <li> <i class="material-icons triangleIcon">play_arrow</i>Application of learned material in their jobs </li>
+                                        <li> <i class="material-icons triangleIcon">play_arrow</i>The impact these changes have on your businesses. </li>
+                                    </ul>
+                                    <p class="paragraph-li"> After the identification of the business impact, </p>
+                                    <ul>
+                                        <li> <i class="material-icons triangleIcon">play_arrow</i>Isolate the impact of the training </li>
+                                        <li> <i class="material-icons triangleIcon">play_arrow</i>Convert data to monetary value </li>
+                                        <li> <i class="material-icons triangleIcon">play_arrow</i>Calculate the ROI for increased accuracy and credibility for the report. </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="show-small">
+                                <div class="col s12">
+                                    <img src="./assets/images/custom/CorporateTable-96.png" alt="table needs greenbooks">
+                                    <div>
+                                        <p class="title">1. Identify stakeholder needs ROI Objectives</p>
+                                        <p class="paragraph"> We begin by identifying specific business measures that, if improved, will take advantage of the opportunity or the problem. By working through the process, we map the performance behaviors or actions to improve the business measures. Then we will identify the learning needs and the preferred methodologies for learning. </p>
+                                    </div>
+                                </div>
+                                <div class="col s12">
+                                    <img class="small-padding-top" src="./assets/images/custom/CorporateTable-97.png" alt="table objectives greenbooks">
+                                    <div>
+                                        <p class="title">2. Develop Objectives</p>
+                                        <p class="paragraph"> We build objectives & success measures to the stakeholder needs at different levels (business impact objectives, application objectives, learning objectives and reaction objectives). Objectives set the stage for program evaluation, ensuring the right measures are taken based on the results that are important to stakeholders. </p>
+                                    </div>
+                                </div>
+                                <div class="col s12">
+                                    <img class="small-padding-top" src="./assets/images/custom/CorporateTable-98.png" alt="table evaluate greenbooks">
+                                    <div>
+                                        <p class="title">3. Evaluate the Program</p>
+                                        <p> Our training evaluation model captures and reports the chain of impact that occurs from the program. </p>
+                                        <p class="paragraph-li"> We capture data at four levels, </p>
+                                        <ul>
+                                            <li> <i class="material-icons triangleIcon">play_arrow</i>The learners reaction to the training process </li>
+                                            <li> <i class="material-icons triangleIcon">play_arrow</i>The learning that has taken place </li>
+                                            <li> <i class="material-icons triangleIcon">play_arrow</i>Application of learned material in their jobs </li>
+                                            <li> <i class="material-icons triangleIcon">play_arrow</i>The impact these changes have on your businesses. </li>
+                                        </ul>
+                                        <p class="paragraph-li"> After the identification of the business impact, </p>
+                                        <ul>
+                                            <li> <i class="material-icons triangleIcon">play_arrow</i>Isolate the impact of the training </li>
+                                            <li> <i class="material-icons triangleIcon">play_arrow</i>Convert data to monetary value </li>
+                                            <li> <i class="material-icons triangleIcon">play_arrow</i>Calculate the ROI for increased accuracy and credibility for the report. </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="paddingBottom5rem"></div>
+                        <div class="paddingBottom5rem"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="triangleWhite"></div>
+        <div class="leftDivision"></div>
+        <div class="rightDivision"></div>
+        <slide-competencies></slide-competencies>
+        <div class="triangleGrey"></div>
+        <div class="leftDivision"></div>
+        <div class="rightDivision"></div>
+        <slide-success></slide-success>
+        <div class="triangleWhite"></div>
+        <div class="leftDivision"></div>
+        <div class="rightDivision"></div>
+    </div>
+</div>

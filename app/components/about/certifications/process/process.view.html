@@ -1,0 +1,582 @@
+<!-- <div class="triangleGrey"></div><div class="leftDivisionGreyBack"></div><div class="rightDivisionGreyBack"></div>-->
+<div class="section greyBackground section-badge">
+    <div class="large-screen">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <h2 class="title">Process badges</h2>
+            </div>
+        </div>
+        <div class="remove-padding">
+            <div class="row">
+                <div class="col s6 m4 l3">
+                    <a href ng-click="largeProcess(0) ">
+                        <div class="border-skill"> <img ng-src="{{processes[0].img}}" alt="{{processes[0].text}} badge greenbooks">
+                            <div ng-class="processes[0].box">
+                                <p class="inside-badge">{{processes[0].text}}</p>
+                                <div class="border-left"></div>
+                                <div class="border-right"></div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col s6 m4 l3">
+                    <a href ng-click="largeProcess(1) ">
+                        <div class="border-skill"> <img ng-src="{{processes[1].img}}" alt="{{processes[1].text}} badge greenbooks">
+                            <div ng-class="processes[1].box">
+                                <p class="inside-badge">{{processes[1].text}}</p>
+                                <div class="border-left"></div>
+                                <div class="border-right"></div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col s6 m4 l3">
+                    <a href ng-click="largeProcess(2) ">
+                        <div class="border-skill"> <img ng-src="{{processes[2].img}}" alt="{{processes[2].text}} badge greenbooks">
+                            <div ng-class="processes[2].box">
+                                <p class="inside-badge">{{processes[2].text}}</p>
+                                <div class="border-left"></div>
+                                <div class="border-right"></div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col s6 m4 l3">
+                    <a href ng-click="largeProcess(3) ">
+                        <div class="border-skill"> <img ng-src="{{processes[3].img}}" alt="{{processes[3].text}} badge greenbooks">
+                            <div ng-class="processes[3].box">
+                                <p class="inside-badge">{{processes[3].text}}</p>
+                                <div class="border-left"></div>
+                                <div class="border-right"></div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="row tabs-badge direct-badge white-back-border" ng-show="0==badgeL.position || 1==badgeL.position || 2==badgeL.position || 3==badgeL.position">
+                <div class="col s12 m12 l3 center"> <img ng-src="{{badgeL.img}}" class="paddingTop" alt="{{badgeL.text}} badge greenbooks"> </div>
+                <div class="col s12 m12 l9">
+                    <p class="sectionTitle paddingTop"><span class="underlineGreen">{{badgeL.text}}</span> <a href ng-click="closeWindowP()"><i class="material-icons md-32">close</i></a></p>
+                    <p class="sub-title">Description</p>
+                    <p class="paragraph">{{badgeL.description}}</p>
+                    <p class="sub-title">Criteria</p>
+                    <p class="paragraph">{{badgeL.criteria}}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s6 m4 l3">
+                    <a href ng-click="largeProcess(4) ">
+                        <div class="border-skill"> <img ng-src="{{processes[4].img}}" alt="{{processes[4].text}} badge greenbooks">
+                            <div ng-class="processes[4].box">
+                                <p class="inside-badge">{{processes[4].text}}</p>
+                                <div class="border-left"></div>
+                                <div class="border-right"></div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col s6 m4 l3">
+                    <a href ng-click="largeProcess(5) ">
+                        <div class="border-skill"> <img ng-src="{{processes[5].img}}" alt="{{processes[5].text}} badge greenbooks">
+                            <div ng-class="processes[5].box">
+                                <p class="inside-badge">{{processes[5].text}}</p>
+                                <div class="border-left"></div>
+                                <div class="border-right"></div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col s6 m4 l3">
+                    <a href ng-click="largeProcess(6) ">
+                        <div class="border-skill"> <img ng-src="{{processes[6].img}}" alt="{{processes[6].text}} badge greenbooks">
+                            <div ng-class="processes[6].box">
+                                <p class="inside-badge">{{processes[6].text}}</p>
+                                <div class="border-left"></div>
+                                <div class="border-right"></div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col s6 m4 l3">
+                    <a href ng-click="largeProcess(7) ">
+                        <div class="border-skill"> <img ng-src="{{processes[7].img}}" alt="{{processes[7].text}} badge greenbooks">
+                            <div ng-class="processes[7].box">
+                                <p class="inside-badge">{{processes[7].text}}</p>
+                                <div class="border-left"></div>
+                                <div class="border-right"></div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="row tabs-badge direct-badge white-back-border" ng-show="4==badgeL.position || 5==badgeL.position || 6==badgeL.position || 7==badgeL.position">
+                <div class="col s12 m12 l3 center"> <img ng-src="{{badgeL.img}}" class="paddingTop" alt="{{badgeL.text}} badge greenbooks"> </div>
+                <div class="col s12 m12 l9">
+                    <p class="sectionTitle paddingTop"><span class="underlineGreen">{{badgeL.text}}</span> <a href ng-click="closeWindowP()"><i class="material-icons md-32">close</i></a></p>
+                    <p class="sub-title">Description</p>
+                    <p class="paragraph">{{badgeL.description}}</p>
+                    <p class="sub-title">Criteria</p>
+                    <p class="paragraph">{{badgeL.criteria}}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s6 m4 l3">
+                    <a href ng-click="largeProcess(8) ">
+                        <div class="border-skill"> <img ng-src="{{processes[8].img}}" alt="{{processes[8].text}} badge greenbooks">
+                            <div ng-class="processes[8].box">
+                                <p class="inside-badge">{{processes[8].text}}</p>
+                                <div class="border-left"></div>
+                                <div class="border-right"></div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col s6 m4 l3">
+                    <a href ng-click="largeProcess(9) ">
+                        <div class="border-skill"> <img ng-src="{{processes[9].img}}" alt="{{processes[9].text}} badge greenbooks">
+                            <div ng-class="processes[9].box">
+                                <p class="inside-badge">{{processes[9].text}}</p>
+                                <div class="border-left"></div>
+                                <div class="border-right"></div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col s6 m4 l3">
+                    <a href ng-click="largeProcess(10) ">
+                        <div class="border-skill"> <img ng-src="{{processes[10].img}}" alt="{{processes[10].text}} badge greenbooks">
+                            <div ng-class="processes[10].box">
+                                <p class="inside-badge">{{processes[10].text}}</p>
+                                <div class="border-left"></div>
+                                <div class="border-right"></div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col s6 m4 l3">
+                    <a href ng-click="largeProcess(11) ">
+                        <div class="border-skill"> <img ng-src="{{processes[11].img}}" alt="{{processes[11].text}} badge greenbooks">
+                            <div ng-class="processes[11].box">
+                                <p class="inside-badge">{{processes[11].text}}</p>
+                                <div class="border-left"></div>
+                                <div class="border-right"></div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="row tabs-badge direct-badge white-back-border" ng-show="8==badgeL.position || 9==badgeL.position || 10==badgeL.position || 11==badgeL.position">
+                <div class="col s12 m12 l3 center"> <img ng-src="{{badgeL.img}}" class="paddingTop" alt="{{badgeL.text}} badge greenbooks"> </div>
+                <div class="col s12 m12 l9">
+                    <p class="sectionTitle paddingTop"><span class="underlineGreen">{{badgeL.text}}</span> <a href ng-click="closeWindowP()"><i class="material-icons md-32">close</i></a></p>
+                    <p class="sub-title">Description</p>
+                    <p class="paragraph">{{badgeL.description}}</p>
+                    <p class="sub-title">Criteria</p>
+                    <p class="paragraph">{{badgeL.criteria}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="medium-screen">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <p class="title">Process badges</p>
+            </div>
+        </div>
+        <div class="remove-padding">
+            <div class="row">
+                <div class="col s6 m4 l3">
+                    <a href ng-click="mediumProcess(0) ">
+                        <div class="border-skill"> <img ng-src="{{processes[0].img}}" alt="{{processes[0].text}} badge greenbooks">
+                            <div ng-class="processes[0].box">
+                                <p class="inside-badge">{{processes[0].text}}</p>
+                                <div class="border-left"></div>
+                                <div class="border-right"></div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col s6 m4 l3">
+                    <a href ng-click="mediumProcess(1) ">
+                        <div class="border-skill"> <img ng-src="{{processes[1].img}}" alt="{{processes[1].text}} badge greenbooks">
+                            <div ng-class="processes[1].box">
+                                <p class="inside-badge">{{processes[1].text}}</p>
+                                <div class="border-left"></div>
+                                <div class="border-right"></div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col s6 m4 l3">
+                    <a href ng-click="mediumProcess(2) ">
+                        <div class="border-skill"> <img ng-src="{{processes[2].img}}" alt="{{processes[2].text}} badge greenbooks">
+                            <div ng-class="processes[2].box">
+                                <p class="inside-badge">{{processes[2].text}}</p>
+                                <div class="border-left"></div>
+                                <div class="border-right"></div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="row tabs-badge direct-badge white-back-border" ng-show="0==badgeM.position || 1==badgeM.position || 2==badgeM.position">
+                <div class="col s12 m12 l3 center"> <img ng-src="{{badgeM.img}}" class="paddingTop" alt="{{badgeM.text}} badge greenbooks"> </div>
+                <div class="col s12 m12 l9">
+                    <p class="sectionTitle paddingTop"><span class="underlineGreen">{{badgeM.text}}</span> <a href ng-click="closeWindowP()"><i class="material-icons md-32">close</i></a></p>
+                    <p class="sub-title">Description</p>
+                    <p class="paragraph">{{badgeM.description}}</p>
+                    <p class="sub-title">Criteria</p>
+                    <p class="paragraph">{{badgeM.criteria}}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s6 m4 l3">
+                    <a href ng-click="mediumProcess(3) ">
+                        <div class="border-skill"> <img ng-src="{{processes[3].img}}" alt="{{processes[3].text}} badge greenbooks">
+                            <div ng-class="processes[3].box">
+                                <p class="inside-badge">{{processes[3].text}}</p>
+                                <div class="border-left"></div>
+                                <div class="border-right"></div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col s6 m4 l3">
+                    <a href ng-click="mediumProcess(4) ">
+                        <div class="border-skill"> <img ng-src="{{processes[4].img}}" alt="{{processes[4].text}} badge greenbooks">
+                            <div ng-class="processes[4].box">
+                                <p class="inside-badge">{{processes[4].text}}</p>
+                                <div class="border-left"></div>
+                                <div class="border-right"></div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col s6 m4 l3">
+                    <a href ng-click="mediumProcess(5) ">
+                        <div class="border-skill"> <img ng-src="{{processes[5].img}}" alt="{{processes[5].text}} badge greenbooks">
+                            <div ng-class="processes[5].box">
+                                <p class="inside-badge">{{processes[5].text}}</p>
+                                <div class="border-left"></div>
+                                <div class="border-right"></div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="row tabs-badge direct-badge white-back-border" ng-show="3==badgeM.position || 4==badgeM.position || 5==badgeM.position">
+                <div class="col s12 m12 l3 center"> <img ng-src="{{badgeM.img}}" class="paddingTop" alt="{{badgeM.text}} badge greenbooks"> </div>
+                <div class="col s12 m12 l9">
+                    <p class="sectionTitle paddingTop"><span class="underlineGreen">{{badgeM.text}}</span> <a href ng-click="closeWindowP()"><i class="material-icons md-32">close</i></a></p>
+                    <p class="sub-title">Description</p>
+                    <p class="paragraph">{{badgeM.description}}</p>
+                    <p class="sub-title">Criteria</p>
+                    <p class="paragraph">{{badgeM.criteria}}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s6 m4 l3">
+                    <a href ng-click="mediumProcess(6) ">
+                        <div class="border-skill"> <img ng-src="{{processes[6].img}}" alt="{{processes[6].text}} badge greenbooks">
+                            <div ng-class="processes[6].box">
+                                <p class="inside-badge">{{processes[6].text}}</p>
+                                <div class="border-left"></div>
+                                <div class="border-right"></div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col s6 m4 l3">
+                    <a href ng-click="mediumProcess(7) ">
+                        <div class="border-skill"> <img ng-src="{{processes[7].img}}" alt="{{processes[7].text}} badge greenbooks">
+                            <div ng-class="processes[7].box">
+                                <p class="inside-badge">{{processes[7].text}}</p>
+                                <div class="border-left"></div>
+                                <div class="border-right"></div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col s6 m4 l3">
+                    <a href ng-click="mediumProcess(8) ">
+                        <div class="border-skill"> <img ng-src="{{processes[8].img}}" alt="{{processes[8].text}} badge greenbooks">
+                            <div ng-class="processes[8].box">
+                                <p class="inside-badge">{{processes[8].text}}</p>
+                                <div class="border-left"></div>
+                                <div class="border-right"></div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="row tabs-badge direct-badge white-back-border" ng-show="6==badgeM.position || 7==badgeM.position || 8==badgeM.position">
+                <div class="col s12 m12 l3 center"> <img ng-src="{{badgeM.img}}" class="paddingTop" alt="{{badgeM.text}} badge greenbooks"> </div>
+                <div class="col s12 m12 l9">
+                    <p class="sectionTitle paddingTop"><span class="underlineGreen">{{badgeM.text}}</span> <a href ng-click="closeWindowP()"><i class="material-icons md-32">close</i></a></p>
+                    <p class="sub-title">Description</p>
+                    <p class="paragraph">{{badgeM.description}}</p>
+                    <p class="sub-title">Criteria</p>
+                    <p class="paragraph">{{badgeM.criteria}}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s6 m4 l3">
+                    <a href ng-click="mediumProcess(9) ">
+                        <div class="border-skill"> <img ng-src="{{processes[9].img}}" alt="{{processes[9].text}} badge greenbooks">
+                            <div ng-class="processes[9].box">
+                                <p class="inside-badge">{{processes[9].text}}</p>
+                                <div class="border-left"></div>
+                                <div class="border-right"></div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col s6 m4 l3">
+                    <a href ng-click="mediumProcess(10) ">
+                        <div class="border-skill"> <img ng-src="{{processes[10].img}}" alt="{{processes[10].text}} badge greenbooks">
+                            <div ng-class="processes[10].box">
+                                <p class="inside-badge">{{processes[10].text}}</p>
+                                <div class="border-left"></div>
+                                <div class="border-right"></div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col s6 m4 l3">
+                    <a href ng-click="mediumProcess(11) ">
+                        <div class="border-skill"> <img ng-src="{{processes[11].img}}" alt="{{processes[11].text}} badge greenbooks">
+                            <div ng-class="processes[11].box">
+                                <p class="inside-badge">{{processes[11].text}}</p>
+                                <div class="border-left"></div>
+                                <div class="border-right"></div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="row tabs-badge direct-badge white-back-border" ng-show="9==badgeM.position || 10==badgeM.position || 11==badgeM.position">
+                <div class="col s12 m12 l3 center"> <img ng-src="{{badgeM.img}}" class="paddingTop" alt="{{badgeM.text}} badge greenbooks"> </div>
+                <div class="col s12 m12 l9">
+                    <p class="sectionTitle paddingTop"><span class="underlineGreen">{{badgeM.text}}</span> <a href ng-click="closeWindowP()"><i class="material-icons md-32">close</i></a></p>
+                    <p class="sub-title">Description</p>
+                    <p class="paragraph">{{badgeM.description}}</p>
+                    <p class="sub-title">Criteria</p>
+                    <p class="paragraph">{{badgeM.criteria}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="small-screen">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <p class="title">Process badges</p>
+            </div>
+        </div>
+        <div class="remove-padding">
+            <div class="row">
+                <div class="col s6 m4 l3">
+                    <a href ng-click="smallProcess(0) ">
+                        <div class="border-skill"> <img ng-src="{{processes[0].img}}" alt="{{processes[0].text}} badge greenbooks">
+                            <div ng-class="processes[0].box">
+                                <p class="inside-badge">{{processes[0].text}}</p>
+                                <div class="border-left"></div>
+                                <div class="border-right"></div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col s6 m4 l3">
+                    <a href ng-click="smallProcess(1) ">
+                        <div class="border-skill"> <img ng-src="{{processes[1].img}}" alt="{{processes[1].text}} badge greenbooks">
+                            <div ng-class="processes[1].box">
+                                <p class="inside-badge">{{processes[1].text}}</p>
+                                <div class="border-left"></div>
+                                <div class="border-right"></div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="row tabs-badge direct-badge white-back-border" ng-show="0==badgeS.position || 1==badgeS.position">
+                <div class="col s12 m12 l3 center"> <img ng-src="{{badgeS.img}}" class="paddingTop" alt="{{badgeS.text}} badge greenbooks"> </div>
+                <div class="col s12 m12 l9">
+                    <p class="sectionTitle paddingTop"><span class="underlineGreen">{{badgeS.text}}</span> <a href ng-click="closeWindowP()"><i class="material-icons md-32">close</i></a></p>
+                    <p class="sub-title">Description</p>
+                    <p class="paragraph">{{badgeS.description}}</p>
+                    <p class="sub-title">Criteria</p>
+                    <p class="paragraph">{{badgeS.criteria}}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s6 m4 l3">
+                    <a href ng-click="smallProcess(2) ">
+                        <div class="border-skill"> <img ng-src="{{processes[2].img}}" alt="{{processes[2].text}} badge greenbooks">
+                            <div ng-class="processes[2].box">
+                                <p class="inside-badge">{{processes[2].text}}</p>
+                                <div class="border-left"></div>
+                                <div class="border-right"></div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col s6 m4 l3">
+                    <a href ng-click="smallProcess(3) ">
+                        <div class="border-skill"> <img ng-src="{{processes[3].img}}" alt="{{processes[3].text}} badge greenbooks">
+                            <div ng-class="processes[3].box">
+                                <p class="inside-badge">{{processes[3].text}}</p>
+                                <div class="border-left"></div>
+                                <div class="border-right"></div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="row tabs-badge direct-badge white-back-border" ng-show="2==badgeS.position || 3==badgeS.position">
+                <div class="col s12 m12 l3 center"> <img ng-src="{{badgeS.img}}" class="paddingTop" alt="{{badgeS.text}} badge greenbooks"> </div>
+                <div class="col s12 m12 l9">
+                    <p class="sectionTitle paddingTop"><span class="underlineGreen">{{badgeS.text}}</span> <a href ng-click="closeWindowP()"><i class="material-icons md-32">close</i></a></p>
+                    <p class="sub-title">Description</p>
+                    <p class="paragraph">{{badgeS.description}}</p>
+                    <p class="sub-title">Criteria</p>
+                    <p class="paragraph">{{badgeS.criteria}}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s6 m4 l3">
+                    <a href ng-click="smallProcess(4) ">
+                        <div class="border-skill"> <img ng-src="{{processes[4].img}}" alt="{{processes[4].text}} badge greenbooks">
+                            <div ng-class="processes[4].box">
+                                <p class="inside-badge">{{processes[4].text}}</p>
+                                <div class="border-left"></div>
+                                <div class="border-right"></div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col s6 m4 l3">
+                    <a href ng-click="smallProcess(5) ">
+                        <div class="border-skill"> <img ng-src="{{processes[5].img}}" alt="{{processes[5].text}} badge greenbooks">
+                            <div ng-class="processes[5].box">
+                                <p class="inside-badge">{{processes[5].text}}</p>
+                                <div class="border-left"></div>
+                                <div class="border-right"></div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="row tabs-badge direct-badge white-back-border" ng-show="4==badgeS.position || 5==badgeS.position">
+                <div class="col s12 m12 l3 center"> <img ng-src="{{badgeS.img}}" class="paddingTop" alt="{{badgeS.text}} badge greenbooks"> </div>
+                <div class="col s12 m12 l9">
+                    <p class="sectionTitle paddingTop"><span class="underlineGreen">{{badgeS.text}}</span> <a href ng-click="closeWindowP()"><i class="material-icons md-32">close</i></a></p>
+                    <p class="sub-title">Description</p>
+                    <p class="paragraph">{{badgeS.description}}</p>
+                    <p class="sub-title">Criteria</p>
+                    <p class="paragraph">{{badgeS.criteria}}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s6 m4 l3">
+                    <a href ng-click="smallProcess(6) ">
+                        <div class="border-skill"> <img ng-src="{{processes[6].img}}" alt="{{processes[6].text}} badge greenbooks">
+                            <div ng-class="processes[6].box">
+                                <p class="inside-badge">{{processes[6].text}}</p>
+                                <div class="border-left"></div>
+                                <div class="border-right"></div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col s6 m4 l3">
+                    <a href ng-click="smallProcess(7) ">
+                        <div class="border-skill"> <img ng-src="{{processes[7].img}}" alt="{{processes[7].text}} badge greenbooks">
+                            <div ng-class="processes[7].box">
+                                <p class="inside-badge">{{processes[7].text}}</p>
+                                <div class="border-left"></div>
+                                <div class="border-right"></div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="row tabs-badge direct-badge white-back-border" ng-show="6==badgeS.position || 7==badgeS.position">
+                <div class="col s12 m12 l3 center"> <img ng-src="{{badgeS.img}}" class="paddingTop" alt="{{badgeS.text}} badge greenbooks"> </div>
+                <div class="col s12 m12 l9">
+                    <p class="sectionTitle paddingTop"><span class="underlineGreen">{{badgeS.text}}</span> <a href ng-click="closeWindowP()"><i class="material-icons md-32">close</i></a></p>
+                    <p class="sub-title">Description</p>
+                    <p class="paragraph">{{badgeS.description}}</p>
+                    <p class="sub-title">Criteria</p>
+                    <p class="paragraph">{{badgeS.criteria}}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s6 m4 l3">
+                    <a href ng-click="smallProcess(8) ">
+                        <div class="border-skill"> <img ng-src="{{processes[8].img}}" alt="{{processes[8].text}} badge greenbooks">
+                            <div ng-class="processes[8].box">
+                                <p class="inside-badge">{{processes[8].text}}</p>
+                                <div class="border-left"></div>
+                                <div class="border-right"></div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col s6 m4 l3">
+                    <a href ng-click="smallProcess(9) ">
+                        <div class="border-skill"> <img ng-src="{{processes[9].img}}" alt="{{processes[9].text}} badge greenbooks">
+                            <div ng-class="processes[9].box">
+                                <p class="inside-badge">{{processes[9].text}}</p>
+                                <div class="border-left"></div>
+                                <div class="border-right"></div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="row tabs-badge direct-badge white-back-border" ng-show="8==badgeS.position || 9==badgeS.position">
+                <div class="col s12 m12 l3 center"> <img ng-src="{{badgeS.img}}" class="paddingTop" alt="{{badgeS.text}} badge greenbooks"> </div>
+                <div class="col s12 m12 l9">
+                    <p class="sectionTitle paddingTop"><span class="underlineGreen">{{badgeS.text}}</span> <a href ng-click="closeWindowP()"><i class="material-icons md-32">close</i></a></p>
+                    <p class="sub-title">Description</p>
+                    <p class="paragraph">{{badgeS.description}}</p>
+                    <p class="sub-title">Criteria</p>
+                    <p class="paragraph">{{badgeS.criteria}}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s6 m4 l3">
+                    <a href ng-click="smallProcess(10) ">
+                        <div class="border-skill"> <img ng-src="{{processes[10].img}}" alt="{{processes[10].text}} badge greenbooks">
+                            <div ng-class="processes[10].box">
+                                <p class="inside-badge">{{processes[10].text}}</p>
+                                <div class="border-left"></div>
+                                <div class="border-right"></div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col s6 m4 l3">
+                    <a href ng-click="smallProcess(11) ">
+                        <div class="border-skill"> <img ng-src="{{processes[11].img}}" alt="{{processes[11].text}} badge greenbooks">
+                            <div ng-class="processes[11].box">
+                                <p class="inside-badge">{{processes[11].text}}</p>
+                                <div class="border-left"></div>
+                                <div class="border-right"></div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="row tabs-badge direct-badge white-back-border" ng-show="10==badgeS.position || 11==badgeS.position">
+                <div class="col s12 m12 l3 center"> <img ng-src="{{badgeS.img}}" class="paddingTop" alt="{{badgeS.text}} badge greenbooks"> </div>
+                <div class="col s12 m12 l9">
+                    <p class="sectionTitle paddingTop"><span class="underlineGreen">{{badgeS.text}}</span> <a href ng-click="closeWindowP()"><i class="material-icons md-32">close</i></a></p>
+                    <p class="sub-title">Description</p>
+                    <p class="paragraph">{{badgeS.description}}</p>
+                    <p class="sub-title">Criteria</p>
+                    <p class="paragraph">{{badgeS.criteria}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

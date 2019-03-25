@@ -1,0 +1,277 @@
+@import url(//fonts.googleapis.com/css?family=Open+Sans);
+@font-face {
+  font-family: ProximaNova-Regular;
+  src: url("ProximaNova-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal; }
+
+.background-black, .header, .separator {
+  background: #1D1C1C;
+  /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(#1D1C1C, #424242);
+  /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#1D1C1C, #424242);
+  /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#1D1C1C, #424242);
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#1D1C1C, #424242);
+  /* Standard syntax (must be last) */ }
+
+.btn, .header a, .badges a, .program a {
+  border-radius: 3px;
+  margin-top: 20px;
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 10px;
+  padding-right: 30px;
+  padding-left: 30px;
+  color: white;
+  background-color: #1a82f7;
+  background: -webkit-gradient(linear, left top, right top, from(#1a82f7), to(#40ED00));
+  background: -webkit-linear-gradient(left, #40ED00, #1a82f7);
+  background: -moz-linear-gradient(left, #40ED00, #1a82f7);
+  background: -ms-linear-gradient(left, #40ED00, #1a82f7);
+  background: -o-linear-gradient(left, #40ED00, #1a82f7); }
+
+.align-center {
+  text-align: center; }
+
+.bold-800 {
+  font-weight: 800; }
+
+.bold-600, .btn, .header a, .badges a, .program a, .clients p, .steps .all-steps .title, .separator, .badges .each-badge .title, .program .discount .main, .program .contact .main, .program .contact .name {
+  font-weight: 600; }
+
+.grey-back, .steps {
+  background: #f8f9f7; }
+
+.row {
+  display: inline-block; }
+  .row .col-4x {
+    float: left;
+    display: block;
+    width: 25%; }
+  .row .col-2x {
+    float: left;
+    display: block;
+    width: 50%; }
+
+.email-container {
+  max-width: 620px;
+  margin: 0 auto;
+  font-family: Arial, 'Open Sans', sans-serif;
+  font-size: 14px; }
+  .email-container p {
+    margin: 0;
+    line-height: 1.5; }
+  .email-container ul {
+    margin: 0; }
+  .email-container a {
+    text-decoration: none; }
+  .email-container i {
+    font-size: 16px;
+    position: absolute;
+    margin-left: -17px;
+    margin-top: 1px; }
+
+.see-browser {
+  text-align: center;
+  font-size: 10px; }
+  .see-browser a {
+    color: #1a82f7;
+    text-decoration: underline; }
+    .see-browser a:visited {
+      color: #1a82f7; }
+
+.top {
+  width: 100%;
+  padding-bottom: 20px; }
+  .top img {
+    width: 70%; }
+  .top .cel-date {
+    padding-top: 10px;
+    float: right; }
+    .top .cel-date .icon-top {
+      display: block;
+      text-align: right;
+      padding-top: 5px; }
+    .top .cel-date .space-left {
+      padding-left: 15px; }
+      .top .cel-date .space-left a {
+        color: #1a82f7; }
+        .top .cel-date .space-left a:visited {
+          color: #1a82f7; }
+
+.header {
+  position: relative;
+  padding-bottom: 20px;
+  padding-top: 20px; }
+  .header img {
+    height: 150px;
+    width: auto; }
+  .header .roi {
+    color: white;
+    padding-left: 180px; }
+    .header .roi .ld {
+      font-size: 30px;
+      margin-top: -15px; }
+    .header .roi .two-days {
+      margin-top: -10px; }
+    .header .roi img {
+      margin-left: -5px; }
+    .header .roi ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      margin-top: 20px;
+      margin-bottom: 10px; }
+    .header .roi .discount {
+      padding-top: 5px;
+      font-size: 12px; }
+  .header .register {
+    text-align: center;
+    margin-bottom: -15px; }
+  .header .image img {
+    position: absolute;
+    bottom: 0; }
+
+.clients {
+  padding-top: 30px;
+  padding-bottom: 30px; }
+  .clients p {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 18px; }
+  .clients .companies {
+    margin-top: 20px; }
+
+.steps {
+  border-top: 2px solid #E1E41B; }
+  .steps p {
+    padding-left: 10px;
+    padding-right: 10px; }
+  .steps .first-p {
+    padding-top: 20px; }
+  .steps .space-top {
+    padding-top: 10px; }
+  .steps .read-now {
+    font-style: italic; }
+  .steps .all-steps img {
+    width: 30%; }
+  .steps .all-steps .title {
+    text-transform: uppercase;
+    padding-top: 10px; }
+  .steps .all-steps .sub-title {
+    padding-top: 10px; }
+  .steps .all-steps .each-step1,
+  .steps .all-steps .each-step2 {
+    margin-top: 20px;
+    text-align: center;
+    height: 175px; }
+  .steps .all-steps .each-step1 {
+    background: #424242;
+    color: white; }
+  .steps .all-steps .each-step2 {
+    background: #E1E41B; }
+
+.separator {
+  text-align: center;
+  color: white;
+  padding: 20px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-size: 16px; }
+
+.badges {
+  text-align: center; }
+  .badges img {
+    width: 80%; }
+  .badges .each-badge .title {
+    text-transform: uppercase;
+    margin-top: -20px; }
+  .badges .each-badge .sub-title {
+    padding-top: 10px;
+    padding-left: 1%; }
+
+.testmonials iframe {
+  padding-top: 5px;
+  width: 100%; }
+
+.program a {
+  padding-right: 20px;
+  padding-left: 20px; }
+
+.program .table-button {
+  text-align: center; }
+
+.program .include-margin {
+  text-align: left; }
+
+.program table {
+  margin: 0 auto;
+  padding-right: 10px;
+  width: 100%; }
+  .program table td {
+    border-top: 2px solid #E1E41B;
+    padding: 5px;
+    padding-top: 8px;
+    padding-bottom: 8px; }
+  .program table .include-border td {
+    border-bottom: 2px solid #E1E41B; }
+
+.program .contact {
+  padding-top: 48px;
+  text-align: left; }
+  .program .contact .main {
+    font-size: 16px; }
+
+.subscribe {
+  background: #424242;
+  color: white;
+  text-align: center;
+  margin-top: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px; }
+  .subscribe a {
+    color: white; }
+    .subscribe a:visited {
+      color: white; }
+
+@media only screen and (max-width: 480px) {
+  .row {
+    display: inline-block; }
+    .row .col-4x {
+      float: left;
+      display: block;
+      width: 50%; }
+    .row .col-2x {
+      float: left;
+      display: block;
+      width: 100%; }
+  .top img {
+    width: 100%; }
+  .top .cel-date {
+    float: left;
+    padding-top: 0;
+    padding-bottom: 30px; }
+    .top .cel-date .icon-top {
+      text-align: left;
+      padding-left: 15px; }
+  .header .register {
+    margin-bottom: 0; }
+  .header .roi {
+    padding-left: 10px; }
+  .header .image {
+    display: none; }
+  .testmonials iframe {
+    height: auto; }
+  .program table {
+    margin: 0 auto; }
+  .program .contact {
+    padding-top: 20px; }
+  .program .discount {
+    padding-top: 20px; }
+  .badges .small-size {
+    padding-top: 20px; }
+  .subscribe {
+    text-align: center; } }

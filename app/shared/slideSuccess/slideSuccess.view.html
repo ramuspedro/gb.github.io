@@ -1,0 +1,62 @@
+<div class="section success">
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m6 l4 left-align">
+                <p class="sectionTitle"><span class="underlineGreen">Case Studies</span></p>
+            </div>
+        </div>
+        <div class="success-stories paddingTop2rem">
+            <div class="row center large-screen">
+                <div class="position-relative">
+                    <div ng-repeat="sL in successL">
+                        <div class="col s12 m6 l4 relativePosition borderGreenImage">
+                            <a href ui-sref="{{sL.url}}">
+                                <div class="blackBrackground cursor-pointer"> <img class="img1" ng-src="{{sL.img1}}" alt="case stories greenbooks"> <img class="img2" ng-src="{{sL.img2}}" alt="case stories greenbooks"> </div>
+                            </a>
+                        </div>
+                        <a href>
+                        	<i class="material-icons arrow-left" ng-click="successPreviousL()" ng-hide="0!=$index">keyboard_arrow_left</i>
+                        </a> 
+                        <a href>
+                        	<i class="material-icons arrow-right" ng-click="successNextL()" ng-hide="2!=$index">keyboard_arrow_right</i>
+                        </a> </div>
+                </div>
+            </div>
+            <div class="row center medium-screen">
+                <div class="position-relative">
+                    <div ng-repeat="sM in successM">
+                        <div class="col s12 m6 l4 relativePosition borderGreenImage">
+                            <a href ui-sref="{{sM.url}}">
+                                <div class="blackBrackground cursor-pointer"> <img class="img1" ng-src="{{sM.img1}}" alt="case stories greenbooks"> <img class="img2" ng-src="{{sM.img2}}" alt="case stories greenbooks"> </div>
+                            </a>
+                        </div>
+                        <a href>
+                        	<i class="material-icons arrow-left" ng-click="successPreviousM()" ng-hide="0!=$index">keyboard_arrow_left</i>
+                        </a> 
+                        <a href>
+                        	<i class="material-icons arrow-right" ng-click="successNextM()" ng-hide="1!=$index">keyboard_arrow_right</i></a> 
+                        </div>
+                </div>
+            </div>
+            <div class="row center small-screen">
+                <div class="position-relative">
+                    <div ng-repeat="sS in successS track by $index">
+                        <div class="col s12 m6 l4 relativePosition borderGreenImage">
+                            <a href ui-sref="{{sS.url}}">
+                                <div class="blackBrackground cursor-pointer"> <img class="img1" ng-src="{{sS.img1}}" alt="case stories greenbooks"> <img class="img2" ng-src="{{sS.img2}}" alt="case stories greenbooks"> </div>
+                            </a>
+                        </div>
+                        <a href>
+                        	<i class="material-icons arrow-left" ng-click="successPreviousS()" ng-hide="0!=$index">keyboard_arrow_left</i>
+                        </a>
+                        <a href>
+                        	<i class="material-icons arrow-right" ng-click="successNextS()" ng-hide="0!=$index">keyboard_arrow_right</i></a> 
+                        </div>
+                </div>
+            </div>
+            <div class="row paddingTop2rem center">
+                <div class="col s12 m8 l4 push-m2 push-l4"> <a ui-sref="success.successStories" class="btn-large waves-effect btn-greenBooks-grey cursor-pointer"><span>View all cases</span></a> </div>
+            </div>
+        </div>
+    </div>
+</div>

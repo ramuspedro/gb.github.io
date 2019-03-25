@@ -1,0 +1,27 @@
+<div class="about">
+    <div class="section">
+        <div class="each-member">
+            <div class="container">
+                <div class="row">
+                    <div class="col s12 m12 l12 name-position">
+                        <h1 class="name">{{vm.person.name}}</h1>
+                        <h2 class="position">{{vm.person.position}}</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12 m8 l5 push-m2">
+                        <div class="col pull-l5"> <img class="member-photo animated fadeIn " ng-src="{{vm.person.img1}}" ng-show="vm.switchImage" alt="Ana Carolina Tramontini greenbooks"> <img class="member-photo animated fadeIn" ng-src="{{vm.person.img2}}" ng-hide="vm.switchImage" alt="Ana Carolina Tramontini greenbooks"> </div>
+                    </div>
+                    <div class="col s12 m12 l7">
+                        <p class="main-text"> Ana is the latest talent added to GreenBooks. She has come all the way from Brazil to be a part of the GreenBooks journey. Ana comes with a mix of experience in Sales, Marketing and Project Coordination. She is qualified as an Architect and has taken to Learning and Development as a chosen area of interest. Ana owns the initiative on Digital Learning, which will catapult GreenBooks’ presence into the global arena. </p>
+                        <div class="social-icons"> <a href="{{vm.person.linkedin}}" target="_blank" class="btn-large waves-effect waves-light btn-greenBooks-grey"><i class="fa fa-linkedin fa-2x"></i></a> </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <slide-people remove="4"></slide-people>
+    </div>
+    <div class="triangleGrey"></div>
+    <div class="leftDivision"></div>
+    <div class="rightDivision"></div>
+</div>

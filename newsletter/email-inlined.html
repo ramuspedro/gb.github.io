@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>Email</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <style>
+        @import url(//fonts.googleapis.com/css?family=Open+Sans);
+        @font-face {
+            font-family: ProximaNova-Regular;
+            src: url("ProximaNova-Regular.otf") format("opentype");
+            font-weight: normal;
+            font-style: normal;
+        }
+        
+        .background-black,
+        .header,
+        .separator {
+            background: #1D1C1C;
+            /* For browsers that do not support gradients */
+            background: -webkit-linear-gradient(#1D1C1C, #424242);
+            /* For Safari 5.1 to 6.0 */
+            background: -o-linear-gradient(#1D1C1C, #424242);
+            /* For Opera 11.1 to 12.0 */
+            background: -moz-linear-gradient(#1D1C1C, #424242);
+            /* For Firefox 3.6 to 15 */
+            background: linear-gradient(#1D1C1C, #424242);
+            /* Standard syntax (must be last) */
+        }
+        
+        .btn,
+        .header a,
+        .badges a,
+        .program a {
+            border-radius: 3px;
+            margin-top: 20px;
+            text-transform: uppercase;
+            display: inline-block;
+            padding: 10px;
+            padding-right: 30px;
+            padding-left: 30px;
+            color: white;
+            background-color: #1a82f7;
+            background: -webkit-gradient(linear, left top, right top, from(#1a82f7), to(#40ED00));
+            background: -webkit-linear-gradient(left, #40ED00, #1a82f7);
+            background: -moz-linear-gradient(left, #40ED00, #1a82f7);
+            background: -ms-linear-gradient(left, #40ED00, #1a82f7);
+            background: -o-linear-gradient(left, #40ED00, #1a82f7);
+        }
+        
+        .align-center {
+            text-align: center;
+        }
+        
+        .bold-800 {
+            font-weight: 800;
+        }
+        
+        .bold-600,
+        .btn,
+        .header a,
+        .badges a,
+        .program a,
+        .clients p,
+        .steps .all-steps .title,
+        .separator,
+        .badges .each-badge .title,
+        .program .discount .main,
+        .program .contact .main,
+        .program .contact .name {
+            font-weight: 600;
+        }
+        
+        .grey-back,
+        .steps {
+            background: #f8f9f7;
+        }
+        
+        .row {
+            display: inline-block;
+        }
+        
+        .row .col-4x {
+            float: left;
+            display: block;
+            width: 25%;
+        }
+        
+        .row .col-2x {
+            float: left;
+            display: block;
+            width: 50%;
+        }
+        
+        .email-container {
+            max-width: 620px;
+            margin: 0 auto;
+            font-family: Arial, 'Open Sans', sans-serif;
+            font-size: 14px;
+        }
+        
+        .email-container p {
+            margin: 0;
+            line-height: 1.5;
+        }
+        
+        .email-container ul {
+            margin: 0;
+        }
+        
+        .email-container a {
+            text-decoration: none;
+        }
+        
+        .email-container i {
+            font-size: 16px;
+            position: absolute;
+            margin-left: -17px;
+            margin-top: 1px;
+        }
+        
+        .see-browser {
+            text-align: center;
+            font-size: 10px;
+        }
+        
+        .see-browser a {
+            color: #1a82f7;
+            text-decoration: underline;
+        }
+        
+        .see-browser a:visited {
+            color: #1a82f7;
+        }
+        
+        .top {
+            width: 100%;
+            padding-bottom: 20px;
+        }
+        
+        .top img {
+            width: 70%;
+        }
+        
+        .top .cel-date {
+            padding-top: 10px;
+            float: right;
+        }
+        
+        .top .cel-date .icon-top {
+            display: block;
+            text-align: right;
+            padding-top: 5px;
+        }
+        
+        .top .cel-date .space-left {
+            padding-left: 15px;
+        }
+        
+        .top .cel-date .space-left a {
+            color: #1a82f7;
+        }
+        
+        .top .cel-date .space-left a:visited {
+            color: #1a82f7;
+        }
+        
+        .header {
+            position: relative;
+            padding-bottom: 20px;
+            padding-top: 20px;
+        }
+        
+        .header img {
+            height: 150px;
+            width: auto;
+        }
+        
+        .header .roi {
+            color: white;
+            padding-left: 180px;
+        }
+        
+        .header .roi .ld {
+            font-size: 30px;
+            margin-top: -15px;
+        }
+        
+        .header .roi .two-days {
+            margin-top: -10px;
+        }
+        
+        .header .roi img {
+            margin-left: -5px;
+        }
+        
+        .header .roi ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        
+        .header .roi .discount {
+            padding-top: 5px;
+            font-size: 12px;
+        }
+        
+        .header .register {
+            text-align: center;
+            margin-bottom: -15px;
+        }
+        
+        .header .image img {
+            position: absolute;
+            bottom: 0;
+        }
+        
+        .clients {
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+        
+        .clients p {
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 18px;
+        }
+        
+        .clients .companies {
+            margin-top: 20px;
+        }
+        
+        .steps {
+            border-top: 2px solid #E1E41B;
+        }
+        
+        .steps p {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        
+        .steps .first-p {
+            padding-top: 20px;
+        }
+        
+        .steps .space-top {
+            padding-top: 10px;
+        }
+        
+        .steps .read-now {
+            font-style: italic;
+        }
+        
+        .steps .all-steps img {
+            width: 30%;
+        }
+        
+        .steps .all-steps .title {
+            text-transform: uppercase;
+            padding-top: 10px;
+        }
+        
+        .steps .all-steps .sub-title {
+            padding-top: 10px;
+        }
+        
+        .steps .all-steps .each-step1,
+        .steps .all-steps .each-step2 {
+            margin-top: 20px;
+            text-align: center;
+            height: 175px;
+        }
+        
+        .steps .all-steps .each-step1 {
+            background: #424242;
+            color: white;
+        }
+        
+        .steps .all-steps .each-step2 {
+            background: #E1E41B;
+        }
+        
+        .separator {
+            text-align: center;
+            color: white;
+            padding: 20px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            font-size: 16px;
+        }
+        
+        .badges {
+            text-align: center;
+        }
+        
+        .badges img {
+            width: 80%;
+        }
+        
+        .badges .each-badge .title {
+            text-transform: uppercase;
+            margin-top: -20px;
+        }
+        
+        .badges .each-badge .sub-title {
+            padding-top: 10px;
+            padding-left: 1%;
+        }
+        
+        .testmonials iframe {
+            padding-top: 5px;
+            width: 100%;
+        }
+        
+        .program a {
+            padding-right: 20px;
+            padding-left: 20px;
+        }
+        
+        .program .table-button {
+            text-align: center;
+        }
+        
+        .program .include-margin {
+            text-align: left;
+        }
+        
+        .program table {
+            margin: 0 auto;
+            padding-right: 10px;
+            width: 100%;
+        }
+        
+        .program table td {
+            border-top: 2px solid #E1E41B;
+            padding: 5px;
+            padding-top: 8px;
+            padding-bottom: 8px;
+        }
+        
+        .program table .include-border td {
+            border-bottom: 2px solid #E1E41B;
+        }
+        
+        .program .contact {
+            padding-top: 48px;
+            text-align: left;
+        }
+        
+        .program .contact .main {
+            font-size: 16px;
+        }
+        
+        .subscribe {
+            background: #424242;
+            color: white;
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+        
+        .subscribe a {
+            color: white;
+        }
+        
+        .subscribe a:visited {
+            color: white;
+        }
+        
+        @media only screen and (max-width: 480px) {
+            .row {
+                display: inline-block;
+            }
+            .row .col-4x {
+                float: left;
+                display: block;
+                width: 50%;
+            }
+            .row .col-2x {
+                float: left;
+                display: block;
+                width: 100%;
+            }
+            .top img {
+                width: 100%;
+            }
+            .top .cel-date {
+                float: left;
+                padding-top: 0;
+                padding-bottom: 30px;
+            }
+            .top .cel-date .icon-top {
+                text-align: left;
+                padding-left: 15px;
+            }
+            .header .register {
+                margin-bottom: 0;
+            }
+            .header .roi {
+                padding-left: 10px;
+            }
+            .header .image {
+                display: none;
+            }
+            .testmonials iframe {
+                height: auto;
+            }
+            .program table {
+                margin: 0 auto;
+            }
+            .program .contact {
+                padding-top: 20px;
+            }
+            .program .discount {
+                padding-top: 20px;
+            }
+            .badges .small-size {
+                padding-top: 20px;
+            }
+            .subscribe {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="email-container">
+        <div class="see-browser">
+            <p>
+                This message contains graphics. If you do not see the graphics, <a href="http://www.greenbookslearning.com/newsletter/newsletter-2016.html" target="_blank">click here</a> to view in browser
+            </p>
+        </div>
+        <div class="row top">
+            <div class="col-2x">
+                <img src="http://www.greenbookslearning.com/newsletter/logo.png">
+            </div>
+            <div class="col-2x cel-date">
+                <div class="icon-top">
+                    <i class="material-icons">phone</i> 8880 100 200
+                </div>
+                <div class="icon-top space-left">
+                    <i class="material-icons">email</i> amit@greenbooks.co.in
+                </div>
+                <div class="icon-top space-left">
+                    <i class="fa fa-twitter"></i> <a href="https://twitter.com/greenbooks" target="_blank">Follow us on twitter</a>
+                </div>
+            </div>
+        </div>
+        <div class="header">
+            <div class="roi">
+                <img src="http://www.greenbookslearning.com/newsletter/ROIimage-31.png">
+                <p class="ld">in L&D/HRD</p>
+                <p class="two-days">a 2 day intense and practical workshop on training evaluation</p>
+                <a href="http://www.greenbookslearning.com/register-roi" target="_blank">Register Now</a>
+            </div>
+            <div class="image">
+                <img src="http://www.greenbookslearning.com/newsletter/logoEvent.png">
+            </div>
+        </div>
+        <div class="clients">
+            <div>
+                <p>
+                    Some of our 300+ happy customers...
+                </p>
+            </div>
+            <div class="row">
+                <div class="col-4x companies">
+                    <img src="http://www.greenbookslearning.com/newsletter/clientnew1.png">
+                </div>
+                <div class="col-4x companies">
+                    <img src="http://www.greenbookslearning.com/newsletter/adani.png">
+                </div>
+                <div class="col-4x companies">
+                    <img src="http://www.greenbookslearning.com/newsletter/clientnew2.png">
+                </div>
+                <div class="col-4x companies">
+                    <img src="http://www.greenbookslearning.com/newsletter/Deloitte.png">
+                </div>
+                <div class="col-4x companies">
+                    <img src="http://www.greenbookslearning.com/newsletter/LT.png">
+                </div>
+                <div class="col-4x companies">
+                    <img src="http://www.greenbookslearning.com/newsletter/RN.png">
+                </div>
+                <div class="col-4x companies">
+                    <img src="http://www.greenbookslearning.com/newsletter/vodafone.png">
+                </div>
+                <div class="col-4x companies">
+                    <img src="http://www.greenbookslearning.com/newsletter/clientnew3.png">
+                </div>
+            </div>
+        </div>
+        <div class="steps">
+            <div>
+                <p class="first-p">
+                    Dear,
+                </p>
+                <p class="space-top">
+                    This ROI workshop will show you how to define metrics and collect data at '5 levels' of evaluation, isolate the training impact from other factors, and report business impact and ROI. <a href="http://www.greenbookslearning.com/competencies/measurement" class="read-now" target="_blank">Click here for program outline</a>
+                </p>
+            </div>
+        </div>
+        <div class="separator">
+            EARN YOUR ROI COMPETENCE AND MASTERY BADGES
+        </div>
+        <div class="row badges">
+            <div class="col-2x each-badge">
+                <img src="http://www.greenbookslearning.com/newsletter/badge-10.png">
+                <p class="title">COMPETENCE IN ROI</p>
+                <p class="sub-title">
+                    Earn the 'Competence in ROI' badge by successfully completing your ROI project plan by end of the workshop.
+                </p>
+            </div>
+            <div class="col-2x each-badge small-size">
+                <img src="http://www.greenbookslearning.com/newsletter/badge-11.png">
+                <p class="title">Mastery in ROI</p>
+                <p class="sub-title">
+                    Earn the 'Mastery in ROI' badge by successfully executing your ROI project within 3 to 6 months of the workshop.
+                </p>
+            </div>
+            <a href="http://www.greenbookslearning.com/about-us/digital-badges-certifications" target="_blank">Learn more</a>
+        </div>
+        <div class="separator">
+            TESTIMONIALS
+        </div>
+        <div class="testmonials">
+            <div class="row">
+                <p>Don't take our word. See what some of our earlier participants have to say about the workshop and thier learning experience...</p>
+                <div class=" video-container">
+                    <iframe width="853" height="350" src="https://www.youtube.com/embed/videoseries?list=PLZa5H4lDfTX1LpV5D9-UcvFZmPGGKEA-L" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="separator">
+            PROGRAM LOCATIONS & DATES
+        </div>
+        <div class="row program">
+            <div class="col-2x table-button">
+                <table>
+                    <tr>
+                        <td class="include-margin">Delhi</td>
+                        <td>23rd & 24th, May 2016</td>
+                    </tr>
+                    <tr>
+                        <td class="include-margin">Mumbai</td>
+                        <td>26th & 27th, May 2016</td>
+                    </tr>
+                    <tr>
+                        <td class="include-margin">Bengaluru</td>
+                        <td>30th & 31st, May 2016</td>
+                    </tr>
+                    <tr class="include-border">
+                        <td class="include-margin">Chennai</td>
+                        <td>2nd & 3rd, June 2016</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="col-2x">
+                <div class="discount">
+                    <p><span class="main">Limited Seats Available.</span> Early bird discount of 10% for registrations before 8th April 2016</p>
+                </div>
+                <div class="contact">
+                    <p class="name">Amit Subba</p>
+                    <p>8880 100 200</p>
+                    <p>amit@greenbooks.co.in</p>
+                    <!--<div class="twitter">
+                        <i class="fa fa-twitter"></i>
+                    </div>-->
+                </div>
+            </div>
+            <div class="align-center">
+                <a href="http://www.greenbookslearning.com/register-roi" target="_blank">Register Now</a>
+            </div>
+        </div>
+        <div class="subscribe">
+            <p><a href="http://www.greenbookslearning.com" target="_blank">www.greenbookslearning.com</a> | <a href="mailto:amit@greenbooks.co.in" target="_blank">Unsubscribe</a></p>
+        </div>
+    </div>
+</body>
+
+</html>

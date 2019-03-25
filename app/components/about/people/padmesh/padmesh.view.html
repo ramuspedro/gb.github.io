@@ -1,0 +1,27 @@
+<div class="about">
+    <div class="section">
+        <div class="each-member">
+            <div class="container">
+                <div class="row">
+                    <div class="col s12 m12 l12 name-position">
+                        <h1 class="name">{{vm.person.name}}</h1>
+                        <h2 class="position">{{vm.person.position}}</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12 m8 l5 push-m2">
+                        <div class="col pull-l5"> <img class="member-photo animated fadeIn " ng-src="{{vm.person.img1}}" ng-show="vm.switchImage" alt="Padmesh H greenbooks"> <img class="member-photo animated fadeIn" ng-src="{{vm.person.img2}}" ng-hide="vm.switchImage" alt="Padmesh H greenbooks"> </div>
+                    </div>
+                    <div class="col s12 m12 l7">
+                        <p class="main-text"> A HR professional who has seen action in Recruitment, HR business partner, HR Consulting, Business Development and Key Account Management over the last 15 years, Padmesh has that rare combination of functional and business experience in HR from his stints with major HR service providers like Mafoi Randstad and SHRM India. Padmesh takes to forming lasting relationships with clients with utmost ease, and is known to be a keen observer and follower of the world of business. He is a strong advocate of investing in Human Resources. He owns the Client Servicing, Talent Acquisition and Operational Excellence Initiatives at Greenbooks. </p>
+                        <div class="social-icons"> <a href="{{vm.person.linkedin}}" target="_blank" class="btn-large waves-effect waves-light btn-greenBooks-grey"><i class="fa fa-linkedin fa-2x"></i></a> </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <slide-people remove="1"></slide-people>
+    </div>
+    <div class="triangleGrey"></div>
+    <div class="leftDivision"></div>
+    <div class="rightDivision"></div>
+</div>

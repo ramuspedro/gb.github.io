@@ -1,0 +1,230 @@
+<div class="section">
+    <div class="container">
+        <h1 class="center-align whatTitle">upcoming public events</h1>
+    </div>
+</div>
+<div class="section paddingBottom5rem public-events-box">
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m6 l4 center event-box">
+                <div class="shadow-grey-box">
+                    <div class="grey-gradient-background box-background">
+                        <img src="./assets/images/events/logoEvent.png" alt="measuring ROI in L&D/HRD image">
+                    </div>
+                    <div class="content">
+                        <h5 class="grey-text-color text-bold">measuring ROI in L&D/HRD</h5>
+                        <div class="border-grey-bottom"></div>
+                        <p class="left-align" style="min-height: 9.4rem;">
+                            This program emphasizes the ROI Methodology developed by industry leader Dr. Jack Phillips. Participants will experience the application of the ROI Process model. This includes developing application...
+                        </p>
+                        <a href ui-sref="programs.measurement" class="btn-large waves-effect waves-light btn-greenBooks-grey">read more</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m6 l4 center event-box">
+                <div class="shadow-grey-box">
+                    <div class="merchants-gradient-background box-background">
+                        <img src="./assets/images/events/logo1.png" alt="negotiation skills certification workshop image">
+                    </div>
+                    <div class="content">
+                        <h5 class="merchants-text-color text-bold">negotiation skills certification workshop</h5>
+                        <div class="date-location">
+                            <div class="date">
+                                <i class="material-icons align-icon gb-color">event</i> Sept, Oct 2016
+                            </div>
+                            <div class="location">
+                                <i class="material-icons align-icon gb-color">location_on</i> 4 locations
+                            </div>
+                        </div>
+                        <p class="left-align">
+                            Strengthen and refine your negotiation skills to become an effective negotiator through the Merchants game. A virtual world simulator. A thrilling video game. A classroom experience...
+                        </p>
+                        <a href ui-sref="events.negotiation" class="btn-large waves-effect waves-light btn-greenBooks-grey">read more</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m6 l4 center event-box medium-m3">
+                <div class="shadow-grey-box">
+                    <div class="pacific-gradient-background box-background">
+                        <img src="./assets/images/events/logo3.png" alt="leadership skills certification workshop image">
+                    </div>
+                    <div class="content">
+                        <h5 class="pacific-text-color text-bold">leadership skills certification workshop</h5>
+                        <div class="date-location">
+                            <div class="date">
+                                <i class="material-icons align-icon gb-color">event</i> Sept, Oct 2016
+                            </div>
+                            <div class="location">
+                                <i class="material-icons align-icon gb-color">location_on</i> 4 locations
+                            </div>
+                        </div>
+                        <p class="left-align">
+                            Strengthen the leadership skills needed for managing high-performance teams through the Pacific game. A virtual world simulator. A thrilling video game. A classroom experience...
+                        </p>
+                        <a href ui-sref="events.leadership" class="btn-large waves-effect waves-light btn-greenBooks-grey">read more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="triangleWhite"></div>
+<div class="leftDivision"></div>
+<div class="rightDivision"></div>
+<div class="section training-schedule paddingTop5rem paddingBottom5rem greyBackground">
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m12 l12 paddingBottom2rem">
+                <select ng-model="vm.date" ng-options="month.name for month in vm.months">
+                </select>
+            </div>
+            <div class="col s12 m12 l12 each-box animated fadeInLeft" ng-show="vm.date.value == 0 || vm.date.value == 1">
+                <img src="./assets/images/events/logo3.png" alt="negotiation skills certification workshop image">
+                <div class="training-name pacific-text-color text-bold">
+                    leadership skills certification workshop
+                </div>
+                <div class="image-city">
+                    <div class="city text-bold center-align">
+                        Mumbai
+                    </div>
+                    <div class="date text-bold center-align">
+                        19th & 20th, Sept 2016
+                    </div>
+                </div>
+                <div class="action-button">
+                    <a href ui-sref="events.leadership" class="btn-large waves-effect waves-light btn-greenBooks-grey">read more</a>
+                    <a href ui-sref="register" class="btn-large waves-effect waves-light btn-greenBooks-grey btn-gradient-gb">register now</a>
+                </div>
+            </div>
+            <div class="col s12 m12 l12 each-box animated fadeInLeft" ng-show="vm.date.value == 0 || vm.date.value == 1">
+                <img src="./assets/images/events/logo1.png" alt="negotiation skills certification workshop image">
+                <div class="training-name merchants-text-color text-bold">
+                    negotiation skills certification workshop
+                </div>
+                <div class="image-city">
+                    <div class="city text-bold center-align">
+                        Mumbai
+                    </div>
+                    <div class="date text-bold center-align">
+                        22nd & 23rd, Sept 2016
+                    </div>
+                </div>
+                <div class="action-button">
+                    <a href ui-sref="events.negotiation" class="btn-large waves-effect waves-light btn-greenBooks-grey">read more</a>
+                    <a href ui-sref="register" class="btn-large waves-effect waves-light btn-greenBooks-grey btn-gradient-gb">register now</a>
+                </div>
+            </div>
+            <div class="col s12 m12 l12 each-box animated fadeInLeft" ng-show="vm.date.value == 0 || vm.date.value == 1">
+                <img src="./assets/images/events/logo3.png" alt="negotiation skills certification workshop image">
+                <div class="training-name pacific-text-color text-bold">
+                    leadership skills certification workshop
+                </div>
+                <div class="image-city">
+                    <div class="city text-bold center-align">
+                        Bangalore
+                    </div>
+                    <div class="date text-bold center-align">
+                        26th & 27th, Sept 2016
+                    </div>
+                </div>
+                <div class="action-button">
+                    <a href ui-sref="events.leadership" class="btn-large waves-effect waves-light btn-greenBooks-grey">read more</a>
+                    <a href ui-sref="register" class="btn-large waves-effect waves-light btn-greenBooks-grey btn-gradient-gb">register now</a>
+                </div>
+            </div>
+            <div class="col s12 m12 l12 each-box animated fadeInLeft" ng-show="vm.date.value == 0 || vm.date.value == 1">
+                <img src="./assets/images/events/logo1.png" alt="negotiation skills certification workshop image">
+                <div class="training-name merchants-text-color text-bold">
+                    negotiation skills certification workshop
+                </div>
+                <div class="image-city">
+                    <div class="city text-bold center-align">
+                        Bangalore
+                    </div>
+                    <div class="date text-bold center-align">
+                        29th & 30th, Sept 2016
+                    </div>
+                </div>
+                <div class="action-button">
+                    <a href ui-sref="events.negotiation" class="btn-large waves-effect waves-light btn-greenBooks-grey">read more</a>
+                    <a href ui-sref="register" class="btn-large waves-effect waves-light btn-greenBooks-grey btn-gradient-gb">register now</a>
+                </div>
+            </div>
+            <div class="col s12 m12 l12 each-box animated fadeInLeft" ng-show="vm.date.value == 0 || vm.date.value == 2">
+                <img src="./assets/images/events/logo3.png" alt="negotiation skills certification workshop image">
+                <div class="training-name pacific-text-color text-bold">
+                    leadership skills certification workshop
+                </div>
+                <div class="image-city">
+                    <div class="city text-bold center-align">
+                        New Delhi
+                    </div>
+                    <div class="date text-bold center-align">
+                        3rd & 4th, Oct 2016
+                    </div>
+                </div>
+                <div class="action-button">
+                    <a href ui-sref="events.leadership" class="btn-large waves-effect waves-light btn-greenBooks-grey">read more</a>
+                    <a href ui-sref="register" class="btn-large waves-effect waves-light btn-greenBooks-grey btn-gradient-gb">register now</a>
+                </div>
+            </div>
+            <div class="col s12 m12 l12 each-box animated fadeInLeft" ng-show="vm.date.value == 0 || vm.date.value == 2">
+                <img src="./assets/images/events/logo1.png" alt="negotiation skills certification workshop image">
+                <div class="training-name merchants-text-color text-bold">
+                    negotiation skills certification workshop
+                </div>
+                <div class="image-city">
+                    <div class="city text-bold center-align">
+                        New Delhi
+                    </div>
+                    <div class="date text-bold center-align">
+                        6rd & 7th, Oct 2016
+                    </div>
+                </div>
+                <div class="action-button">
+                    <a href ui-sref="events.negotiation" class="btn-large waves-effect waves-light btn-greenBooks-grey">read more</a>
+                    <a href ui-sref="register" class="btn-large waves-effect waves-light btn-greenBooks-grey btn-gradient-gb">register now</a>
+                </div>
+            </div>
+            <div class="col s12 m12 l12 each-box animated fadeInLeft" ng-show="vm.date.value == 0 || vm.date.value == 2">
+                <img src="./assets/images/events/logo3.png" alt="negotiation skills certification workshop image">
+                <div class="training-name pacific-text-color text-bold">
+                    leadership skills certification workshop
+                </div>
+                <div class="image-city">
+                    <div class="city text-bold center-align">
+                        Chennai
+                    </div>
+                    <div class="date text-bold center-align">
+                        20th & 21st, Oct 2016
+                    </div>
+                </div>
+                <div class="action-button">
+                    <a href ui-sref="events.leadership" class="btn-large waves-effect waves-light btn-greenBooks-grey">read more</a>
+                    <a href ui-sref="register" class="btn-large waves-effect waves-light btn-greenBooks-grey btn-gradient-gb">register now</a>
+                </div>
+            </div>
+            <div class="col s12 m12 l12 each-box animated fadeInLeft" ng-show="vm.date.value == 0 || vm.date.value == 2">
+                <img src="./assets/images/events/logo1.png" alt="negotiation skills certification workshop image">
+                <div class="training-name merchants-text-color text-bold">
+                    negotiation skills certification workshop
+                </div>
+                <div class="image-city">
+                    <div class="city text-bold center-align">
+                        Chennai
+                    </div>
+                    <div class="date text-bold center-align">
+                        24th & 25th, Oct 2016
+                    </div>
+                </div>
+                <div class="action-button">
+                    <a href ui-sref="events.negotiation" class="btn-large waves-effect waves-light btn-greenBooks-grey">read more</a>
+                    <a href ui-sref="register" class="btn-large waves-effect waves-light btn-greenBooks-grey btn-gradient-gb">register now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="triangleGrey"></div>
+<div class="leftDivision"></div>
+<div class="rightDivision"></div>

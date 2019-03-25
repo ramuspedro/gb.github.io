@@ -1,0 +1,402 @@
+<!-- <div class="triangleGrey"></div><div class="leftDivisionGreyBack"></div><div class="rightDivisionGreyBack"></div>-->
+<div class="section greyBackground section-badge">
+    <div class="large-screen">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <h2 class="title">Accomplishment badges</h2>
+            </div>
+        </div>
+        <div class="remove-padding">
+            <div class="row">
+                <div class="col s6 m4 l3">
+                    <a href ng-click="largeAccomp(0) ">
+                        <div class="border-skill"> <img ng-src="{{accomplishment[0].img}}" alt="{{accomplishment[0].text}} badge greenbooks">
+                            <div ng-class="accomplishment[0].box">
+                                <p class="inside-badge">{{accomplishment[0].text}}</p>
+                                <div class="border-left"></div>
+                                <div class="border-right"></div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col s6 m4 l3">
+                    <a href ng-click="largeAccomp(1) ">
+                        <div class="border-skill"> <img ng-src="{{accomplishment[1].img}}" alt="{{accomplishment[1].text}} badge greenbooks">
+                            <div ng-class="accomplishment[1].box">
+                                <p class="inside-badge">{{accomplishment[1].text}}</p>
+                                <div class="border-left"></div>
+                                <div class="border-right"></div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col s6 m4 l3">
+                    <a href ng-click="largeAccomp(2) ">
+                        <div class="border-skill"> <img ng-src="{{accomplishment[2].img}}" alt="{{accomplishment[2].text}} badge greenbooks">
+                            <div ng-class="accomplishment[2].box">
+                                <p class="inside-badge">{{accomplishment[2].text}}</p>
+                                <div class="border-left"></div>
+                                <div class="border-right"></div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col s6 m4 l3">
+                    <a href ng-click="largeAccomp(3) ">
+                        <div class="border-skill"> <img ng-src="{{accomplishment[3].img}}" alt="{{accomplishment[3].text}} badge greenbooks">
+                            <div ng-class="accomplishment[3].box">
+                                <p class="inside-badge">{{accomplishment[3].text}}</p>
+                                <div class="border-left"></div>
+                                <div class="border-right"></div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="row tabs-badge direct-badge white-back-border" ng-show="0==accompL.position || 1==accompL.position || 2==accompL.position || 3==accompL.position">
+                <div class="col s12 m12 l3 center"> <img ng-src="{{accompL.img}}" class="paddingTop" alt="{{accompL.text}} badge greenbooks"> </div>
+                <div class="col s12 m12 l9">
+                    <p class="sectionTitle paddingTop"><span class="underlineGreen">{{accompL.text}}</span> <a href ng-click="closeWindow()"><i class="material-icons md-32">close</i></a></p>
+                    <p class="sub-title">Description</p>
+                    <p class="paragraph">{{accompL.description}}</p>
+                    <p class="sub-title">Criteria</p>
+                    <p class="paragraph">{{accompL.criteria}}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s6 m4 l3">
+                    <a href ng-click="largeAccomp(4) ">
+                        <div class="border-skill"> <img ng-src="{{accomplishment[4].img}}" alt="{{accomplishment[4].text}} badge greenbooks">
+                            <div ng-class="accomplishment[4].box">
+                                <p class="inside-badge">{{accomplishment[4].text}}</p>
+                                <div class="border-left"></div>
+                                <div class="border-right"></div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col s6 m4 l3">
+                    <a href ng-click="largeAccomp(5) ">
+                        <div class="border-skill"> <img ng-src="{{accomplishment[5].img}}" alt="{{accomplishment[5].text}} badge greenbooks">
+                            <div ng-class="accomplishment[5].box">
+                                <p class="inside-badge">{{accomplishment[5].text}}</p>
+                                <div class="border-left"></div>
+                                <div class="border-right"></div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col s6 m4 l3">
+                    <a href ng-click="largeAccomp(6) ">
+                        <div class="border-skill"> <img ng-src="{{accomplishment[6].img}}" alt="{{accomplishment[6].text}} badge greenbooks">
+                            <div ng-class="accomplishment[6].box">
+                                <p class="inside-badge">{{accomplishment[6].text}}</p>
+                                <div class="border-left"></div>
+                                <div class="border-right"></div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col s6 m4 l3">
+                    <a href ng-click="largeAccomp(7) ">
+                        <div class="border-skill"> <img ng-src="{{accomplishment[7].img}}" alt="{{accomplishment[7].text}} badge greenbooks">
+                            <div ng-class="accomplishment[7].box">
+                                <p class="inside-badge">{{accomplishment[7].text}}</p>
+                                <div class="border-left"></div>
+                                <div class="border-right"></div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="row tabs-badge direct-badge white-back-border" ng-show="4==accompL.position || 5==accompL.position || 6==accompL.position || 7==accompL.position">
+                <div class="col s12 m12 l3 center"> <img ng-src="{{accompL.img}}" class="paddingTop" alt="{{accompL.text}} badge greenbooks"> </div>
+                <div class="col s12 m12 l9">
+                    <p class="sectionTitle paddingTop"><span class="underlineGreen">{{accompL.text}}</span> <a href ng-click="closeWindow()"><i class="material-icons md-32">close</i></a></p>
+                    <p class="sub-title">Description</p>
+                    <p class="paragraph">{{accompL.description}}</p>
+                    <p class="sub-title">Criteria</p>
+                    <p class="paragraph">{{accompL.criteria}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="medium-screen">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <p class="title">Process badges</p>
+            </div>
+        </div>
+        <div class="remove-padding">
+            <div class="row">
+                <div class="col s6 m4 l3">
+                    <a href ng-click="mediumAccomp(0) ">
+                        <div class="border-skill"> <img ng-src="{{accomplishment[0].img}}" alt="{{accomplishment[0].text}} badge greenbooks">
+                            <div ng-class="accomplishment[0].box">
+                                <p class="inside-badge">{{accomplishment[0].text}}</p>
+                                <div class="border-left"></div>
+                                <div class="border-right"></div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col s6 m4 l3">
+                    <a href ng-click="mediumAccomp(1) ">
+                        <div class="border-skill"> <img ng-src="{{accomplishment[1].img}}" alt="{{accomplishment[1].text}} badge greenbooks">
+                            <div ng-class="accomplishment[1].box">
+                                <p class="inside-badge">{{accomplishment[1].text}}</p>
+                                <div class="border-left"></div>
+                                <div class="border-right"></div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col s6 m4 l3">
+                    <a href ng-click="mediumAccomp(2) ">
+                        <div class="border-skill"> <img ng-src="{{accomplishment[2].img}}" alt="{{accomplishment[2].text}} badge greenbooks">
+                            <div ng-class="accomplishment[2].box">
+                                <p class="inside-badge">{{accomplishment[2].text}}</p>
+                                <div class="border-left"></div>
+                                <div class="border-right"></div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="row tabs-badge direct-badge white-back-border" ng-show="0==accompM.position || 1==accompM.position || 2==accompM.position">
+                <div class="col s12 m12 l3 center"> <img ng-src="{{accompM.img}}" alt="{{accompM.text}} badge greenbooks" class="paddingTop"> </div>
+                <div class="col s12 m12 l9">
+                    <p class="sectionTitle paddingTop"><span class="underlineGreen">{{accompM.text}}</span> <a href ng-click="closeWindow()"><i class="material-icons md-32">close</i></a></p>
+                    <p class="sub-title">Description</p>
+                    <p class="paragraph">{{accompM.description}}</p>
+                    <p class="sub-title">Criteria</p>
+                    <p class="paragraph">{{accompM.criteria}}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s6 m4 l3">
+                    <a href ng-click="mediumAccomp(3) ">
+                        <div class="border-skill"> <img ng-src="{{accomplishment[3].img}}" alt="{{accomplishment[3].text}} badge greenbooks">
+                            <div ng-class="accomplishment[3].box">
+                                <p class="inside-badge">{{accomplishment[3].text}}</p>
+                                <div class="border-left"></div>
+                                <div class="border-right"></div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col s6 m4 l3">
+                    <a href ng-click="mediumAccomp(4) ">
+                        <div class="border-skill"> <img ng-src="{{accomplishment[4].img}}" alt="{{accomplishment[4].text}} badge greenbooks">
+                            <div ng-class="accomplishment[4].box">
+                                <p class="inside-badge">{{accomplishment[4].text}}</p>
+                                <div class="border-left"></div>
+                                <div class="border-right"></div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col s6 m4 l3">
+                    <a href ng-click="mediumAccomp(5) ">
+                        <div class="border-skill"> <img ng-src="{{accomplishment[5].img}}" alt="{{accomplishment[5].text}} badge greenbooks">
+                            <div ng-class="accomplishment[5].box">
+                                <p class="inside-badge">{{accomplishment[5].text}}</p>
+                                <div class="border-left"></div>
+                                <div class="border-right"></div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="row tabs-badge direct-badge white-back-border" ng-show="3==accompM.position || 4==accompM.position || 5==accompM.position">
+                <div class="col s12 m12 l3 center"> <img ng-src="{{accompM.img}}" class="paddingTop" alt="{{accompM.text}} badge greenbooks"> </div>
+                <div class="col s12 m12 l9">
+                    <p class="sectionTitle paddingTop"><span class="underlineGreen">{{accompM.text}}</span> <a href ng-click="closeWindow()"><i class="material-icons md-32">close</i></a></p>
+                    <p class="sub-title">Description</p>
+                    <p class="paragraph">{{accompM.description}}</p>
+                    <p class="sub-title">Criteria</p>
+                    <p class="paragraph">{{accompM.criteria}}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s6 m4 l3">
+                    <a href ng-click="mediumAccomp(6) ">
+                        <div class="border-skill"> <img ng-src="{{accomplishment[6].img}}" alt="{{accomplishment[6].text}} badge greenbooks">
+                            <div ng-class="accomplishment[6].box">
+                                <p class="inside-badge">{{accomplishment[6].text}}</p>
+                                <div class="border-left"></div>
+                                <div class="border-right"></div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col s6 m4 l3">
+                    <a href ng-click="mediumAccomp(7) ">
+                        <div class="border-skill"> <img ng-src="{{accomplishment[7].img}}" alt="{{accomplishment[7].text}} badge greenbooks">
+                            <div ng-class="accomplishment[7].box">
+                                <p class="inside-badge">{{accomplishment[7].text}}</p>
+                                <div class="border-left"></div>
+                                <div class="border-right"></div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="row tabs-badge direct-badge white-back-border" ng-show="6==accompM.position || 7==accompM.position || 8==accompM.position">
+                <div class="col s12 m12 l3 center"> <img ng-src="{{accompM.img}}" class="paddingTop" alt="{{accompM.text}} badge greenbooks"> </div>
+                <div class="col s12 m12 l9">
+                    <p class="sectionTitle paddingTop"><span class="underlineGreen">{{accompM.text}}</span> <a href ng-click="closeWindow()"><i class="material-icons md-32">close</i></a></p>
+                    <p class="sub-title">Description</p>
+                    <p class="paragraph">{{accompM.description}}</p>
+                    <p class="sub-title">Criteria</p>
+                    <p class="paragraph">{{accompM.criteria}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="small-screen">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <p class="title">Process badges</p>
+            </div>
+        </div>
+        <div class="remove-padding">
+            <div class="row">
+                <div class="col s6 m4 l3">
+                    <a href ng-click="smallAccomp(0) ">
+                        <div class="border-skill"> <img ng-src="{{accomplishment[0].img}}" alt="{{accomplishment[0].text}} badge greenbooks">
+                            <div ng-class="accomplishment[0].box">
+                                <p class="inside-badge">{{accomplishment[0].text}}</p>
+                                <div class="border-left"></div>
+                                <div class="border-right"></div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col s6 m4 l3">
+                    <a href ng-click="smallAccomp(1) ">
+                        <div class="border-skill"> <img ng-src="{{accomplishment[1].img}}" alt="{{accomplishment[1].text}} badge greenbooks">
+                            <div ng-class="accomplishment[1].box">
+                                <p class="inside-badge">{{accomplishment[1].text}}</p>
+                                <div class="border-left"></div>
+                                <div class="border-right"></div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="row tabs-badge direct-badge white-back-border" ng-show="0==accompS.position || 1==accompS.position">
+                <div class="col s12 m12 l3 center"> <img ng-src="{{accompS.img}}" class="paddingTop" alt="{{accompS.text}} badge greenbooks"> </div>
+                <div class="col s12 m12 l9">
+                    <p class="sectionTitle paddingTop"><span class="underlineGreen">{{accompS.text}}</span> <a href ng-click="closeWindow()"><i class="material-icons md-32">close</i></a></p>
+                    <p class="sub-title">Description</p>
+                    <p class="paragraph">{{accompS.description}}</p>
+                    <p class="sub-title">Criteria</p>
+                    <p class="paragraph">{{accompS.criteria}}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s6 m4 l3">
+                    <a href ng-click="smallAccomp(2) ">
+                        <div class="border-skill"> <img ng-src="{{accomplishment[2].img}}" alt="{{accomplishment[2].text}} badge greenbooks">
+                            <div ng-class="accomplishment[2].box">
+                                <p class="inside-badge">{{accomplishment[2].text}}</p>
+                                <div class="border-left"></div>
+                                <div class="border-right"></div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col s6 m4 l3">
+                    <a href ng-click="smallAccomp(3) ">
+                        <div class="border-skill"> <img ng-src="{{accomplishment[3].img}}" alt="{{accomplishment[3].text}} badge greenbooks">
+                            <div ng-class="accomplishment[3].box">
+                                <p class="inside-badge">{{accomplishment[3].text}}</p>
+                                <div class="border-left"></div>
+                                <div class="border-right"></div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="row tabs-badge direct-badge white-back-border" ng-show="2==accompS.position || 3==accompS.position">
+                <div class="col s12 m12 l3 center"> <img ng-src="{{accompS.img}}" class="paddingTop" alt="{{accompS.text}} badge greenbooks"> </div>
+                <div class="col s12 m12 l9">
+                    <p class="sectionTitle paddingTop"><span class="underlineGreen">{{accompS.text}}</span> <a href ng-click="closeWindow()"><i class="material-icons md-32">close</i></a></p>
+                    <p class="sub-title">Description</p>
+                    <p class="paragraph">{{accompS.description}}</p>
+                    <p class="sub-title">Criteria</p>
+                    <p class="paragraph">{{accompS.criteria}}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s6 m4 l3">
+                    <a href ng-click="smallAccomp(4) ">
+                        <div class="border-skill"> <img ng-src="{{accomplishment[4].img}}" alt="{{accomplishment[4].text}} badge greenbooks">
+                            <div ng-class="accomplishment[4].box">
+                                <p class="inside-badge">{{accomplishment[4].text}}</p>
+                                <div class="border-left"></div>
+                                <div class="border-right"></div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col s6 m4 l3">
+                    <a href ng-click="smallAccomp(5) ">
+                        <div class="border-skill"> <img ng-src="{{accomplishment[5].img}}" alt="{{accomplishment[5].text}} badge greenbooks">
+                            <div ng-class="accomplishment[5].box">
+                                <p class="inside-badge">{{accomplishment[5].text}}</p>
+                                <div class="border-left"></div>
+                                <div class="border-right"></div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="row tabs-badge direct-badge white-back-border" ng-show="4==accompS.position || 5==accompS.position">
+                <div class="col s12 m12 l3 center"> <img ng-src="{{accompS.img}}" class="paddingTop" alt="{{accompS.text}} badge greenbooks"> </div>
+                <div class="col s12 m12 l9">
+                    <p class="sectionTitle paddingTop"><span class="underlineGreen">{{accompS.text}}</span> <a href ng-click="closeWindow()"><i class="material-icons md-32">close</i></a></p>
+                    <p class="sub-title">Description</p>
+                    <p class="paragraph">{{accompS.description}}</p>
+                    <p class="sub-title">Criteria</p>
+                    <p class="paragraph">{{accompS.criteria}}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s6 m4 l3">
+                    <a href ng-click="smallAccomp(6) ">
+                        <div class="border-skill"> <img ng-src="{{accomplishment[6].img}}" alt="{{accomplishment[6].text}} badge greenbooks">
+                            <div ng-class="accomplishment[6].box">
+                                <p class="inside-badge">{{accomplishment[6].text}}</p>
+                                <div class="border-left"></div>
+                                <div class="border-right"></div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col s6 m4 l3">
+                    <a href ng-click="smallAccomp(7) ">
+                        <div class="border-skill"> <img ng-src="{{accomplishment[7].img}}" alt="{{accomplishment[7].text}} badge greenbooks">
+                            <div ng-class="accomplishment[7].box">
+                                <p class="inside-badge">{{accomplishment[7].text}}</p>
+                                <div class="border-left"></div>
+                                <div class="border-right"></div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="row tabs-badge direct-badge white-back-border" ng-show="6==accompS.position || 7==accompS.position">
+                <div class="col s12 m12 l3 center"> <img ng-src="{{accompS.img}}" class="paddingTop" alt="{{accompS.text}} badge greenbooks"> </div>
+                <div class="col s12 m12 l9">
+                    <p class="sectionTitle paddingTop"><span class="underlineGreen">{{accompS.text}}</span> <a href ng-click="closeWindow()"><i class="material-icons md-32">close</i></a></p>
+                    <p class="sub-title">Description</p>
+                    <p class="paragraph">{{accompS.description}}</p>
+                    <p class="sub-title">Criteria</p>
+                    <p class="paragraph">{{accompS.criteria}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

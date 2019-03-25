@@ -1,0 +1,456 @@
+// Variables
+$black-email: #424242 !default;
+$yellow-email: #E1E41B !default;
+$blue-email: #1a82f7 !default;
+@import url(//fonts.googleapis.com/css?family=Open+Sans);
+@font-face {
+    font-family: ProximaNova-Regular;
+    src: url("ProximaNova-Regular.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+.background-black {
+    background: #1D1C1C;
+    /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#1D1C1C, $black-email);
+    /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#1D1C1C, $black-email);
+    /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#1D1C1C, $black-email);
+    /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#1D1C1C, $black-email);
+    /* Standard syntax (must be last) */
+}
+
+.btn {
+    border-radius: 3px;
+    margin-top: 20px;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 10px;
+    padding-right: 30px;
+    padding-left: 30px;
+    color: white;
+    @extend .bold-600;
+    background-color: $blue-email;
+    background: -webkit-gradient(linear, left top, right top, from($blue-email), to(#40ED00));
+    background: -webkit-linear-gradient(left, #40ED00, $blue-email);
+    background: -moz-linear-gradient(left, #40ED00, $blue-email);
+    background: -ms-linear-gradient(left, #40ED00, $blue-email);
+    background: -o-linear-gradient(left, #40ED00, $blue-email);
+}
+
+.align-center {
+    text-align: center;
+}
+
+.bold-800 {
+    font-weight: 800;
+}
+
+.bold-600 {
+    font-weight: 600;
+}
+
+.grey-back {
+    background: #f8f9f7;
+}
+
+.row {
+    display: inline-block;
+    .col-4x {
+        float: left;
+        display: block;
+        width: 25%;
+    }
+    .col-2x {
+        float: left;
+        display: block;
+        width: 50%;
+    }
+}
+
+.email-container {
+    max-width: 620px;
+    margin: 0 auto;
+    p {
+        margin: 0;
+        line-height: 1.5;
+    }
+    ul {
+        margin: 0;
+    }
+    a {
+        text-decoration: none;
+    }
+    font-family: //"ProximaNova-Regular",
+    Arial,
+    'Open Sans',
+    sans-serif;
+    font-size: 14px;
+    i {
+        font-size: 16px;
+        position: absolute;
+        margin-left: -17px;
+        margin-top: 1px;
+    }
+}
+
+.see-browser {
+    text-align: center;
+    font-size: 10px;
+    a {
+        color: $blue-email;
+        text-decoration: underline;
+        &:visited {
+            color: $blue-email;
+        }
+    }
+}
+
+.top {
+    width: 100%;
+    padding-bottom: 20px;
+    img {
+        width: 70%;
+    }
+    .cel-date {
+        padding-top: 10px;
+        float: right;
+        .icon-top {
+            display: block;
+            text-align: right;
+            padding-top: 5px;
+        }
+        .space-left {
+            padding-left: 15px;
+            a {
+                color: $blue-email;
+                &:visited {
+                    color: $blue-email;
+                }
+            }
+        }
+    }
+}
+
+.header {
+    @extend .background-black;
+    position: relative;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    img {
+        height: 150px;
+        width: auto;
+    }
+    //    .content {
+    //        text-align: center;
+    //        .big-space-top {
+    //            padding-top: 40px;
+    //            font-size: 18px;
+    //        }
+    //        .space-top {
+    //            padding-top: 10px;
+    //        }
+    //        p {
+    //            color: white;
+    //            text-align: center;
+    //            @extend .bold-600;
+    //        }
+    //    }
+    .roi {
+        color: white;
+        padding-left: 180px;
+        .ld {
+            font-size: 30px;
+            margin-top: -15px;
+        }
+        .two-days {
+            margin-top: -10px;
+        }
+        img {
+            margin-left: -5px;
+        }
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        .discount {
+            padding-top: 5px;
+            font-size: 12px;
+        }
+    }
+    a {
+        @extend .btn;
+    }
+    .register {
+        text-align: center;
+        margin-bottom: -15px;
+    }
+    .image {
+        img {
+            position: absolute;
+            bottom: 0;
+        }
+    }
+}
+
+.clients {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    p {
+        text-align: center;
+        text-transform: uppercase;
+        @extend .bold-600;
+        font-size: 18px;
+    }
+    .companies {
+        margin-top: 20px;
+    }
+}
+
+.steps {
+    border-top: 2px solid $yellow-email;
+    @extend .grey-back;
+    p {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .first-p {
+        padding-top: 20px;
+    }
+    .space-top {
+        padding-top: 10px;
+    }
+    .read-now {
+        font-style: italic;
+    }
+    .all-steps {
+        img {
+            width: 30%;
+        }
+        .title {
+            @extend .bold-600;
+            text-transform: uppercase;
+            padding-top: 10px;
+        }
+        .sub-title {
+            padding-top: 10px;
+        }
+        .each-step1,
+        .each-step2 {
+            margin-top: 20px;
+            text-align: center;
+            height: 175px;
+        }
+        .each-step1 {
+            background: $black-email;
+            color: white;
+        }
+        .each-step2 {
+            background: $yellow-email;
+        }
+    }
+}
+
+.separator {
+    @extend .background-black;
+    text-align: center;
+    color: white;
+    padding: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    @extend .bold-600;
+    font-size: 16px;
+}
+
+.badges {
+    text-align: center;
+    img {
+        width: 80%;
+    }
+    .each-badge {
+        .title {
+            @extend .bold-600;
+            text-transform: uppercase;
+            margin-top: -20px;
+        }
+        .sub-title {
+            padding-top: 10px;
+            padding-left: 1%;
+        }
+    }
+    a {
+        @extend .btn;
+    }
+}
+
+.testmonials {
+    iframe {
+        padding-top: 5px;
+        width: 100%;
+    }
+}
+
+.program {
+    a {
+        @extend .btn;
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+    .table-button {
+        text-align: center;
+    }
+    .include-margin {
+        text-align: left;
+    }
+    table {
+        margin: 0 auto;
+        padding-right: 10px;
+        width: 100%;
+        td {
+            border-top: 2px solid $yellow-email;
+            padding: 5px;
+            padding-top: 8px;
+            padding-bottom: 8px;
+        }
+        .include-border {
+            td {
+                border-bottom: 2px solid $yellow-email;
+            }
+        }
+    }
+    .discount {
+        .main {
+            @extend .bold-600;
+        }
+    }
+    .contact {
+        padding-top: 48px;
+        text-align: left;
+        .main {
+            @extend .bold-600;
+            font-size: 16px;
+        }
+        .name {
+            @extend .bold-600;
+        }
+    }
+}
+
+.subscribe {
+    background: $black-email;
+    color: white;
+    text-align: center;
+    //    display: block;
+    margin-top: 30px;
+    //    margin-bottom: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    a {
+        color: white;
+        &:visited {
+            color: white;
+        }
+    }
+    //    clear: both;
+    //    padding-left: 10px;
+    //    padding-right: 10px;
+    //    .container {
+    //        padding-bottom: 20px;
+    //        padding-top: 20px;
+    //    }
+    //    .cont-sub {
+    //        display: inline-block;
+    //    }
+    //    .number {
+    //        display: inline-block;
+    //        float: right;
+    //        text-align: right;
+    //        a {
+    //            padding-top: 5px;
+    //            color: white;
+    //        }
+    //    }
+}
+
+@media only screen and (max-width: 480px) {
+    .row {
+        display: inline-block;
+        .col-4x {
+            float: left;
+            display: block;
+            width: 50%;
+        }
+        .col-2x {
+            float: left;
+            display: block;
+            width: 100%;
+        }
+    }
+    .top {
+        img {
+            width: 100%;
+        }
+        .cel-date {
+            float: left;
+            padding-top: 0;
+            padding-bottom: 30px;
+            .icon-top {
+                text-align: left;
+                padding-left: 15px;
+            }
+        }
+    }
+    .header {
+        .register {
+            margin-bottom: 0;
+        }
+        .roi {
+            padding-left: 10px;
+        }
+        .image {
+            display: none;
+        }
+    }
+    .testmonials {
+        iframe {
+            height: auto;
+        }
+    }
+    .program {
+        table {
+            margin: 0 auto;
+        }
+        .contact {
+            padding-top: 20px;
+        }
+        .discount {
+            padding-top: 20px;
+        }
+    }
+    .badges {
+        .small-size {
+            padding-top: 20px;
+        }
+    }
+    .subscribe {
+        //        .cont-sub {
+        //            display: block;
+        //        }
+        //        .number {
+        //            display: block;
+        //            float: none;
+        //            text-align: left;
+        //            padding-left: 15px;
+        //            a {
+        //                margin-left: -15px;
+        //            }
+        //        }
+        text-align: center;
+    }
+}

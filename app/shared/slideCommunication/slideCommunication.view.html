@@ -1,0 +1,56 @@
+<div class="section communicationDirec greyBackground">
+    <div class="container metho-boxes">
+        <h2 class="center-align methoTitle">Other communication programs</h2>
+        <div class="row large-screen">
+            <div class="position-relative">
+                <div ng-repeat="cL in communicationL">
+                    <div class="col s12 m6 l4">
+                        <a href ui-sref="{{cL.url}}">
+                            <div class="blackBackground cursor-pointer"> <img ng-src="{{cL.img}}" alt="{{cL.name}} greenbooks">
+                                <div class="textInside center">
+                                    <p>{{cL.name}}</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href><i class="material-icons arrow-left" ng-click="communicationPreviousL()" ng-hide="0!=$index">keyboard_arrow_left</i></a> <a href><i class="material-icons arrow-right" ng-click="communicationNextL()" ng-hide="2!=$index">keyboard_arrow_right</i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row medium-screen">
+            <div class="position-relative">
+                <div ng-repeat="cM in communicationM">
+                    <div class="col s12 m6 l4">
+                        <a href ui-sref="{{cM.url}}">
+                            <div class="blackBackground cursor-pointer"> <img ng-src="{{cM.img}}" alt="{{cM.name}} greenbooks">
+                                <div class="textInside center">
+                                    <p>{{cM.name}}</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href><i class="material-icons arrow-left" ng-click="communicationPreviousM()" ng-hide="0!=$index">keyboard_arrow_left</i></a> <a href><i class="material-icons arrow-right" ng-click="communicationNextM()" ng-hide="1!=$index">keyboard_arrow_right</i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row small-screen">
+            <div class="position-relative">
+                <div ng-repeat="cS in communicationS track by $index">
+                    <div class="col s12 m6 l4">
+                        <a href ui-sref="{{cS.url}}">
+                            <div class="blackBackground cursor-pointer"> <img ng-src="{{cS.img}}" alt="{{cS.name}} greenbooks">
+                                <div class="textInside center">
+                                    <p>{{cS.name}}</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href><i class="material-icons arrow-left" ng-click="communicationPreviousS()" ng-hide="0!=$index">keyboard_arrow_left</i></a> <a href><i class="material-icons arrow-right" ng-click="communicationNextS()" ng-hide="0!=$index">keyboard_arrow_right</i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row paddingTop2rem center">
+            <div class="col s12 m8 l4 push-m2 push-l4"> <a ui-sref="programs.communication" class="btn-large waves-effect btn-greenBooks-grey cursor-pointer"><span>View all programs</span></a> </div>
+        </div>
+    </div>
+</div>

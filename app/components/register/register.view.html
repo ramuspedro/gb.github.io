@@ -1,0 +1,175 @@
+<div class="register">
+    <div class="section">
+        <div class="container">
+            <h1 class="center-align whatTitle">Register for a public program</h1>
+            <div class="row">
+                <div class="col s12 m12 l5 push-l7">
+                    <div class="pricing">
+                        <p>Date and Location</p>
+                        <!-- <ul>
+                            <li class="li-triangle"><span class="text-bold">Leadership</span>
+                                <li class="li-triangle"> <i class="material-icons triangleIcon">play_arrow</i> 19th & 20th, Sept 2016 - Mumbai </li>
+                                <li class="li-triangle"> <i class="material-icons triangleIcon">play_arrow</i> 26th & 27th, Sept 2016 - Bangalore </li>
+                                <li class="li-triangle"> <i class="material-icons triangleIcon">play_arrow</i> 3rd & 4th, Oct 2016 - Delhi </li>
+                                <li class="li-triangle"> <i class="material-icons triangleIcon">play_arrow</i> 20th & 21st, Oct 2016 - Chennai </li>
+                                <li class="li-triangle"><span class="text-bold">Negotiation</span>
+                                    <li class="li-triangle"> <i class="material-icons triangleIcon">play_arrow</i> 22th & 23th, Sept 2016 - Mumbai </li>
+                                    <li class="li-triangle"> <i class="material-icons triangleIcon">play_arrow</i> 29th & 30th, Sept 2016 - Bangalore </li>
+                                    <li class="li-triangle"> <i class="material-icons triangleIcon">play_arrow</i> 6th & 7th, Oct 2016 - Delhi </li>
+                                    <li class="li-triangle"> <i class="material-icons triangleIcon">play_arrow</i> 24th & 25th, Oct 2016 - Chennai </li>
+                        </ul> -->
+                        <ul>
+                            <!-- <li class="li-triangle"><span class="text-bold">ROI</span> -->
+                            <li class="li-triangle"> <i class="material-icons triangleIcon">play_arrow</i> 13th and 14th, Feb 2017 - Delhi </li>
+                            <li class="li-triangle"> <i class="material-icons triangleIcon">play_arrow</i> 16th and 17th, Feb 2017 - Mumbai </li>
+                            <li class="li-triangle"> <i class="material-icons triangleIcon">play_arrow</i> 20th and 21st, Feb 2017 - Bangalore </li>
+                            <li class="li-triangle"> <i class="material-icons triangleIcon">play_arrow</i> 23rd and 24th, Feb 2017- Chennai </li>
+                        </ul>
+                        <p class="title">Program Fee</p>
+                        <!-- <ul>
+                            <li class="li-triangle"> <i class="material-icons triangleIcon">play_arrow</i>Regular fee per – <span class="transform-to-capital">INR</span> 24,000/-*</li>
+                            <li class="li-triangle"> <i class="material-icons triangleIcon">play_arrow</i>Early bird offer (valid till 31st <span class="transform-to-capital">J</span>uly 2016) – <span class="transform-to-capital">INR</span> 21,600/- *</li>
+                            <li class="li-triangle"> <i class="material-icons triangleIcon">play_arrow</i>Group Discount</li>
+                            <li class="li-triangle"> 2-3 participants – 10% discount </li>
+                            <li class="li-triangle"> 4-5 participants – 15% discount </li>
+                            <li class="li-triangle"> 6 or more participants – 20% discount </li>
+                            <li class="li-triangle"> * - all fee are exclusive of service tax. </li>
+                            <li class="li-triangle"> ** - group discount will also apply on multiple programs. </li>
+                        </ul> -->
+                        <ul>
+                            <li class="li-triangle"> <i class="material-icons triangleIcon">play_arrow</i>early bird offer (valid till 23nd Dec 2016) – INR 26,999/- * </li>
+                            <li class="li-triangle"> <i class="material-icons triangleIcon">play_arrow</i>regular fee per – INR 29,999/-* </li>
+                            <li class="li-triangle"> <i class="material-icons triangleIcon">play_arrow</i>group discount </li>
+                            <li> 2 participants – 10% discount </li>
+                            <li> 3-4 participants – 15% discount </li>
+                            <li> 5 or more participants – 20% discount </li>
+                            <li class="li-triangle"> * - all fee are exclusive of service tax. </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col s12 m12 l7 pull-l5">
+                    <!-- <form method="post" enctype="multipart/form-data" action="https://web.mxradon.com/t/FormTracker.aspx"> -->
+                    <form id="form-registration" name="form-registration">
+                        <div class="row">
+                            <div class="input-field col s12 m12"> <i class="material-icons md-24 prefix">account_circle</i>
+                                <input type="text" id='FirstName' name='FirstName' class="validate" ng-model="vm.registrant.fullName" name="name" required>
+                                <label>full name<span class="red-text">*</span></label>
+                            </div>
+                            <div class="input-field col s12 m12"> <i class="material-icons md-24 prefix">person_pin</i>
+                                <input type="text" id='JobTitle' name='JobTitle' class="validate" ng-model="vm.registrant.designation">
+                                <label>designation</label>
+                            </div>
+                            <div class="input-field col s12 m12"> <i class="material-icons md-24 prefix">phone</i>
+                                <input type="text" id='Phone' name='Phone' class="validate" ng-model="vm.registrant.phone" required>
+                                <label>phone number<span class="red-text">*</span></label>
+                            </div>
+                            <div class="input-field col s12 m12"> <i class="material-icons md-24 prefix">email</i>
+                                <input type="email" id='EmailAddress' name='EmailAddress' class="validate" ng-model="vm.registrant.email" required>
+                                <label>email<span class="red-text">*</span></label>
+                            </div>
+                            <div class="input-field col s12 m12"> <i class="material-icons md-24 prefix">business</i>
+                                <input type="text" id='Company' name='Company' class="validate" ng-model="vm.registrant.companyName">
+                                <label>company name<span class="red-text">*</span></label>
+                            </div>
+                            <div class="input-field col s12 m12"> <i class="material-icons md-24 prefix">location_city</i>
+                                <input type="text" id='mx_City' name='mx_City' class="validate" ng-model="vm.registrant.city">
+                                <label>city</label>
+                            </div>
+                            <div class="input-field col s12 m12 select-location">
+                                <div class="registrant">
+                                    <select ng-model="vm.registrant.location" ng-options="location.value group by location.category for location in vm.datesAndVenueTable">
+                                        <option value="" disabled selected>-- program & location<span class="red-text">*</span> --</option>
+                                    </select>
+                                    <i class="material-icons md-24 prefix">location_on</i>
+                                    <!-- <label>Program Location<span class="red-text">*</span></label> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row more-participants">
+                            <div class="input-field col s12 m12 l12">
+                                <p>
+                                    <input type="checkbox" class="filled-in" ng-model="vm.showParticipantForm" id="checkbox-participants" />
+                                    <label for="checkbox-participants">click here to add more participants</label>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row add-delegate" ng-show="vm.showParticipantForm">
+                            <p class="delegate-text">participant information</p>
+                            <div class="col s12 m12 people-delegated">
+                                <p class="delegate-text" ng-show="vm.showDelegateForm">People that you already delegated</p>
+                                <ul class="collapsible" data-collapsible="accordion" ng-show="vm.showDelegateForm">
+                                    <li ng-repeat="person in vm.peopleDelegated track by $index">
+                                        <div class="collapsible-header">
+                                            <i class="material-icons">perm_identity</i><strong>{{person.fullName}}</strong>
+                                            <i class="material-icons right icons-change" ng-click="vm.editNomination($index)" ng-hide="vm.showEdit">edit</i>
+                                            <i class="material-icons right icons-change" ng-click="vm.deleteNomination($index)">close</i>
+                                        </div>
+                                        <div class="collapsible-body">
+                                            <p>designation: <strong>{{person.designation}}</strong></p>
+                                            <p>phone number: <strong>{{person.phone}}</strong></p>
+                                            <p>email: <strong>{{person.email}}</strong></p>
+                                            <p>city: <strong>{{person.city}}</strong></p>
+                                            <p>location: <strong>{{person.location}}</strong></p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col s12 m12 border-form">
+                                <div class="input-field"> <i class="material-icons md-24 prefix">account_circle</i>
+                                    <input type="text" class="validate" ng-model="vm.nominatePerson.fullName">
+                                    <label>full name<span class="red-text">*</span></label>
+                                </div>
+                                <div class="input-field"> <i class="material-icons md-24 prefix">person_pin</i>
+                                    <input type="text" class="validate" ng-model="vm.nominatePerson.designation">
+                                    <label>designation</label>
+                                </div>
+                                <div class="input-field"> <i class="material-icons md-24 prefix">phone</i>
+                                    <input type="text" class="validate" ng-model="vm.nominatePerson.phone">
+                                    <label>phone number<span class="red-text">*</span></label>
+                                </div>
+                                <div class="input-field"> <i class="material-icons md-24 prefix">email</i>
+                                    <input type="email" class="validate" ng-model="vm.nominatePerson.email">
+                                    <label>email<span class="red-text">*</span></label>
+                                </div>
+                                <div class="input-field"> <i class="material-icons md-24 prefix">location_city</i>
+                                    <input type="text" class="validate" ng-model="vm.nominatePerson.city">
+                                    <label>city</label>
+                                </div>
+                                <div class="select-location">
+                                    <select ng-model="vm.nominatePerson.location" ng-options="location.value group by location.category for location in vm.datesAndVenueTable">
+                                        <option value="" disabled selected>-- program & location<span class="red-text">*</span> --</option>
+                                    </select>
+                                    <i class="material-icons md-24 prefix">location_on</i>
+                                    <label>Program Location<span class="red-text">*</span></label>
+                                </div>
+                                <div class="left button-plus" ng-hide="vm.showEdit">
+                                    <a href class="btn-large waves-effect waves-light btn-greenBooks-grey" ng-click="vm.newNomination(vm.nominatePerson)">+</a>
+                                </div>
+                                <div class="center button-update-cancel" ng-show="vm.showEdit">
+                                    <a href class="btn-large waves-effect waves-light btn-greenBooks-grey" ng-click="vm.newNomination(vm.nominatePerson)">update</a>
+                                    <a href class="btn-large waves-effect waves-light btn-greenBooks-grey" ng-click="vm.cancelNomination()">cancel</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col s12 m12 l12 center submit-button">
+                            <button href id="form-submit-button" class="btn-large waves-effect waves-light btn-greenBooks-grey" type="submit" ng-style="vm.submitButton.style" ng-click="vm.submitForm(vm.registrant, vm.peopleDelegated)">{{vm.submitButton.name}}</button>
+                            <input type="hidden" name="MXHOrgCode" value="7983" />
+                            <input type="hidden" name="MXHLandingPageId" value="0131a58f-f56e-11e5-b61b-22000aa8e760" />
+                            <input type="hidden" name="MXHFormBehaviour" value="0" />
+                            <input type="hidden" name="MXHFormDataTransfer" value="0" />
+                            <input type="hidden" name="MXHRedirectUrl" value="/" />
+                            <input type="hidden" name="MXHAsc" value="5" />
+                            <input type="hidden" name="MXHPageTitle" value="gb registration form" />
+                            <input type="hidden" name="MXHOutputMessagePosition" value="0" />
+                            <input type="hidden" name="MXHIsExternallyUsed" value="1" />
+                        </div>
+                        <!-- <a href class="btn-large col s6 m4 l4 waves-effect waves-light btn-greenBooks-grey" ng-click="submitForm()">call me back</a> -->
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="triangleWhite"></div>
+    <div class="leftDivision"></div>
+    <div class="rightDivision"></div>
+</div>

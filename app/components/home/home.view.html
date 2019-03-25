@@ -1,0 +1,246 @@
+<!-- <div class=""> -->
+<div class="image-background bannerMain home-content-image" ng-style="vm.backHeader">
+    <div class="img-back-home"></div>
+    <div class="imageText" ng-style="vm.paddingTopLogo"> <img src="./assets/images/mainpagelogo.png" alt="greenbooks logo">
+        <div class="textBesideImage white-text">
+            <div class="main">out of the
+                <div class="slidingHorizontal">
+                    <span class="changeText">box</span>
+                    <span class="changeText">normal</span>
+                    <span class="changeText">present</span>
+                    <span class="changeText">classroom</span>
+                    <span class="changeText">average</span>
+                    <span class="changeText">uncertainty</span>
+                    <span class="changeText">fixed</span>
+                    <span class="changeText">gyan</span>
+                    <span class="changeText">bored</span>
+                    <span class="changeText">guess</span>
+                    <span class="changeText">tradition</span>
+                </div>
+            </div>
+            <div class="hash-text">
+                <div class="submain">
+                    <div class="verticalFlip">
+                        <span>creative</span>
+                        <span>awesome</span>
+                        <span>futuristic</span>
+                        <span>anywhere</span>
+                        <span>excellent</span>
+                        <span>clarity</span>
+                        <span>personalised</span>
+                        <span>immersive</span>
+                        <span>gamified</span>
+                        <span>datadriven</span>
+                        <span>fresh</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="text-hero center">
+        <div class="row">
+            <div class="col s12">
+                <div class="position-relative">
+                    <p>we create innovative learning experiences for corporates</p>
+                    <p>and individuals to achieve the extraordinary.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="triangleGrey"></div>
+<div class="leftDivision"></div>
+<div class="rightDivision"></div>
+<div class="sectionTitle" id="second-section">
+    <div class="section">
+        <div class="container">
+            <div class="row center imgADD">
+                <div class="col s12 m4 img1 cursor-pointer" ui-sref="about.add"> <img src="./assets/images/add/ADDicon-07.png" alt="learning analytics greenbooks"> </div>
+                <div class="col s12 m4 img2 cursor-pointer" ui-sref="about.add"> <img src="./assets/images/add/ADDicon-08.png" alt="learning design greenbooks"> </div>
+                <div class="col s12 m4 img3 cursor-pointer" ui-sref="about.add"> <img src="./assets/images/add/ADDicon-09.png" alt="digital learning greenbooks"> </div>
+                <div class="col s12 m12 l12">
+                    <div class="paragraph">
+                        <p>we combine learning analytics, learning design and digital learning (ADD)</p>
+                        <p>to multiply learning experiences and increase ROI.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="triangleWhite"></div>
+<div class="leftDivision"></div>
+<div class="rightDivision"></div>
+<div class="section clientsSection greyBackground">
+    <div class="container paddingTop3rem sectionLarge">
+        <div class="center sectionLogo" ng-repeat="clientL in vm.clientsLarge track by $index" ng-hide="!vm.slide.isCurrentClientIndexLarge($index)">
+            <div class="row animated center">
+                <div class="col s12 l4"> <img ng-src="{{clientL.img1}}"> </div>
+                <div class="col s12 l4"> <img ng-src="{{clientL.img2}}"> </div>
+                <div class="col s12 l4"> <img ng-src="{{clientL.img3}}"> </div>
+            </div>
+            <div class="navPages">
+                <a href ng-click="vm.slide.setCurrentClientIndexLarge(0)" ng-class="{selected: vm.slide.currentIndexClientLarge===0}"></a>
+                <a href ng-click="vm.slide.setCurrentClientIndexLarge(1)" ng-class="{selected: vm.slide.currentIndexClientLarge===1}"></a>
+                <a href ng-click="vm.slide.setCurrentClientIndexLarge(2)" ng-class="{selected: vm.slide.currentIndexClientLarge===2}"></a>
+                <a href ng-click="vm.slide.setCurrentClientIndexLarge(3)" ng-class="{selected: vm.slide.currentIndexClientLarge===3}"></a>
+            </div>
+        </div>
+    </div>
+    <div class="container paddingTop3rem sectionMedium">
+        <div class="center sectionLogo" ng-repeat="clientM in vm.clientsMedium track by $index" ng-hide="!vm.slide.isCurrentClientIndexMedium($index)">
+            <div class="row animated fadeIn center">
+                <div class="col s12 m6 l4"> <img ng-src="{{clientM.img1}}"> </div>
+                <div class="col s12 m6 l4"> <img ng-src="{{clientM.img2}}"> </div>
+            </div>
+            <div class="navPages">
+                <a href ng-click="vm.slide.setCurrentClientIndexMedium(0)" ng-class="{selected: vm.slide.currentIndexClientMedium===0}"></a>
+                <a href ng-click="vm.slide.setCurrentClientIndexMedium(1)" ng-class="{selected: vm.slide.currentIndexClientMedium===1}"></a>
+                <a href ng-click="vm.slide.setCurrentClientIndexMedium(2)" ng-class="{selected: vm.slide.currentIndexClientMedium===2}"></a>
+                <a href ng-click="vm.slide.setCurrentClientIndexMedium(3)" ng-class="{selected: vm.slide.currentIndexClientMedium===3}"></a>
+                <a href ng-click="vm.slide.setCurrentClientIndexMedium(4)" ng-class="{selected: vm.slide.currentIndexClientMedium===4}"></a>
+                <a href ng-click="vm.slide.setCurrentClientIndexMedium(5)" ng-class="{selected: vm.slide.currentIndexClientMedium===5}"></a>
+            </div>
+        </div>
+    </div>
+    <div class="container paddingTop3rem sectionSmall">
+        <div class="center sectionLogo" ng-repeat="clientS in vm.clientsSmall track by $index" ng-hide="!vm.slide.isCurrentClientIndexSmall($index)">
+            <div class="row animated center">
+                <div class="col s12 l4"> <img ng-src="{{clientS}}"> </div>
+            </div>
+            <div class="navPages">
+                <a href ng-click="vm.slide.setCurrentClientIndexSmall(0)" ng-class="{selected: vm.slide.currentIndexClientSmall===0}"></a>
+                <a href ng-click="vm.slide.setCurrentClientIndexSmall(1)" ng-class="{selected: vm.slide.currentIndexClientSmall===1}"></a>
+                <a href ng-click="vm.slide.setCurrentClientIndexSmall(2)" ng-class="{selected: vm.slide.currentIndexClientSmall===2}"></a>
+                <a href ng-click="vm.slide.setCurrentClientIndexSmall(3)" ng-class="{selected: vm.slide.currentIndexClientSmall===3}"></a>
+                <a href ng-click="vm.slide.setCurrentClientIndexSmall(4)" ng-class="{selected: vm.slide.currentIndexClientSmall===4}"></a>
+                <a href ng-click="vm.slide.setCurrentClientIndexSmall(5)" ng-class="{selected: vm.slide.currentIndexClientSmall===5}"></a>
+                <a href ng-click="vm.slide.setCurrentClientIndexSmall(6)" ng-class="{selected: vm.slide.currentIndexClientSmall===6}"></a>
+                <a href ng-click="vm.slide.setCurrentClientIndexSmall(7)" ng-class="{selected: vm.slide.currentIndexClientSmall===7}"></a>
+                <a href ng-click="vm.slide.setCurrentClientIndexSmall(8)" ng-class="{selected: vm.slide.currentIndexClientSmall===8}"></a>
+                <a href ng-click="vm.slide.setCurrentClientIndexSmall(9)" ng-class="{selected: vm.slide.currentIndexClientSmall===9}"></a>
+                <a href ng-click="vm.slide.setCurrentClientIndexSmall(10)" ng-class="{selected: vm.slide.currentIndexClientSmall===10}"></a>
+                <a href ng-click="vm.slide.setCurrentClientIndexSmall(11)" ng-class="{selected: vm.slide.currentIndexClientSmall===11}"></a>
+            </div>
+        </div>
+    </div>
+    <div class="paddingBottom5rem"></div>
+</div>
+<div class="triangleGrey"></div>
+<div class="leftDivision"></div>
+<div class="rightDivision"></div>
+<div class="section testmonialsSection paddingTop5rem">
+    <div class="container">
+        <div class="row" ng-repeat="testmonial in vm.slide.testmonials" ng-hide="!vm.slide.isCurrentTestmonialIndex($index)">
+            <div class="row animated fixedHeight position-relative">
+                <div class="col s12 m12 l4 center"> <img class="circle" ng-src="{{testmonial.image}}" alt="{{testmonial.name}} greenbooks"> </div>
+                <div class="col s12 m12 l8 marginBottom3rem">
+                    <div class="">
+                        <p class="p1">"{{testmonial.msg}}"</p>
+                        <div class="name-company">
+                            <p class="p2">{{testmonial.name}}</p>
+                            <p class="p3">{{testmonial.company}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="navPages">
+                    <a href ng-click="vm.slide.setCurrentTestmonialIndex(0)" ng-class="{selected: vm.slide.currentIndexTestmonial===0}"></a>
+                    <a href ng-click="vm.slide.setCurrentTestmonialIndex(1)" ng-click="vm.slide.prevTestmonial($index)" ng-class="{selected: vm.slide.currentIndexTestmonial===1}"></a>
+                    <a href ng-click="vm.slide.setCurrentTestmonialIndex(2)" ng-class="{selected: vm.slide.currentIndexTestmonial===2}"></a>
+                </div>
+            </div>
+            <div class="paddingBottom5rem"></div>
+        </div>
+    </div>
+</div>
+<div class="triangleWhite"></div>
+<div class="leftDivision"></div>
+<div class="rightDivision"></div>
+<div class="section greyBackground">
+    <div class="iconsSection paddingBottom5rem container">
+        <div class="section center-align">
+            <div class="row center">
+                <div class="col s12 {{icon.classe}} m4 l2 center" ng-repeat="icon in vm.icons"> <img ng-src="{{icon.img}}" alt="{{icon.text}} icon greenbooks">
+                    <p class="p1 fontLight">{{icon.number}}</p>
+                    <p class="p2">{{icon.text}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="triangleGrey"></div>
+<div class="leftDivision"></div>
+<div class="rightDivision"></div>
+<div class="section twoSectionsBeside">
+    <div class="row center paddingTop5rem paddingBottom3rem container">
+        <div class="col s12 m6 l6 borderStraightRight"> <img src="./assets/images/icons/iconGBfactsheet.png" alt="icon factsheet greenbooks">
+            <h5>to know more about us</h5> <a href="http://greenbookslearning.com/assets/downloads/GreenBooks-Factsheet.pdf" target="_blank" class="btn-large waves-effect waves-light btn-greenBooks-grey"><span>Download factsheet</span></a> </div>
+        <div class="col s12 m6 l6"> <img src="./assets/images/icons/iconcallback.png" alt="callback icon greenbooks">
+            <h5>let's talk about your project</h5> <a href data-target="modalRequest" class="btn-large waves-effect waves-light btn-greenBooks-grey modal-trigger" ng-click="vm.requestCall()"><span>Request a call back</span></a> </div>
+    </div>
+</div>
+<div class="triangleWhite"></div>
+<div class="leftDivision"></div>
+<div class="rightDivision"></div>
+<div class="section greyBackground">
+    <div class="row center listen-our-song">
+        <div class="col s12 m12 l12">
+            <div class="listen-song">
+                <img src="./assets/images/career/learnersIcon-34.png">
+                <i class="material-icons vertical left-down" ng-show="vm.songIsPlaying">music_note</i>
+                <i class="fa fa-music horizontal middle" ng-show="vm.songIsPlaying"></i>
+                <i class="material-icons diagonal right" ng-show="vm.songIsPlaying">music_note</i>
+                <i class="fa fa-music middle-down horizontal-invert" ng-show="vm.songIsPlaying"></i>
+                <i class="material-icons right-down diagonal-invert" ng-show="vm.songIsPlaying">music_note</i>
+            </div>
+            <p class="tribe-p">
+                we are the tribe of learners!
+            </p>
+            <div class="text-p">
+                <p>our passion for learning spills over into everything that we do… even when it’s misty, you</p>
+                <p>might just see us breathing awesome learning designs.</p>
+            </div>
+            <div class="play-song">
+                <audio controls ng-hide="true" id="audioGB">
+                    <source src="assets/songs/GreenBooksJingle.mp3" type="audio/mpeg"> Your browser does not support the audio element.
+                </audio>
+                <i class="material-icons" ng-click="vm.playAudio()">{{vm.iconSong}}</i>
+                <p class="listen-p">
+                    listen to our learning anthem
+                </p>
+            </div>
+            <a class="btn-large waves-effect waves-light btn-greenBooks-grey cursor-pointer" ui-sref="about.career">join our tribe - we are hiring!</a>
+        </div>
+    </div>
+</div>
+<div class="triangleGrey"></div>
+<div class="leftDivision"></div>
+<div class="rightDivision"></div>
+<!-- <div class="section sectionEvents">
+    <div class="container">
+        <div class="position-relative">
+            <img class="logoEvent" src="./assets/images/logoEvent.png" alt="greenbooks events logo">
+            <div class="row">
+                <div class="col s12 m3 l3 alignmentTitle">
+                    <p class="sectionTitle"><span class="underlineGreen white-text">upcoming events</span></p>
+                </div>
+                <div class="col s12 m10 l7 push-m2 push-l2">
+                    <div class="textImageEvent">
+                        <img class="responsive-img roiImage" alt="measuring roi greenbooks" src="./assets/images/roi/ROIimage-31.png">
+                        <p class="p1">in L&D/HRD</p>
+                        <p class="p2 fontLight">a 2 day intense and practical workshop on training evaluation</p>
+                        <ul>
+                            <li ng-repeat="info in vm.datesAndVenueTable">{{info.date}} - {{info.location}}</li>
+                        </ul>
+                    </div>
+                    <div class="button-text-event">
+                        <a href ui-sref="competencies.measurement" class="btn-large waves-effect waves-light btn-greenBooks-grey">click for more information</a>
+                        <p class="p3">*Early bird discount of 10% for registrations before 8th April 2016</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->

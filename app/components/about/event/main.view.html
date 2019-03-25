@@ -1,0 +1,196 @@
+<!-- <div class=""> -->
+<div class="image-background bannerMain event-all-background" ng-style="vm.backHeader">
+    <div class="img-back-corporate"></div>
+    <div class="imageText" ng-style="vm.paddingTopLogo"> <img src="./assets/images/mainpagelogo.png" alt="greenbooks logo">
+        <div class="textBesideImage white-text">
+            <p class="main">out of the <span class="changeText">unskilled</span>.</p>
+            <p class="submain"><span>mastery</span></p>
+        </div>
+    </div>
+    <div class="text-hero center">
+        <div class="row">
+            <div class="col s12">
+                <div class="position-relative">
+                    <p>Do you have any immediate training needs? Small groups to train? </p>
+                    <p>Or simply want to experience one of Greenbooks programs? </p>
+                    <p>Attend one of our public programs.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="triangleGrey"></div>
+<div class="leftDivision"></div>
+<div class="rightDivision"></div>
+<div class="section training-schedule paddingTop5rem paddingBottom5rem greyBackground">
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m12 l12 paddingBottom2rem center">
+                <select ng-model="vm.program" ng-options="program.name for program in vm.programs">
+                </select>
+                <select ng-model="vm.date" ng-options="month.name for month in vm.months">
+                </select>
+                <select ng-model="vm.location" ng-options="location.name for location in vm.locations">
+                </select>
+            </div>
+            <div class="col s12 m12 l12 each-box animated fadeInLeft" ng-hide="vm.date.value == 2 || vm.program.value == 2" ng-show="vm.location.value == 0 || vm.location.value == 1">
+                <img src="./assets/images/events/logo3.png" alt="leadership skills certification workshop image">
+                <div class="training-name text-bold">
+                    <a href ui-sref="products.leadership" class="pacific-text-color">game-based leadership skill workshop</a>
+                </div>
+                <div class="image-city">
+                    <div class="city text-bold center-align">
+                        Mumbai
+                    </div>
+                    <div class="date text-bold center-align">
+                        19th & 20th, Sept 2016
+                    </div>
+                </div>
+                <div class="action-button">
+                    <a href ui-sref="products.leadership" class="btn-large waves-effect waves-light btn-greenBooks-grey">read more</a>
+                    <a href ui-sref="register" class="btn-large waves-effect waves-light btn-greenBooks-grey btn-gradient-gb">register now</a>
+                </div>
+            </div>
+            <div class="col s12 m12 l12 each-box animated fadeInLeft" ng-hide="vm.date.value == 2 || vm.program.value == 1" ng-show="vm.location.value == 0 || vm.location.value == 1">
+                <img src="./assets/images/events/logo1.png" alt="negotiation skills certification workshop image">
+                <div class="training-name text-bold">
+                    <a href ui-sref="products.negotiation" class="merchants-text-color">game-based negotiation skill workshop</a>
+                </div>
+                <div class="image-city">
+                    <div class="city text-bold center-align">
+                        Mumbai
+                    </div>
+                    <div class="date text-bold center-align">
+                        22nd & 23rd, Sept 2016
+                    </div>
+                </div>
+                <div class="action-button">
+                    <a href ui-sref="products.negotiation" class="btn-large waves-effect waves-light btn-greenBooks-grey">read more</a>
+                    <a href ui-sref="register" class="btn-large waves-effect waves-light btn-greenBooks-grey btn-gradient-gb">register now</a>
+                </div>
+            </div>
+            <div class="col s12 m12 l12 each-box animated fadeInLeft" ng-hide="vm.date.value == 2 || vm.program.value == 2" ng-show="vm.location.value == 0 || vm.location.value == 2">
+                <img src="./assets/images/events/logo3.png" alt="leadership skills certification workshop image">
+                <div class="training-name text-bold">
+                    <a href ui-sref="products.leadership" class="pacific-text-color">game-based leadership skill workshop</a>
+                </div>
+                <div class="image-city">
+                    <div class="city text-bold center-align">
+                        Bangalore
+                    </div>
+                    <div class="date text-bold center-align">
+                        26th & 27th, Sept 2016
+                    </div>
+                </div>
+                <div class="action-button">
+                    <a href ui-sref="products.leadership" class="btn-large waves-effect waves-light btn-greenBooks-grey">read more</a>
+                    <a href ui-sref="register" class="btn-large waves-effect waves-light btn-greenBooks-grey btn-gradient-gb">register now</a>
+                </div>
+            </div>
+            <div class="col s12 m12 l12 each-box animated fadeInLeft" ng-hide="vm.date.value == 2 || vm.program.value == 1" ng-show="vm.location.value == 0 || vm.location.value == 2">
+                <img src="./assets/images/events/logo1.png" alt="negotiation skills certification workshop image">
+                <div class="training-name text-bold">
+                    <a href ui-sref="products.negotiation" class="merchants-text-color">game-based negotiation skill workshop</a>
+                </div>
+                <div class="image-city">
+                    <div class="city text-bold center-align">
+                        Bangalore
+                    </div>
+                    <div class="date text-bold center-align">
+                        29th & 30th, Sept 2016
+                    </div>
+                </div>
+                <div class="action-button">
+                    <a href ui-sref="products.negotiation" class="btn-large waves-effect waves-light btn-greenBooks-grey">read more</a>
+                    <a href ui-sref="register" class="btn-large waves-effect waves-light btn-greenBooks-grey btn-gradient-gb">register now</a>
+                </div>
+            </div>
+            <div class="col s12 m12 l12 each-box animated fadeInLeft" ng-hide="vm.date.value == 1 || vm.program.value == 2" ng-show="vm.location.value == 0 || vm.location.value == 3">
+                <img src="./assets/images/events/logo3.png" alt="leadership skills certification workshop image">
+                <div class="training-name text-bold">
+                    <a href ui-sref="products.leadership" class="pacific-text-color">game-based leadership skill workshop</a>
+                </div>
+                <div class="image-city">
+                    <div class="city text-bold center-align">
+                        New Delhi
+                    </div>
+                    <div class="date text-bold center-align">
+                        3rd & 4th, Oct 2016
+                    </div>
+                </div>
+                <div class="action-button">
+                    <a href ui-sref="products.leadership" class="btn-large waves-effect waves-light btn-greenBooks-grey">read more</a>
+                    <a href ui-sref="register" class="btn-large waves-effect waves-light btn-greenBooks-grey btn-gradient-gb">register now</a>
+                </div>
+            </div>
+            <div class="col s12 m12 l12 each-box animated fadeInLeft" ng-hide="vm.date.value == 1 || vm.program.value == 1" ng-show="vm.location.value == 0 || vm.location.value == 3">
+                <img src="./assets/images/events/logo1.png" alt="negotiation skills certification workshop image">
+                <div class="training-name text-bold">
+                    <a href ui-sref="products.negotiation" class="merchants-text-color">game-based negotiation skill workshop</a>
+                </div>
+                <div class="image-city">
+                    <div class="city text-bold center-align">
+                        New Delhi
+                    </div>
+                    <div class="date text-bold center-align">
+                        6th & 7th, Oct 2016
+                    </div>
+                </div>
+                <div class="action-button">
+                    <a href ui-sref="products.negotiation" class="btn-large waves-effect waves-light btn-greenBooks-grey">read more</a>
+                    <a href ui-sref="register" class="btn-large waves-effect waves-light btn-greenBooks-grey btn-gradient-gb">register now</a>
+                </div>
+            </div>
+            <div class="col s12 m12 l12 each-box animated fadeInLeft" ng-hide="vm.date.value == 1 || vm.program.value == 2" ng-show="vm.location.value == 0 || vm.location.value == 4">
+                <img src="./assets/images/events/logo3.png" alt="leadership skills certification workshop image">
+                <div class="training-name text-bold">
+                    <a href ui-sref="products.leadership" class="pacific-text-color">game-based leadership skill workshop</a>
+                </div>
+                <div class="image-city">
+                    <div class="city text-bold center-align">
+                        Chennai
+                    </div>
+                    <div class="date text-bold center-align">
+                        20th & 21st, Oct 2016
+                    </div>
+                </div>
+                <div class="action-button">
+                    <a href ui-sref="products.leadership" class="btn-large waves-effect waves-light btn-greenBooks-grey">read more</a>
+                    <a href ui-sref="register" class="btn-large waves-effect waves-light btn-greenBooks-grey btn-gradient-gb">register now</a>
+                </div>
+            </div>
+            <div class="col s12 m12 l12 each-box animated fadeInLeft" ng-hide="vm.date.value == 1 || vm.program.value == 1" ng-show="vm.location.value == 0 || vm.location.value == 4">
+                <img src="./assets/images/events/logo1.png" alt="negotiation skills certification workshop image">
+                <div class="training-name text-bold">
+                    <a href ui-sref="products.negotiation" class="merchants-text-color">game-based negotiation skill workshop</a>
+                </div>
+                <div class="image-city">
+                    <div class="city text-bold center-align">
+                        Chennai
+                    </div>
+                    <div class="date text-bold center-align">
+                        24th & 25th, Oct 2016
+                    </div>
+                </div>
+                <div class="action-button">
+                    <a href ui-sref="products.negotiation" class="btn-large waves-effect waves-light btn-greenBooks-grey">read more</a>
+                    <a href ui-sref="register" class="btn-large waves-effect waves-light btn-greenBooks-grey btn-gradient-gb">register now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="triangleGrey"></div>
+<div class="leftDivision"></div>
+<div class="rightDivision"></div>
+<div class="section section-event-registerNow paddingTop5rem paddingBottom5rem">
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m12 l12 center ">
+                <p>can’t find what you’re looking for?
+                    <br> talk to us about in-house training</p>
+                <div><a ng-click="vm.requestCall()" href class="btn-large waves-effect waves-light btn-greenBooks-grey btn-gradient-gb">contact us</a></div>
+            </div>
+        </div>
+    </div>
+</div>

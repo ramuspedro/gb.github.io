@@ -1,0 +1,25 @@
+<div class="section success">
+    <div class="container">
+        <h1 class="center-align methoTitle">Case Studies</h1>
+       <!--  <div class="row">
+            <div class="col gb-list">
+                <ul>
+                    <li ng-class="vm.allStories" ng-click="vm.selectActive(0); vm.filter=''"><a href>All stories</a></li>
+                    <li ng-class="vm.analytics" ng-click="vm.selectActive(1); vm.filter='analytics'"><a href>Analytics</a></li>
+                    <li ng-class="vm.design" ng-click="vm.selectActive(2); vm.filter='design'"><a href>Design</a></li>
+                    <li ng-class="vm.digital" ng-click="vm.selectActive(3); vm.filter='digital'"><a href>Digital</a></li>
+                </ul>
+            </div>
+        </div> -->
+        <div class="row success-stories">
+            <div class="col s12 m6 l4 relativePosition" ng-repeat="successStory in vm.successStories | filter:vm.filter">
+                <a ui-sref="{{successStory.url}}">
+                    <div class="blackBrackground animated fadeIn"> <img class="img1" ng-src="{{successStory.img1}}" alt="{{successStory.alt}}"> <img class="img2" ng-src="{{successStory.img2}}" alt="{{successStory.alt}}"> </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="triangleWhite"></div>
+<div class="leftDivision"></div>
+<div class="rightDivision"></div>

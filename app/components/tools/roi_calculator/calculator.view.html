@@ -1,0 +1,554 @@
+<div class="section roi-calculator">
+    <div class="container">
+        <h1 class="center-align methoTitle">ROI Calculator</h1>
+        <div class="row roi-main-text">
+            <div class="col s12 m10 l10 push-l1 push-m1">
+                <p>
+                    There are five steps in the ROI calculator:
+                </p>
+                <p class="text-step1">
+                    Step 1: Start with the business impact data – your current performance and future performance
+                </p>
+                <p>
+                    Step 2: Use an isolation method to identify the training contribution towards the performance improvement
+                </p>
+                <p>
+                    Step 3: Convert the data to monetary value for program benefits
+                </p>
+                <p>
+                    Step 4: Fully load the cost
+                </p>
+                <p>
+                    Step 5: Calculate ROI
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="triangleWhite"></div>
+    <div class="leftDivision"></div>
+    <div class="rightDivision"></div>
+    <!-- step 1 -->
+    <div class="container">
+        <div class="each-step">
+            <h2>What business impact measures are your targetting? <a href="" ng-click="vm.getInformations(1)"><i class="material-icons close">info_outline</i></a></h2>
+            <div class="content-step">
+                <h3>business impact measure you are targetting</h3>
+                <form class="step1">
+                    <div class="row block-form" ng-repeat="roi in vm.roiCalculator track by $index">
+                        <div class="col s12 m6 l6">
+                            <p class="important-text">
+                                {{roi.name}} <a href="" ng-click="vm.removeMeasure($index)" ng-hide="$index==0"><i class="material-icons close" >close</i></a><a href="" ng-show="$index==0" ng-click="vm.getInformations(9)"><i class="material-icons close">info_outline</i></a>
+                            </p>
+                            <select ng-model="roi.step1.payoff" ng-options="pay.name for pay in vm.payoffs">
+                                <option value="" ng-disabled="true">payoffs</option>
+                            </select>
+                        </div>
+                        <div class="col s12 m6 l6">
+                            <p class="important-text">
+                                type of data <a href="" ng-click="vm.getInformations(10)"><i ng-show="$index==0" class="material-icons close">info_outline</i></a>
+                            </p>
+                            <select ng-model="roi.step1.data" class="select-data animated flipInX" ng-show="vm.step1Data[$index].select" ng-disabled="!roi.step1.payoff.name">
+                                <!-- this option is just available if the user choosen a payoff -->
+                                <option value="" ng-disabled="true">choose data</option>
+                                <!-- <option value="" ng-disabled="true" class="type">hard data</option> -->
+                                <optgroup label="output" ng-show="'increase' == roi.step1.payoff.name">
+                                    <option ng-repeat="d in vm.data | filter:{name:'output', payoffs: roi.step1.payoff.name}" value="{{d.subname}}" class="subname">{{d.subname}}</option>
+                                </optgroup>
+                                <optgroup label="costs" ng-show="!('increase' == roi.step1.payoff.name)">
+                                    <option ng-repeat="d in vm.data | filter:{name:'costs', payoffs: roi.step1.payoff.name}" value="{{d.subname}}" class="subname">{{d.subname}}</option>
+                                </optgroup>
+                                <optgroup label="time" ng-show="!('increase' == roi.step1.payoff.name)">
+                                    <option ng-repeat="d in vm.data | filter:{name:'time', payoffs: roi.step1.payoff.name}" value="{{d.subname}}" class="subname">{{d.subname}}</option>
+                                </optgroup>
+                                <optgroup label="quality" ng-show="!('increase' == roi.step1.payoff.name)">
+                                    <option ng-repeat="d in vm.data | filter:{name:'quality', payoffs: roi.step1.payoff.name}" value="{{d.subname}}" class="subname">{{d.subname}}</option>
+                                </optgroup>
+                                <!-- <option value="" ng-disabled="true" class="type">soft data</option> -->
+                                <optgroup label="work habits" ng-show="!('increase' == roi.step1.payoff.name)">
+                                    <option ng-repeat="d in vm.data | filter:{name:'work habits', payoffs: roi.step1.payoff.name}" value="{{d.subname}}" class="subname">{{d.subname}}</option>
+                                </optgroup>
+                                <optgroup label="work climate/satisfaction">
+                                    <option ng-repeat="d in vm.data | filter:{name:'work climate/satisfaction', payoffs: roi.step1.payoff.name}" value="{{d.subname}}" class="subname">{{d.subname}}</option>
+                                </optgroup>
+                                <optgroup label="initiative/innovation" ng-show="'increase' == roi.step1.payoff.name">
+                                    <option ng-repeat="d in vm.data | filter:{name: 'initiative/innovation', payoffs: roi.step1.payoff.name}" value="{{d.subname}}" class="subname">{{d.subname}}</option>
+                                </optgroup>
+                                <optgroup label="customer service">
+                                    <option ng-repeat="d in vm.data | filter:{name: 'customer service', payoffs: roi.step1.payoff.name}" value="{{d.subname}}" class="subname">{{d.subname}}</option>
+                                </optgroup>
+                                <optgroup label="employee development/advancement" ng-show="'increase' == roi.step1.payoff.name">
+                                    <option ng-repeat="d in vm.data | filter:{name: 'employee development/advancement', payoffs: roi.step1.payoff.name}" value="{{d.subname}}" class="subname">{{d.subname}}</option>
+                                </optgroup>
+                                <option value="999999999" class="type-data" ng-click="vm.toggleDataStep1()">others</option>
+                            </select>
+                            <div class="space-column">
+                                <input type="text" class="input-data animated flipInX" ng-model="roi.step1.data" title="type of data" placeholder="type of data" ng-hide="vm.step1Data[$index].select">
+                                <a href="" ng-click="vm.toggleDataStep1($index)" ng-hide="vm.step1Data[$index].select"><i class="material-icons icon-data">list</i></a>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <div class="row">
+                    <div class="col s12">
+                        <div class="btn-plus">
+                            <a href="" class="btn-large waves-effect waves-light btn-greenBooks" ng-click="vm.addMeasure()">add measure {{vm.countROI + 1}}</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="triangleWhite"></div>
+    <div class="leftDivision"></div>
+    <div class="rightDivision"></div>
+    <!-- step 2 -->
+    <div class="container">
+        <div class="each-step">
+            <h2>What does it look like now? <a href="" ng-click="vm.getInformations(2)"><i class="material-icons close">info_outline</i></a></h2>
+            <div class="content-step">
+                <form class="step2">
+                    <div class="row space-top-unit" ng-repeat="st2 in vm.roiCalculator">
+                        <div class="col s12 m12 l12 main-name">
+                            {{st2.name}}: {{st2.step1.payoff.name}} {{st2.step1.data}}
+                        </div>
+                        <div class="col s12 m6 l6">
+                            <input type="text" ng-model="st2.step2.value" pattern="(?:\d*\.)?\d+" title="just numbers" placeholder="baseline value" numbers-validate-input>
+                        </div>
+                        <div class="col s12 m6 l6 space-small-screen">
+                            <select ng-model="st2.step2.unit.name" ng-show="st2.step2.select">
+                                <option value="" ng-disabled="true">-- baseline unit --</option>
+                                <option ng-repeat="unit in vm.units" value="{{unit.name}}">{{unit.name}}</option>
+                                <option value="999999999">others</option>
+                            </select>
+                            <input type="text" class="input-data animated flipInX" ng-model="st2.step2.unit.name" title="type of data" placeholder="type of data" ng-hide="st2.step2.select">
+                            <a href="" ng-click="st2.step2.select = true" ng-hide="st2.step2.select"><i class="material-icons icon-data">list</i></a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="each-step step3-no-padding-top">
+            <h2>What would it look like in the future? <a href="" ng-click="vm.getInformations(3)"><i class="material-icons close">info_outline</i></a></h2>
+            <div class="content-step">
+                <form class="step3">
+                    <div class="row" ng-repeat="st3 in vm.roiCalculator">
+                        <div class="col s12 m12 l12 name-measure">
+                            {{st3.name}}: {{st3.step1.payoff.name}} {{st3.step1.data}}
+                        </div>
+                        <div class="col s12 m6 l6">
+                            <input type="text" ng-model="st3.step3.value" pattern="(?:\d*\.)?\d+" title="just numbers" placeholder="after training value" numbers-validate-input>
+                        </div>
+                        <div class="col s12 m6 l6">
+                            <p class="unit-height">{{st3.step2.unit.name || 'unit'}}</p>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="triangleWhite"></div>
+    <div class="leftDivision"></div>
+    <div class="rightDivision"></div>
+    <!-- step 4 -->
+    <div class="container">
+        <div class="each-step">
+            <h2>What isolation method will you use? <a href="" ng-click="vm.getInformations(4)"><i class="material-icons close">info_outline</i></a></h2>
+            <div class="content-step">
+                <form class="step4">
+                    <div ng-repeat="st4 in vm.roiCalculator">
+                        <div class="row">
+                            <div class="col s12 m12 l12 main-name">
+                                {{st4.name}}: {{st4.step1.payoff.name}} {{st4.step1.data}}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col s12 m12 l12">
+                                <select ng-model="st4.step4.method.name">
+                                    <option value="" ng-disabled="true">-- method name --</option>
+                                    <option ng-repeat="method in vm.methods" value="{{method.name}}" ng-disabled="st4.step1.payoff.name=='avoid' && method.name == 'trend' || st4.step1.payoff.name=='avoid' && method.name == 'control group'">{{method.name}}</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div ng-show="vm.showStep5">
+        <div class="triangleWhite"></div>
+        <div class="leftDivision"></div>
+        <div class="rightDivision"></div>
+    </div>
+    <!-- step 5 -->
+    <div class="container">
+        <div class="each-step" ng-show="vm.showStep5">
+            <div ng-repeat="st5 in vm.roiCalculator" class="content-step space-method">
+                <div class="" ng-switch="st5.step4.method.name">
+                    <h3>{{st5.step1.payoff.name}} {{st5.step1.data}}: {{st5.step4.method.name}}</h3>
+                    <form class="step5" ng-switch-when="trend">
+                        <div class="row">
+                            <div class="col s12 m8 l8 line-height-3rem">
+                                Projected Trend based on the past data
+                            </div>
+                            <div class="col s12 m4 l4 text-lowercase line-height-3rem">
+                                {{st5.step2.value}} {{st5.step1.data}} / {{st5.step2.unit.name}}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col s12 m8 l8 line-height-3rem">
+                                Improvement Trend based on the future data
+                            </div>
+                            <div class="col s12 m4 l4">
+                                <input type="text" ng-model="st5.step5.futureData" pattern="(?:\d*\.)?\d+" title="just numbers" placeholder="future data value" numbers-validate-input>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col s12 m8 l8 line-height-3rem">
+                                Total improvement attribute to the program
+                            </div>
+                            <div ng-switch="st5.step1.payoff.name">
+                                <div class="col s12 m4 l4 line-height-3rem" ng-switch-when="increase">
+                                    {{st5.step5.totalImprovement = (st5.step5.futureData - st5.step2.value || 0).toFixed(2)}} {{st5.step1.data}} / {{st5.step2.unit.name}}
+                                </div>
+                                <div class="col s12 m4 l4 line-height-3rem" ng-switch-when="decrease">
+                                    {{st5.step5.totalImprovement = (st5.step2.value - st5.step5.futureData || 0).toFixed(2)}} {{st5.step1.data}} / {{st5.step2.unit.name}}
+                                </div>
+                                <div class="col s12 m4 l4 line-height-3rem" ng-switch-default>
+                                    <span class="red-text">choose increase or decrease</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col s12 m8 l8 line-height-3rem">
+                                % Attributed to training
+                            </div>
+                            <div class="col s12 m4 l4 line-height-3rem">
+                                {{st5.step5.totalImprovementAtribute = ((st5.step5.totalImprovement/st5.step2.value)*100 || 0).toFixed(2)}}%
+                            </div>
+                        </div>
+                    </form>
+                    <form class="step5" ng-switch-when="control group">
+                        <div class="row control-group-after-before">
+                            <div class="col s12 m4 l4 adjust-line-control-group">
+                                control group
+                            </div>
+                            <div class="col s6 m4 l4">
+                                <p>before training</p>
+                                <p>{{st5.step3.value || 0}}</p>
+                            </div>
+                            <div class="col s6 m4 l4">
+                                <p>after training</p>
+                                <p>{{st5.step3.value || 0}}</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col s12 m4 l4 adjust-line-experimentation-group">
+                                Experimentation Group
+                            </div>
+                            <div class="col s6 m4 l4">
+                                <p>before training</p>
+                                <p class="line-height-3rem">{{st5.step3.value || 0}}</p>
+                            </div>
+                            <div class="col s6 m4 l4">
+                                <p>after training</p>
+                                <input type="text" ng-model="st5.step5.experimentationAfter" pattern="(?:\d*\.)?\d+" title="just numbers" placeholder="after training value" numbers-validate-input>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col s12 m8 l8 line-height-3rem">
+                                Total improvement directly attribute to the program
+                            </div>
+                            <div ng-switch="st5.step1.payoff.name">
+                                <div class="col s12 m4 l4 line-height-3rem" ng-switch-when="increase">
+                                    {{st5.step5.totalImprovement = (st5.step5.experimentationAfter - st5.step3.value || 0).toFixed(2)}} {{st5.step1.data}} / {{st5.step2.unit.name}}
+                                </div>
+                                <div class="col s12 m4 l4 line-height-3rem" ng-switch-when="decrease">
+                                    {{st5.step5.totalImprovement = (st5.step3.value - st5.step5.experimentationAfter || 0).toFixed(2)}} {{st5.step1.data}} / {{st5.step2.unit.name}}
+                                </div>
+                                <div class="col s12 m4 l4 line-height-3rem" ng-switch-default>
+                                    <span class="red-text">choose increase or decrease</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col s8 m8 l8 line-height-3rem">
+                                % Attributed to training
+                            </div>
+                            <div class="col s4 m4 l4 line-height-3rem">
+                                {{st5.step5.totalImprovementAtribute = ((st5.step5.totalImprovement/st5.step5.experimentationAfter)*100 || 0).toFixed(2)}}%
+                            </div>
+                        </div>
+                    </form>
+                    <form class="step5" ng-switch-when="estimate">
+                        <div class="row">
+                            <div class="col s8 m8 l8 line-height-3rem">
+                                Total improvement
+                            </div>
+                            <div class="col s4 m4 l4 line-height-3rem">
+                                {{st5.step5.totalImprovement = (Math.abs(st5.step3.value - st5.step2.value)).toFixed(2)}} {{st5.step1.data}} / {{st5.step2.unit.name}}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col s8 m8 l8 line-height-3rem">
+                                How many factors influence the improvement
+                            </div>
+                            <div class="col s4 m4 l4">
+                                <select ng-model="st5.step5.numberOfFactors">
+                                    <option value="1"> 1 </option>
+                                    <option ng-repeat="f in [2,3,4,5,6,7]" value="{{f}}"> {{f}} </option>
+                                </select>
+                            </div>
+                        </div>
+                        <div ng-repeat="factorImprovement in st5.step5.factorsImprovement track by $index">
+                            <div class="row add-factors-improvement">
+                                <div class="col s12 m6 l4 line-height-3rem">
+                                    <span class="factors">Factor {{$index + 1}}:</span>
+                                </div>
+                                <div class="col s12 m6 l8">
+                                    <input type="text" ng-model="factorImprovement.factorName" title="text" placeholder="new factor" ng-disabled="factorImprovement.disabled" class="step5-input">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col s12 m6 l8 line-height-3rem">
+                                    % of improvement
+                                </div>
+                                <div class="col s12 m6 l4">
+                                    <input type="text" ng-model="factorImprovement.percentageOfImprovement" pattern="(?:\d*\.)?\d+" title="just numbers" placeholder="% of improvement between 1 - {{100 - st5.step5.sumImprovement}}%" numbers-validate-input>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col s12 m6 l8 line-height-3rem">
+                                    confidence expressed in %
+                                </div>
+                                <div class="col s12 m6 l4">
+                                    <input type="text" ng-model="factorImprovement.confidenceExpressed" pattern="(?:\d*\.)?\d+" title="just numbers" placeholder="0% - no confidence, 100 - absolutely confident" numbers-validate-input>
+                                </div>
+                            </div>
+                            <div class="row adjust-improvement">
+                                <div class="col s12 m6 l8 line-height-3rem">
+                                    Adjusted % of improvement
+                                </div>
+                                <div class="col s12 m6 l4 line-height-3rem">
+                                    {{factorImprovement.adjustImprovement = ((factorImprovement.percentageOfImprovement*factorImprovement.confidenceExpressed)/100 || 0).toFixed(2)}}%
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row total express-result express-result">
+                            <div class="col s12 m8 l8">
+                                total
+                            </div>
+                            <div class="col s12 m4 l4" ng-if="st5.step5.sumImprovement <= 100">
+                                {{st5.step5.sumImprovement || 0}}%
+                            </div>
+                            <div class="col s12 m4 l4" ng-if="st5.step5.sumImprovement > 100">
+                                <span class="red-text">the total cannot be more than 100%</span>
+                            </div>
+                        </div>
+                        <!-- <div class="row">
+                            <div class="col s12 m12 l12 btn-plus">
+                                <a href="" class="btn-large waves-effect waves-light btn-greenBooks" ng-click="vm.addFactor($index)">add more factors</a>
+                            </div>
+                        </div> -->
+                        <div class="row total-improvement express-result">
+                            <div class="col s12 m8 l8">
+                                Total improvement attributable to the program
+                            </div>
+                            <div class="col s12 m4 l4">
+                                {{st5.step5.totalImprovementAtribute = ((st5.step5.totalImprovement*st5.step5.factorsImprovement[0].adjustImprovement)/100 || 0).toFixed(2)}}
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="triangleWhite"></div>
+    <div class="leftDivision"></div>
+    <div class="rightDivision"></div>
+    <!-- step 6 -->
+    <div class="container">
+        <div class="each-step">
+            <h2>Convert Data to Monetary Value <a href="" ng-click="vm.getInformations(5)"><i class="material-icons close">info_outline</i></a></h2>
+            <div class="content-step">
+                <form class="step6">
+                    <div ng-repeat="st6 in vm.roiCalculator" class="space-convert">
+                        <div class="row">
+                            <div class="col s12 m12 l12 main-name">
+                                {{st6.name}}: {{st6.step1.payoff.name}} {{st6.step1.data}}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col s12 m8 l8 line-height-3rem">
+                                data conversion method
+                            </div>
+                            <div class="col s12 m4 l4">
+                                <select ng-model="st6.step6.conversion" ng-options="conversion.name for conversion in vm.dataConversionMethod">
+                                    <option value="" ng-disabled="true"> conversion method </option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col s12 m8 l8 line-height-3rem">
+                                value of one unit:
+                            </div>
+                            <div class="col s12 m4 l4">
+                                <input type="text" ng-model="st6.step6.oneUnitValue" pattern="(?:\d*\.)?\d+" title="just numbers" placeholder="value of one unit" numbers-validate-input>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col s12 m8 l8 line-height-3rem">
+                                change in performance
+                            </div>
+                            <div class="col s12 m4 l4 line-height-3rem">
+                                {{st6.step6.changePerformance = (st6.step6.oneUnitValue*st6.step5.totalImprovementAtribute || 0).toFixed(2)}}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col s12 m8 l8 line-height-3rem">
+                                annual performance
+                            </div>
+                            <div class="col s12 m4 l4">
+                                <select ng-model="st6.step6.AnnualPerformance">
+                                    <option value="" ng-disabled="true"> months </option>
+                                    <option ng-repeat="v in [1,2,3,4,5,6,7,8,9,10,11,12]" value="{{v}}"> {{v}} </option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col s12 m8 l8 line-height-3rem">
+                                program benefits
+                            </div>
+                            <div class="col s12 m4 l4 line-height-3rem">
+                                {{st6.step6.programBenefits = (st6.step6.changePerformance*st6.step6.AnnualPerformance || 0).toFixed(2)}}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row express-result result-step6">
+                        <div class="col s8 m8 l8 ">
+                            Total Program Benefits
+                        </div>
+                        <div class="col s4 m4 l4">
+                            {{vm.result.totalProgramBenefits}}
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="triangleWhite"></div>
+    <div class="leftDivision"></div>
+    <div class="rightDivision"></div>
+    <!-- step 7 -->
+    <div class="container">
+        <div class="each-step">
+            <h2>What is the total cost of the program? <a href="" ng-click="vm.getInformations(6)"><i class="material-icons close">info_outline</i></a></h2>
+            <div class="content-step">
+                <form class="step7">
+                    <div class="row second-space-top" ng-repeat="totalCost in vm.totalCosts track by $index">
+                        <div class="col s12 m6 l6">
+                            <!-- ng-hide="$index==0" -->
+                            <p class="cost-count">
+                                cost {{$index + 1}} <a href="" ng-click="vm.removeCost($index)" ng-hide="$index==0"><i class="material-icons close first-icon" >close</i></a>
+                                <a href="" ng-hide="vm.step7Data[$index].select" ng-click="vm.toggleDataStep7($index)"><i class="material-icons close second-icon">list</i></a>
+                            </p>
+                            <select ng-model="totalCost.cost.name" class="step7-select animated flipInX" ng-show="vm.step7Data[$index].select">
+                                <option value="" ng-disabled="true">-- cost name --</option>
+                                <option ng-repeat="cost in vm.costProgram" value="{{cost.name}}">{{cost.name}}</option>
+                                <option value="999999">others</option>
+                            </select>
+                            <input type="text" class="animated flipInX" ng-model="totalCost.cost.name" title="type of data" placeholder="cost name" ng-hide="vm.step7Data[$index].select">
+                        </div>
+                        <div class="col s12 m6 l6">
+                            <input type="text" ng-model="totalCost.value" pattern="^[0-9]*$" title="just numbers" placeholder="cost" class="input-data" numbers-validate-input>
+                        </div>
+                    </div>
+                    <div class="row express-result space-result">
+                        <div class="col s12 m8 l8">
+                            total cost
+                        </div>
+                        <div class="col s12 m4 l4">
+                            {{vm.result.totalCost}}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col s12 m12 l12 btn-plus">
+                            <a href="" class="btn-large waves-effect waves-light btn-greenBooks" ng-click="vm.addCost()">add cost item</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="triangleWhite"></div>
+    <div class="leftDivision"></div>
+    <div class="rightDivision"></div>
+    <!-- step 8 -->
+    <div class="container">
+        <div class="each-step">
+            <div class="step8">
+                <h2 class="center-align">Get your result</h2>
+            </div>
+            <div class="content-step" ng-hide="true">
+                <form class="step8">
+                    <div class="row express-result">
+                        <div class="col s8 m8 l8">
+                            Benefit to Cost Ratio <a href="" ng-click="vm.getInformations(7)"><i class="material-icons close">info_outline</i></a>
+                        </div>
+                        <div class="col s4 m4 l4">
+                            {{vm.result.benefitCostRatio = (vm.result.totalProgramBenefits/vm.result.totalCost || 0).toFixed(2)}}
+                        </div>
+                    </div>
+                    <div class="row express-result space-result">
+                        <div class="col s8 m8 l8">
+                            ROI <a href="" ng-click="vm.getInformations(8)"><i class="material-icons close">info_outline</i></a>
+                        </div>
+                        <div class="col s4 m4 l4">
+                            {{vm.result.roi = ((vm.result.benefitCostRatio - 1)*100).toFixed(2)}}%
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="row contact-form">
+                <form class="col s12" id="roi-calculator-form">
+                    <div class="row">
+                        <div class="col s12 m12 l12 btn-plus center">
+                            <a href="" class="btn-large waves-effect waves-light btn-greenBooks" type="input" ng-click="vm.submitForm()">calculate roi</a>
+                            <p class="center">
+                                *Your result will also be emailed to you.
+                            </p>
+                            <br />
+                            <input type="hidden" name="MXHOrgCode" value="7983" />
+                            <input type="hidden" name="MXHLandingPageId" value="eb5cf664-1350-11e6-b61b-22000aa8e760" />
+                            <input type="hidden" name="MXHFormBehaviour" value="0" />
+                            <input type="hidden" name="MXHFormDataTransfer" value="0" />
+                            <input type="hidden" name="MXHRedirectUrl" value="/" />
+                            <input type="hidden" name="MXHAsc" value="5" />
+                            <input type="hidden" name="MXHPageTitle" value="roi calculator form" />
+                            <input type="hidden" name="MXHOutputMessagePosition" value="0" />
+                            <input type="hidden" name="MXHIsExternallyUsed" value="1" />
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="triangleWhite"></div>
+<div class="leftDivision"></div>
+<div class="rightDivision"></div>
+<!-- Modal Structure -->
+<div class="roi-calculator">
+    <div id="modal-informations" class="modal modal-informations">
+        <div class="modal-content">
+            <h4>{{vm.showInformations.question}}</h4>
+            <div ng-bind-html="sce.trustAsHtml(vm.showInformations.paragraph)"></div>
+            <div ng-repeat="info in vm.showInformations.subquestion">
+                <h5>{{info.h5}}</h5>
+                <div ng-bind-html="sce.trustAsHtml(info.p)"></div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <a href="" class="modal-action modal-close waves-effect waves-green btn-flat ">close</a>
+        </div>
+    </div>
+</div>

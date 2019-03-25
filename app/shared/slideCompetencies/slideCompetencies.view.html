@@ -1,0 +1,52 @@
+<div class="section communicationDirec greyBackground">
+    <div class="container metho-boxes">
+        <div class="row">
+            <div class="col s12 m6 l4 left-align">
+                <p class="sectionTitle"><span class="underlineGreen">Competencies</span></p>
+            </div>
+        </div>
+        <div class="row center large-screen">
+            <div class="position-relative">
+                <div ng-repeat="cL in compL">
+                    <div class="col s12 m6 l4">
+                        <a href ui-sref="{{cL.url}}">
+                            <div class="blackBackground cursor-pointer"> <img ng-src="{{cL.img}}" alt="{{cL.name}} greenbooks">
+                                <div class="textInside center">
+                                    <p>{{cL.name}}</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row center medium-screen">
+            <div class="position-relative">
+                <div ng-repeat="cM in compM">
+                    <div class="col s12 m6 l4">
+                        <a href ui-sref="{{cM.url}}">
+                            <div class="blackBackground cursor-pointer"> <img ng-src="{{cM.img}}" alt="{{cM.name}} greenbooks">
+                                <div class="textInside center">
+                                    <p>{{cM.name}}</p>
+                                </div>
+                            </div>
+                        </a> <a href><i class="material-icons arrow-left" ng-click="compPreviousM()" ng-hide="0!=$index">keyboard_arrow_left</i></a> <a href><i class="material-icons arrow-right" ng-click="compNextM()" ng-hide="2!=$index">keyboard_arrow_right</i></a> </div>
+                </div>
+            </div>
+        </div>
+        <div class="row center small-screen">
+            <div class="position-relative">
+                <div ng-repeat="cS in compS track by index">
+                    <div class="col s12 m6 l4">
+                        <a href ui-sref="{{cS.url}}">
+                            <div class="blackBackground cursor-pointer"> <img ng-src="{{cS.img}}" alt="{{cS.name}} greenbooks">
+                                <div class="textInside center">
+                                    <p>{{cS.name}}</p>
+                                </div>
+                            </div>
+                        </a> <a href><i class="material-icons arrow-left" ng-click="compPreviousS()" ng-hide="0!=$index">keyboard_arrow_left</i></a> <a href><i class="material-icons arrow-right" ng-hide="0!=$index" ng-click="compNextS()">keyboard_arrow_right</i></a> </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

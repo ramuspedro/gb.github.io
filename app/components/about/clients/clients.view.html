@@ -1,0 +1,18 @@
+<div class="section about">
+    <div class="container clients">
+        <h1 class="center-align methoTitle">Clients</h1>
+        <div class="row">
+            <ul>
+                <li ng-class="{'active':cat.active}" class="cursor-pointer" ng-click="vm.selectActive($index)" ng-repeat="cat in vm.categories track by $index"> <a href>{{cat.name}}</a> </li>
+            </ul>
+        </div>
+        <div class="row logos">
+            <div class="col s6 m3 l2" ng-repeat="client in vm.clients | filter:vm.filter">
+                <div class="animated fadeIn"> <img class="img1" ng-src="{{client.img}}" alt="{{client.alt}} greenbooks"> </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="triangleWhite"></div>
+<div class="leftDivision"></div>
+<div class="rightDivision"></div>
